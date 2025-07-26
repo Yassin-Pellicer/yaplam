@@ -56,7 +56,7 @@ const items = [
   },
 ];
 
-export function VerticalCarousel() {
+function VerticalCarousel() {
   const baseX = useMotionValue(0);
   const itemHeight = 300; // px
   const totalHeight = items.length * itemHeight;
@@ -330,88 +330,6 @@ export default function Portfolio() {
       </p>
       `,
       link: "https://github.com/Yassin-Pellicer/Miscellaneous",
-    },
-    {
-      route: "/pinpoint.png",
-      title: "Pinpoint, la plataforma de eventos gratuita",
-      icon: "🗺️",
-      technologies: [
-        "devicon-react-original",
-        "devicon-nodejs-plain",
-        "devicon-postgresql-plain",
-        "devicon-nextjs-plain",
-        "devicon-figma-plain",
-      ],
-      date: "2023",
-      description: `Pinpoint. Pinpoint es una plataforma con características de red social de eventos que permite a sus usuarios subir, 
-        consultar y participar en actividades publicadas por ellos mismo y por otros usuarios. Estos eventos se publican en un mapa global.`,
-      content: `
-      <p style="color: white; font-size: 1.125rem; margin-bottom: 1rem;">
-        Pinpoint es una plataforma web (que presenté como trabajo de final de grado) <b>que permite a los usuarios crear, compartir y explorar eventos e itinerarios mediante puntos de control geolocalizados sobre un mapa interactivo </b>.
-      </p>
-      <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;" />
-      <ul style="color: white; font-size: 1rem; margin-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
-        <li style="margin-bottom: 0.5rem;">
-          Permite asociar a cada punto de control información adicional como material multimedia o códigos QR.
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-          Incluye funcionalidades como creación de eventos públicos o privados, inscripciones, y gestión de visibilidad.
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-          Implementada con tecnologías modernas como Next.js y React, integrando gestión de estado global, internacionalización (i18n) y un diseño centrado en el usuario.
-        </li>
-      </ul>
-      <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;" />
-      <p style="color: white; font-size: 1rem; margin-bottom: 1rem;">
-        Pinpoint no solo es una herramienta versátil, sino también un proyecto con propósito social: democratiza la organización de eventos sin necesidad de plataformas comerciales o publicidad.
-      </p>
-      <video style="width: 100%;" controls>
-        <source src="/pinpoint.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    `,
-      link: "https://github.com/Yassin-Pellicer/pinpoint",
-    },
-    {
-      route: "/pinpoint.png",
-      title: "Pinpoint, la plataforma de eventos gratuita",
-      icon: "🗺️",
-      technologies: [
-        "devicon-react-original",
-        "devicon-nodejs-plain",
-        "devicon-postgresql-plain",
-        "devicon-nextjs-plain",
-        "devicon-figma-plain",
-      ],
-      date: "2023",
-      description: `Pinpoint. Pinpoint es una plataforma con características de red social de eventos que permite a sus usuarios subir, 
-        consultar y participar en actividades publicadas por ellos mismo y por otros usuarios. Estos eventos se publican en un mapa global.`,
-      content: `
-      <p style="color: white; font-size: 1.125rem; margin-bottom: 1rem;">
-        Pinpoint es una plataforma web (que presenté como trabajo de final de grado) <b>que permite a los usuarios crear, compartir y explorar eventos e itinerarios mediante puntos de control geolocalizados sobre un mapa interactivo </b>.
-      </p>
-      <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;" />
-      <ul style="color: white; font-size: 1rem; margin-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
-        <li style="margin-bottom: 0.5rem;">
-          Permite asociar a cada punto de control información adicional como material multimedia o códigos QR.
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-          Incluye funcionalidades como creación de eventos públicos o privados, inscripciones, y gestión de visibilidad.
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-          Implementada con tecnologías modernas como Next.js y React, integrando gestión de estado global, internacionalización (i18n) y un diseño centrado en el usuario.
-        </li>
-      </ul>
-      <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;" />
-      <p style="color: white; font-size: 1rem; margin-bottom: 1rem;">
-        Pinpoint no solo es una herramienta versátil, sino también un proyecto con propósito social: democratiza la organización de eventos sin necesidad de plataformas comerciales o publicidad.
-      </p>
-      <video style="width: 100%;" controls>
-        <source src="/pinpoint.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    `,
-      link: "https://github.com/Yassin-Pellicer/pinpoint",
     },
   ];
 
