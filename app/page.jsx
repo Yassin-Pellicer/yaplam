@@ -490,7 +490,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
   ];
 
   return (
-    <div className="flex justify-center flex-col items-center bg-gradient-to-br from-blue-500 to-blue-900 overflow-x-hidden select-none">
+    <div className="flex justify-center flex-col items-center bg-gradient-to-br from-blue-500 to-blue-900 select-none">
       <section className="flex flex-col min-h-screen max-w-6xl sm:px-12 px-4">
         {/* Header */}
         <div className="flex justify-center flex-col items-center">
