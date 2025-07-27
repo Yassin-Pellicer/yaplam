@@ -1,6 +1,6 @@
 # Yaplam – Personal Portfolio
 
-Visit the live site 👉 [yaplam.netlify.app](https://yplam.netlify.app)
+Visit the live site 👉 [yplam.netlify.app](https://yplam.netlify.app)
 
 ## 👋 About
 
