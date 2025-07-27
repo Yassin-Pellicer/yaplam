@@ -62,7 +62,7 @@ function VerticalCarousel() {
   const totalHeight = items.length * itemHeight;
 
   useAnimationFrame((t) => {
-    baseX.set((t / 8) % (totalHeight + itemHeight / 2 - 20));
+    baseX.set((t / 20) % (totalHeight + itemHeight / 2 - 20));
   });
 
   return (
@@ -125,11 +125,10 @@ const InViewSection = ({ children, triggerKey }) => {
   // Re-trigger animation if triggerKey changes while in view
   useEffect(() => {
     if (triggerKey !== undefined && inView) {
-      // Reset and animate again
       controls.set({ opacity: 0, filter: "blur(20px)", y: 100 });
       controls.start({ opacity: 1, filter: "blur(0px)", y: 0 });
     }
-  }, [triggerKey, inView, controls]);
+  }, [triggerKey]);
 
   return (
     <motion.div
@@ -149,9 +148,9 @@ const InViewSection = ({ children, triggerKey }) => {
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("about");
   const [isScrolled, setIsScrolled] = useState(false);
-  const [selectedExperience, setSelectedExperience] = useState(1);
+  const [selectedExperience, setSelectedExperience] = useState(4);
   const [selectedColor, setSelectedColor] = useState([]);
-  const [selectedProject, setSelectedProject] = useState(1);
+  const [selectedProject, setSelectedProject] = useState(0);
   const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -259,6 +258,52 @@ export default function Portfolio() {
 
   const projects = [
     {
+      indev: true,
+      route: "/tutorgo.png",
+      title:
+        "TutorGo, una herramienta para tutores particulares y profesionales",
+      icon: "👨🏻‍🏫",
+      technologies: [
+        "devicon-react-original",
+        "devicon-nodejs-plain",
+        "devicon-postgresql-plain",
+        "devicon-nextjs-plain",
+        "devicon-figma-plain",
+        "devicon-amazonwebservices-plain",
+      ],
+      date: "2025",
+      description: `Plataforma de gestión de tutorías y cursos online y presenciales, con funcionalidades de gestión de contenido.`,
+      content: `
+      <p style="color: white; font-size: 1.125rem; margin-bottom: 1rem;">
+        TutorGo es una <b>plataforma de gestión de tutorías y cursos online y presenciales</b>, diseñada para tutores particulares y profesionales que buscan digitalizar y organizar su oferta educativa.
+      </p>
+      <hr style="border-color: white; margin: 1rem 0;" />
+      <ul style="color: white; font-size: 1rem; margin-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
+        <li style="margin-bottom: 0.5rem;">
+          Permite gestionar contenido educativo, incluyendo materiales, horarios, alumnos y sesiones.
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+          Ofrece herramientas para organizar cursos online o presenciales de forma eficiente.
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+          Construida con tecnologías modernas como React, Next.js, Node.js y PostgreSQL, y diseñada con Figma.
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+          Integración con servicios de AWS para almacenamiento y despliegue.
+        </li>
+      </ul>
+      <hr style="border-color: white; margin: 1rem 0;" />
+      <p style="color: white; font-size: 1rem; margin-bottom: 1rem;">
+        TutorGo nace con el objetivo de <b>potenciar la enseñanza personalizada</b>, simplificando la gestión tanto para tutores como para alumnos.
+      </p>
+      <video style="width: 100%;" controls>
+        <source src="/modalverbs.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    `,
+      link: "https://github.com/Yassin-Pellicer/s3md",
+    },
+    {
       route: "/pinpoint.png",
       title: "Pinpoint, la plataforma de eventos gratuita",
       icon: "🗺️",
@@ -269,13 +314,13 @@ export default function Portfolio() {
         "devicon-nextjs-plain",
         "devicon-figma-plain",
       ],
-      date: "2023",
+      date: "2024",
       description: `Plataforma de publicación de eventos gratis, accesible y con características de red social en un mapa global.`,
       content: `
       <p style="color: white; font-size: 1.125rem; margin-bottom: 1rem;">
         Pinpoint es una plataforma web (que presenté como trabajo de final de grado) <b>que permite a los usuarios crear, compartir y explorar eventos e itinerarios mediante puntos de control geolocalizados sobre un mapa interactivo </b>.
       </p>
-      <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;" />
+      <hr style="border-color: white; margin: 1rem 0;" />
       <ul style="color: white; font-size: 1rem; margin-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
         <li style="margin-bottom: 0.5rem;">
           Permite asociar a cada punto de control información adicional como material multimedia o códigos QR.
@@ -287,7 +332,7 @@ export default function Portfolio() {
           Implementada con tecnologías modernas como Next.js y React, integrando gestión de estado global, internacionalización (i18n) y un diseño centrado en el usuario.
         </li>
       </ul>
-      <hr style="border-color: rgba(255,255,255,0.3); margin: 1rem 0;" />
+      <hr style="border-color: white; margin: 1rem 0;" />
       <p style="color: white; font-size: 1rem; margin-bottom: 1rem;">
         Pinpoint no solo es una herramienta versátil, sino también un proyecto con propósito social: democratiza la organización de eventos sin necesidad de plataformas comerciales o publicidad.
       </p>
@@ -301,7 +346,7 @@ export default function Portfolio() {
     {
       route: "/gol.png",
       title: "Varios juegos y proyectos pequeños",
-      icon: "🗺️",
+      icon: "🎮",
       technologies: [
         "devicon-nodejs-plain",
         "devicon-html5-plain",
@@ -311,23 +356,41 @@ export default function Portfolio() {
       date: "2023",
       description: `Varios proyectos pequeños y juegos que me permiten aplicar mis habilidades en diferentes contextos.`,
       content: `
-      <p style="color: white; font-size: 1.125rem; margin-bottom: 1rem;">
-        En este repositorio se encuentran algunos proyectos personales que me permiten aplicar mis habilidades en diferentes contextos:
-        <ul style="color: white; font-size: 1rem; margin-left: 1.25rem; margin-bottom: 1rem; list-style-type: disc;">
-          <li style="margin-bottom: 0.5rem;">
-            Un compilador de un subconjunto del lenguaje C, desarrollado como proyecto para la asignatura de Compiladores en la UPV.
+      <div class="text-white text-base md:text-lg space-y-6">
+        <p>
+          En este repositorio se encuentran algunos proyectos personales que me permiten aplicar mis habilidades en diferentes contextos. Estos incluyen desde compiladores hasta simulaciones gráficas y juegos clásicos implementados desde cero:
+        </p>
+
+        <hr style="border-color: white; margin: 1rem 0;" />
+
+        <ul class="list-disc list-inside space-y-4">
+          <li>
+            <span class="font-semibold text-white">Compilador de C:</span> Un compilador para un subconjunto del lenguaje C, desarrollado como proyecto para la asignatura de Compiladores en la UPV. Permite analizar, optimizar y generar código a partir de programas escritos en dicho lenguaje.
           </li>
-          <li style="margin-bottom: 0.5rem;">
-            Un scraper de Wikipedia, que permite extraer contenido de la web y mostrarlo en un formato más atractivo.
+          <li>
+            <span class="font-semibold text-white">Scraper de Wikipedia:</span> Herramienta que extrae contenido de Wikipedia y lo presenta en un formato más limpio y estructurado, facilitando su lectura y análisis.
           </li>
-          <li style="margin-bottom: 0.5rem;">
-            La simulación de un conjunto de Mandelbrot, que muestra el comportamiento de este conjunto matemático en diferentes escalas.
+          <li>
+            <span class="font-semibold text-white">Conjunto de Mandelbrot:</span> Visualización interactiva de este famoso conjunto fractal. Permite explorar su estructura a diferentes escalas con alto detalle 
           </li>
-          <li style="margin-bottom: 0.5rem;">
-            La implementación de una máquina de Turing en JavaScript, que permite simular el comportamiento de esta máquina abstracta.
+          <li>
+            <span class="font-semibold text-white">Máquina de Turing:</span> Simulador de una máquina de Turing implementado en JavaScript, ideal para ilustrar conceptos de computabilidad y lógica formal.
+          </li>
+          <li>
+            <span class="font-semibold text-white">Snake Game:</span> Implementación del clásico juego de la serpiente en un entorno gráfico personalizado. El jugador controla una serpiente que debe recoger comida sin chocar contra los bordes ni su propio cuerpo 
+            <span class="italic"> (parte inferior izquierda de la imagen)</span>.
+          </li>
+          <li>
+            <span class="font-semibold text-white">Brick Breaker:</span> Versión interactiva del clásico juego en el que se controla una paleta para romper bloques con una pelota que rebota 
           </li>
         </ul>
-      </p>
+
+        <hr style="border-color: white; margin: 1rem 0;" />
+
+        <p class="text-sm md:text-base text-gray-300">
+          Todos estos proyectos no solo han reforzado mis conocimientos técnicos en programación, estructuras de datos y algoritmia, sino que también han sido una excelente oportunidad para trabajar con interfaces gráficas, visualizaciones interactivas y lógica de juegos.
+        </p>
+      </div>
       `,
       link: "https://github.com/Yassin-Pellicer/Miscellaneous",
     },
@@ -659,7 +722,10 @@ Entre las cosas de las que me he encargado destacamos...</p>
 
         {/* Abilities and Certifications Section */}
         <InViewSection>
-          <section id="habilidades" className="sm:py-20 py-8 w-full">
+          <section
+            id="habilidades"
+            className="flex-col sm:pt-20 pt-8 sm:pb-0! pb-8"
+          >
             <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
               ✨ Habilidades
             </h2>
@@ -692,7 +758,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
             </div>
           </section>
 
-          <section id="habilidades" className="flex-col sm:pt-20 py-8">
+          <section id="habilidades" className="flex-col sm:py-20">
             <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
               🎖️ Certificaciones
             </h2>
@@ -744,7 +810,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
 
         {/* Projects Section */}
         <InViewSection>
-          <section id="experiencia" className="sm:py-20 pb-0! py-8">
+          <section id="proyectos" className="sm:py-20 pb-0! py-8">
             <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
               💻 Proyectos
             </h2>
@@ -753,7 +819,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
               ref={scrollRef}
               className="overflow-y-hidden scrollbar-hide w-full cursor-grab active:cursor-grabbing scroll-smooth"
             >
-              <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 mb-4">
+              <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 mb-4">
                 {projects.map((skill, index) => (
                   <div
                     key={index}
@@ -770,6 +836,14 @@ Entre las cosas de las que me he encargado destacamos...</p>
                       selectedColor[index + 2]
                     }/10 transition-all duration-200 cursor-pointer w-full flex-wrap`}
                   >
+                    {skill.indev && (
+                      <div className="absolute bottom-4 right-4 flex flex-row shadow-xl items-center justify-center gap-2 bg-green-100 w-fit rounded-full px-3 text-black font-bold tracking-tighter border-2 border-red-500">
+                        <div className="relative h-2 w-2 rounded-full bg-red-500 animate-pulse">
+                          <div className="absolute h-2 w-2 rounded-full bg-red-500 animate-[ping_0.75s_infinite]"></div>
+                        </div>
+                        <span className="text-sm">🚀</span>
+                      </div>
+                    )}
                     <div className="flex flex-col mb-4">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-5xl">{skill.icon}</span>
@@ -779,7 +853,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
                       </div>
                       <div className="flex justify-between items-center gap-4">
                         <h3 className="text-sm font-bold text-white">
-                          🗓️ Desarrollada en {skill.date}
+                          🗓️ Desarrollado en {skill.date}
                         </h3>
                         <div className="flex gap-2">
                           {skill.technologies.map((tech, index) => (
@@ -800,6 +874,9 @@ Entre las cosas de las que me he encargado destacamos...</p>
                   if (selectedProject > 0) {
                     setSelectedProject(selectedProject - 1);
                   }
+                  else{
+                    setSelectedProject(projects.length - 1);
+                  }
                 }}
                 aria-label="Scroll left"
                 className="flex flex-col justify-center w-10 h-10 z-10 0 bg-black/40 hover:bg-black/70 text-white rounded-full shrink-0"
@@ -812,6 +889,9 @@ Entre las cosas de las que me he encargado destacamos...</p>
                 onClick={() => {
                   if (selectedProject < projects.length - 1) {
                     setSelectedProject(selectedProject + 1);
+                  }
+                  else{
+                    setSelectedProject(0);
                   }
                 }}
                 aria-label="Scroll left"
@@ -826,12 +906,20 @@ Entre las cosas de las que me he encargado destacamos...</p>
 
         <InViewSection triggerKey={selectedProject}>
           <div
-            className={`snap-center relative pb-4 backdrop-blur-md rounded-2xl p-6 border bg-blue-900 border-white/10 hover:shadow-md transition-all duration-200 cursor-pointer`}
+            className={`snap-center relative backdrop-blur-md rounded-2xl p-6 border bg-blue-900 border-white/10 hover:shadow-md transition-all duration-200 cursor-pointer pb-8`}
           >
+            {projects.find((p, i) => i === selectedProject)?.indev && (
+              <div className="absolute top-4 left-4 flex flex-row shadow-xl items-center justify-center gap-2 bg-green-100 w-fit rounded-full px-3 text-black font-bold tracking-tighter border-2 border-red-500">
+                <div className="relative h-2 w-2 rounded-full bg-red-500 animate-pulse">
+                  <div className="absolute h-2 w-2 rounded-full bg-red-500 animate-[ping_0.75s_infinite]"></div>
+                </div>
+                <span className="text-md"> ¡Actualmente en desarrollo! 🚀</span>
+              </div>
+            )}
             <div className="flex flex-wrap md:flex-nowrap gap-4 flex-row mb-6">
               <img
                 src={projects.find((p, i) => i === selectedProject)?.route}
-                className="w-1/3 h-48 rounded-lg object-cover"
+                className="w-full h-68 rounded-lg object-cover"
                 alt=""
               />
               <div className="flex flex-col md:ml-6">
@@ -845,7 +933,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
                 </div>
                 <div className="flex justify-between items-center gap-4">
                   <h3 className="text-lg font-bold text-white">
-                    🗓️ Desarrollada en{" "}
+                    🗓️ Desarrollado en{" "}
                     {projects.find((p, i) => i === selectedProject)?.date}
                   </h3>
                   <div className="flex gap-2">
@@ -857,14 +945,14 @@ Entre las cosas de las que me he encargado destacamos...</p>
                   </div>
                 </div>
                 <hr className="border-t-2 border-white/50 my-4" />
-                <p className="text-white text-sm">
+                <p className="text-white text-lg">
                   {projects.find((p, i) => i === selectedProject)?.description}
                 </p>
               </div>
             </div>
 
             <div
-              className="mb-16"
+              className="mb-18"
               dangerouslySetInnerHTML={{
                 __html: projects.find((exp, index) => index === selectedProject)
                   ?.content,
@@ -878,7 +966,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
                   "_blank"
                 )
               }
-              className="hover:cursor-pointer absolute bottom-6 left-6 flex items-center gap-2 bg-green-100 w-fit rounded-full px-3 py-2 text-black font-bold tracking-tighter border-2 border-green-500"
+              className="hover:bg-green-500 hover:text-white absolute bottom-6 left-6 flex items-center gap-2 bg-green-100 w-fit rounded-full px-3 py-2 text-black font-bold tracking-tighter border-2 border-green-500 transition-all duration-200"
             >
               Ver código
               <span
@@ -887,98 +975,75 @@ Entre las cosas de las que me he encargado destacamos...</p>
               ></span>
             </div>
           </div>
-
-          <div className="flex justify-between flex-row items-center w-full mt-4">
-            <button
-              onClick={() => {
-                if (selectedProject > 0) {
-                  setSelectedProject(selectedProject - 1);
-                }
-              }}
-              aria-label="Scroll left"
-              className="flex flex-col justify-center w-10 h-10 z-10 0 bg-black/40 hover:bg-black/70 text-white rounded-full shrink-0"
-              style={{ userSelect: "none" }}
-            >
-              <span className="material-symbols-outlined">chevron_left</span>
-            </button>
-
-            <button
-              onClick={() => {
-                if (selectedProject < projects.length - 1) {
-                  setSelectedProject(selectedProject + 1);
-                }
-              }}
-              aria-label="Scroll left"
-              className="flex flex-col justify-center w-10 h-10 z-10 0 bg-black/40 hover:bg-black/70 text-white rounded-full shrink-0"
-              style={{ userSelect: "none" }}
-            >
-              <span className="material-symbols-outlined">chevron_right</span>
-            </button>
-          </div>
         </InViewSection>
 
         {/* Contact Section */}
-        <section id="contacto" className="py-20">
-          <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-12">
-              Get In Touch
+        <InViewSection>
+          <section id="Yassin" className="py-40">
+            <h2 className="text-5xl font-bold text-white mb-4 tracking-tighter">
+              ☎️ Contacto
             </h2>
-            <div className="max-w-2xl mx-auto">
-              <p className="text-lg text-gray-300 mb-12 leading-relaxed">
-                I'm always interested in hearing about new opportunities and
-                exciting projects. Whether you have a question or just want to
-                say hi, feel free to reach out!
-              </p>
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <a
-                  href="mailto:john@example.com"
-                  className="flex items-center justify-center p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:bg-white/10 transition-all hover:scale-105 group"
-                >
-                  <Mail className="w-6 h-6 text-purple-400 mr-3 group-hover:scale-110 transition-transform" />
-                  <span className="text-white">john@example.com</span>
-                </a>
-                <a
-                  href="tel:+1234567890"
-                  className="flex items-center justify-center p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 hover:bg-white/10 transition-all hover:scale-105 group"
-                >
-                  <Phone className="w-6 h-6 text-purple-400 mr-3 group-hover:scale-110 transition-transform" />
-                  <span className="text-white">+1 (234) 567-8900</span>
-                </a>
+            <div className="relative max-w-6xl mx-auto text-center">
+              <div className="flex flex-col items-center gap-12">
+                          <img
+            src="/yo.jpg"
+            alt="Yassin Pellicer Lamla"
+            className="absolute w-64 h-64 z-[-1] top-[150] rounded-full object-cover border-white shadow-lg opacity-40 overflow-hidden"
+          />
+                <p className="sm:text-3xl bold mt-8 text-white">
+                  Quieres más información o concertar una entrevista o cita
+                  personalizada?{" "}
+                  <span style={{ fontFamily: "Over the Rainbow" }}>
+                    ¡No dudes en ponerte en contacto conmigo!{" "}
+                  </span>
+                  Aquí tienes mis datos de contacto.
+                </p>
+                <div className="flex flex-row items-center  flex-wrap justify-around gap-12">
+                  <a
+                    href="mailto:yassinpellicerlamla@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black/20 backdrop-blur-xl rounded-full text-white text-lg sm:text-3xl hover:bg-black/50 transition duration-300 p-4"
+                  >
+                    ✉️ Mi correo
+                  </a>
+                  <a
+                    href="https://github.com/Yassin-Pellicer"
+                    target="_blank"
+                    className="bg-black/20 backdrop-blur-xl rounded-full text-white text-lg sm:text-3xl hover:bg-black/50 transition duration-300 p-4"
+                  >
+                    <span className="devicon-github-plain"></span> Github
+                  </a>
+                  <a
+                    href="https://github.com/Yassin-Pellicer"
+                    target="_blank"
+                    className="bg-black/20 backdrop-blur-xl rounded-full text-white text-lg sm:text-3xl hover:bg-black/50 transition duration-300 p-4 px-6"
+                  >
+                    <span className="devicon-linkedin-plain"></span> Perfil de
+                    LinkedIn
+                  </a>
+                </div>
               </div>
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105 shadow-2xl">
-                Download Resume
-              </button>
             </div>
-          </div>
-        </section>
+          </section>
+        </InViewSection>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 w-full bg-black/30 backdrop-blur-md border-t border-white/10">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400 mb-4">
-            © 2025 John Doe. Crafted with passion and React.
+      <footer
+        id="contacto"
+        className="py-8 w-full bg-black/30 backdrop-blur-md border-t border-white/10"
+      >
+        <div className="flex flex-row max-w-6xl mx-auto text-center justify-between align-center items-center px-4">
+          <p className="text-gray-400 sm:text-md text-xs hover:text-white transition duration-300">
+            © Yassin Pellicer Lamla. Todos los derechos reservados.
           </p>
-          <div className="flex justify-center space-x-6">
-            <a
-              href="#"
-              className="text-gray-400 hover:text-purple-300 transition-colors"
-            >
-              <Github className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-purple-300 transition-colors"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-purple-300 transition-colors"
-            >
-              <Mail className="w-5 h-5" />
-            </a>
-          </div>
+          <a
+            href="mailto:yassinpellicerlamla@gmail.com"
+            className="text-gray-400 hover:text-white sm:text-md text-xs transition duration-300"
+          >
+            Contacto
+          </a>
         </div>
       </footer>
     </div>
