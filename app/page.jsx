@@ -560,29 +560,31 @@ Entre las cosas de las que me he encargado destacamos...</p>
               Especializado en ciencias de la computación 🤖
             </p>
 
-            {/* Social Links */}
             <div className="flex justify-center space-x-6">
               <a
-                href="#"
+                href="https://github.com/Yassin-Pellicer"
+                target="_blank"
                 className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all hover:scale-110"
               >
                 <Github className="w-6 h-6 text-white" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/yassin-pellicer-lamla-9a53a81a1/"
+                target="_blank"
                 className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all hover:scale-110"
               >
                 <Linkedin className="w-6 h-6 text-white" />
               </a>
               <a
-                href="#"
+                href="mailto:yassinpellicerlamla@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all hover:scale-110"
               >
                 <Mail className="w-6 h-6 text-white" />
               </a>
             </div>
 
-            {/* CTA Button */}
             <button
               onClick={() => {
                 window.scrollTo({
@@ -872,8 +874,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
                 onClick={() => {
                   if (selectedProject > 0) {
                     setSelectedProject(selectedProject - 1);
-                  }
-                  else{
+                  } else {
                     setSelectedProject(projects.length - 1);
                   }
                 }}
@@ -888,8 +889,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
                 onClick={() => {
                   if (selectedProject < projects.length - 1) {
                     setSelectedProject(selectedProject + 1);
-                  }
-                  else{
+                  } else {
                     setSelectedProject(0);
                   }
                 }}
@@ -984,11 +984,11 @@ Entre las cosas de las que me he encargado destacamos...</p>
             </h2>
             <div className="relative max-w-6xl mx-auto text-center">
               <div className="flex flex-col items-center gap-12">
-                          <img
-            src="/yo.jpg"
-            alt="Yassin Pellicer Lamla"
-            className="absolute w-64 h-64 z-[-1] top-[-150] rounded-full object-cover border-white shadow-lg opacity-40 overflow-hidden"
-          />
+                <img
+                  src="/yo.jpg"
+                  alt="Yassin Pellicer Lamla"
+                  className="absolute w-64 h-64 z-[-1] top-[-150] rounded-full object-cover border-white shadow-lg opacity-40 overflow-hidden"
+                />
                 <p className="sm:text-3xl bold mt-8 text-white">
                   Quieres más información o concertar una entrevista o cita
                   personalizada?{" "}
