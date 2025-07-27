@@ -569,7 +569,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
                 <Github className="w-6 h-6 text-white" />
               </a>
               <a
-                href="https://www.linkedin.com/in/yassin-pellicer-lamla-9a53a81a1/"
+                href="https://www.linkedin.com/in/yassin-pellicer/"
                 target="_blank"
                 className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all hover:scale-110"
               >
@@ -1008,7 +1008,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
                       <Github className="w-6 h-6 text-white" />
                     </a>
                     <a
-                      href="https://www.linkedin.com/in/yassin-pellicer-lamla-9a53a81a1/"
+                      href="https://www.linkedin.com/in/yassin-pellicer/"
                       target="_blank"
                       className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all hover:scale-110"
                     >
