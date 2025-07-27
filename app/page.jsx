@@ -378,7 +378,6 @@ export default function Portfolio() {
           </li>
           <li>
             <span class="font-semibold text-white">Snake Game:</span> Implementación del clásico juego de la serpiente en un entorno gráfico personalizado. El jugador controla una serpiente que debe recoger comida sin chocar contra los bordes ni su propio cuerpo 
-            <span class="italic"> (parte inferior izquierda de la imagen)</span>.
           </li>
           <li>
             <span class="font-semibold text-white">Brick Breaker:</span> Versión interactiva del clásico juego en el que se controla una paleta para romper bloques con una pelota que rebota 
@@ -810,7 +809,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
 
         {/* Projects Section */}
         <InViewSection>
-          <section id="proyectos" className="sm:py-20 pb-0! py-8">
+          <section id="proyectos" className="sm:py-20 pb-0! py-16">
             <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
               💻 Proyectos
             </h2>
