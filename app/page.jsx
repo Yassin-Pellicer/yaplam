@@ -999,29 +999,31 @@ Entre las cosas de las que me he encargado destacamos...</p>
                   Aquí tienes mis datos de contacto.
                 </p>
                 <div className="flex flex-row items-center  flex-wrap justify-around gap-12">
-                  <a
-                    href="mailto:yassinpellicerlamla@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-black/20 backdrop-blur-xl rounded-full text-white text-lg sm:text-3xl hover:bg-black/50 transition duration-300 p-4"
-                  >
-                    ✉️ Mi correo
-                  </a>
-                  <a
-                    href="https://github.com/Yassin-Pellicer"
-                    target="_blank"
-                    className="bg-black/20 backdrop-blur-xl rounded-full text-white text-lg sm:text-3xl hover:bg-black/50 transition duration-300 p-4"
-                  >
-                    <span className="devicon-github-plain"></span> Github
-                  </a>
-                  <a
-                    href="https://github.com/Yassin-Pellicer"
-                    target="_blank"
-                    className="bg-black/20 backdrop-blur-xl rounded-full text-white text-lg sm:text-3xl hover:bg-black/50 transition duration-300 p-4 px-6"
-                  >
-                    <span className="devicon-linkedin-plain"></span> Perfil de
-                    LinkedIn
-                  </a>
+                  {/* Social Links */}
+                  <div className="flex justify-center space-x-6">
+                    <a
+                      href="https://github.com/Yassin-Pellicer"
+                      target="_blank"
+                      className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all hover:scale-110"
+                    >
+                      <Github className="w-6 h-6 text-white" />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/yassin-pellicer-lamla-9a53a81a1/"
+                      target="_blank"
+                      className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all hover:scale-110"
+                    >
+                      <Linkedin className="w-6 h-6 text-white" />
+                    </a>
+                    <a
+                      href="mailto:yassinpellicerlamla@gmail.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all hover:scale-110"
+                    >
+                      <Mail className="w-6 h-6 text-white" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
