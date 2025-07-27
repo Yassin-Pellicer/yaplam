@@ -988,7 +988,7 @@ Entre las cosas de las que me he encargado destacamos...</p>
                           <img
             src="/yo.jpg"
             alt="Yassin Pellicer Lamla"
-            className="absolute w-64 h-64 z-[-1] top-[150] rounded-full object-cover border-white shadow-lg opacity-40 overflow-hidden"
+            className="absolute w-64 h-64 z-[-1] top-[-150] rounded-full object-cover border-white shadow-lg opacity-40 overflow-hidden"
           />
                 <p className="sm:text-3xl bold mt-8 text-white">
                   Quieres más información o concertar una entrevista o cita
