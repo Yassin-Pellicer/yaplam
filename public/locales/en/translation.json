@@ -1,0 +1,269 @@
+{
+  "navigation": {
+    "sections": [
+      "Yassin",
+      "Experience",
+      "Skills",
+      "Projects",
+      "Contact",
+      "Blog"
+    ]
+  },
+  "hero": {
+    "greeting": "Hello, my name is...",
+    "title": "Software Developer | Graduated in Computer Science by the UPV",
+    "subtitle": "Specialized in computer science",
+    "cta": "More information"
+  },
+  "carousel": {
+    "dev": " In development! 🚀",
+    "items": [
+      {
+        "emoji": "💯",
+        "title": "Notable academic record",
+        "subtitle": "Average of 7.7 in a English-taught curriculum."
+      },
+      {
+        "emoji": "💼",
+        "title": "+2 Years of Experience in IT",
+        "subtitle": "Front-end, back-end and QA development with recent technologies."
+      },
+      {
+        "emoji": "🌍",
+        "title": "Welche Sprachen sprechen Sie?",
+        "subtitle": "Fluent in English, B1 in French, and basic knowledge in German. Native Spanish and Valencian."
+      },
+      {
+        "emoji": "🎓",
+        "title": "Graduated with Honors",
+        "subtitle": "Computer Science UPV - English-taught curriculum (High Academic Achievement)."
+      },
+      {
+        "emoji": "✨",
+        "title": "+1 Year of experience in full-stack development",
+        "subtitle": "And every day I keep learning."
+      },
+      {
+        "emoji": "🗒️",
+        "title": "Blog where I document my learning",
+        "subtitle": "I'll publish my first post soon!",
+        "incoming": true
+      }
+    ]
+  },
+  "sections": {
+    "about": {
+      "title": "About Me 🤔",
+      "description": "Graduated in Computer Science by the UPV, seeking to grow as a professional in the field of software development and front-end and back-end technologies. Related to frameworks like Next, Angular and front-end libraries (React). Worked with back-end frameworks in PHP (Symphony) in projects focused on retail and transaction monitoring in large surfaces.",
+      "personal": "When I'm not programming, I like to go to the gym, play video games (especially strategy ones) or listen to music."
+    },
+    "experience": {
+      "title": "Experience",
+      "openToWork": "Open to Work! 😊",
+      "experiences": [
+        {
+          "id": 4,
+          "company": "Freelance",
+          "position": "🤠 Independent Developer",
+          "period": "2025 ~",
+          "description": "Developer of software products for individuals and web designer",
+          "content": {
+            "paragraph": "While working full-time, I dedicate myself to creating software products, web pages and applications for individuals who want to advertise themselves, offer their services or simply have an online presence. My main clients are...",
+            "list": [
+              "Individuals who need an online presence through a portfolio. Artists, models, professionals...",
+              "Private tutors through a platform that allows them to organize their teaching schedules and publish content for their students in the form of a blog."
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "company": "UNIVERSAL TICKETS S.L",
+          "position": "🎫 Full-Stack Developer in an online ticketing company",
+          "period": "2025 ~",
+          "description": "Development, maintenance and implementation of code for the ERP of an online ticketing company.",
+          "content": {
+            "paragraph": "In Universal Tickets S.L, the cradle of Servientradas, I have been able to grow as a professional developing code in Javascript, HTML, CSS and PHP, in a robust system with years of experience and with the hand of experienced professionals in the ticketing and entertainment industry. Among the things I have been in charge of, we highlight...",
+            "list": [
+              "Custom design of web pages. At the request of the client and their needs, a design is created according to their objectives.",
+              "Integration of third-party services: Integration of an external ticket sales service, adapting the responses of its API to our system."
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "company": "F1 CONNECTING",
+          "position": "🧠 Front-End Developer and Technical Support",
+          "period": "2023 - 2025",
+          "description": "My experience at F1 Connecting has been key to developing myself as a front-end developer and technical support professional.",
+          "content": {
+            "paragraph": "I have had the opportunity to participate in three different projects, each with its own focus and level of responsibility:",
+            "list": [
+              "Technical Support in Carrefour TPVs (2023 - 2024): attention and resolution of incidents in point-of-sale systems.",
+              "Developer in retail management solution (2024): creation of functional interfaces and design of user flows.",
+              "Front-End Developer in payment monitoring system (2024 - 2025): development of user interfaces and performance optimization."
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "company": "LaCuesta Grup",
+          "position": "🍔 Waiter and shift leader",
+          "period": "2022 - 2023",
+          "description": "My first contact with the working world allowed me to learn to work in a team and develop soft skills.",
+          "content": {
+            "paragraph": "During my time at LaCuesta Grup, I learned to handle the composure at key moments of the day and to treat people kindly regardless of the situation. Among other skills, I developed...",
+            "list": [
+              "Patience, understanding and ease of speaking with customers.",
+              "Teamwork and collaboration with other waiters.",
+              "Physical dexterity and balance.",
+              "Social skills. Reinforcement of languages with foreign clients."
+            ]
+          }
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "items": [
+        {
+          "name": "Frontend Development",
+          "icon": "devicon-react-original",
+          "level": "Advanced",
+          "description": "Solid experience building interfaces with React and modern frontend technologies."
+        },
+        {
+          "name": "UI/UX Design",
+          "icon": "devicon-figma-plain",
+          "level": "Medium",
+          "description": "Designing intuitive interfaces with a focus on user experience using tools like Figma."
+        },
+        {
+          "name": "Backend Development",
+          "icon": "devicon-nodejs-plain",
+          "level": "Advanced",
+          "description": "Developing APIs and server-side logic using Node.js and Express."
+        },
+        {
+          "name": "Database Management",
+          "icon": "devicon-postgresql-plain",
+          "level": "Medium",
+          "description": "Managing and designing relational databases with PostgreSQL and MongoDB."
+        },
+        {
+          "name": "TypeScript",
+          "icon": "devicon-typescript-plain",
+          "level": "Medium",
+          "description": "Using TypeScript to ensure strong typing and scalability in large projects."
+        },
+        {
+          "name": "Next.js",
+          "icon": "devicon-nextjs-plain",
+          "level": "Advanced",
+          "description": "Main framework for SSR and static site generation with React."
+        },
+        {
+          "name": "Git & GitHub",
+          "icon": "devicon-git-plain",
+          "level": "Advanced",
+          "description": "Efficient version control and collaborative work through branches and pull requests."
+        },
+        {
+          "name": "PHP",
+          "icon": "devicon-php-plain",
+          "level": "Medium",
+          "description": "Developing dynamic web applications and managing servers with PHP."
+        },
+        {
+          "name": "Tailwind CSS",
+          "icon": "devicon-tailwindcss-plain",
+          "level": "Advanced",
+          "description": "Styling and componentizing with Tailwind CSS for a modern and adaptable design."
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Certifications",
+      "items": [
+        {
+          "id": 1,
+          "name": "Machine Learning and Data Science.",
+          "link": "https://courses.edx.org/certificates/701dafa629a54605844f0478cb45e488",
+          "platform": "edX",
+          "date": "2024",
+          "description": "Recognize the value of data for business, apply machine learning techniques, use data preparation and visualization tools, and handle R for analysis and modeling.",
+          "icon": "devicon-python-plain"
+        },
+        {
+          "id": 2,
+          "name": "Fundamentals of Cybersecurity.",
+          "link": "https://courses.edx.org/certificates/e741dbb335cc428a98532a61832520a8",
+          "platform": "edX",
+          "date": "2024",
+          "description": "Identify risks present on the web and how to protect yourself against them, understand network structure and security of transport and application protocols.",
+          "icon": "devicon-kalilinux-original"
+        }
+      ],
+      "cta": "Certificate available"
+    },
+    "projects": {
+      "title": "Projects",
+      "viewCode": "View code",
+      "developedIn": "Developed in",
+      "inDevelopment": "Currently in development! 🚀",
+      "comingSoon": "Coming soon! 🚀",
+      "items": [
+        {
+          "indev": true,
+          "route": "/tutorgo.png",
+          "title": "TutorGo, a tool for private tutors and professionals",
+          "icon": "👨🏻‍🏫",
+          "technologies": [
+            "devicon-react-original",
+            "devicon-nodejs-plain",
+            "devicon-postgresql-plain",
+            "devicon-nextjs-plain",
+            "devicon-figma-plain",
+            "devicon-amazonwebservices-plain"
+          ],
+          "date": "2025",
+          "description": "Platform for managing tutoring and online courses, with content management features.",
+          "link": "https://github.com/Yassin-Pellicer/s3md"
+        },
+        {
+          "route": "/pinpoint.png",
+          "title": "Pinpoint, the free event platform",
+          "icon": "🗺️",
+          "technologies": [
+            "devicon-react-original",
+            "devicon-nodejs-plain",
+            "devicon-postgresql-plain",
+            "devicon-nextjs-plain",
+            "devicon-figma-plain"
+          ],
+          "date": "2024",
+          "description": "Free event platform, accessible and with social network features on a global map.",
+          "link": "https://github.com/Yassin-Pellicer/pinpoint"
+        },
+        {
+          "route": "/gol.png",
+          "title": "Various games and small projects",
+          "icon": "🎮",
+          "technologies": [
+            "devicon-nodejs-plain",
+            "devicon-html5-plain",
+            "devicon-css3-plain",
+            "devicon-javascript-plain"
+          ],
+          "date": "2023",
+          "description": "Various small projects and games that allow me to apply my skills in different contexts.",
+          "link": "https://github.com/Yassin-Pellicer/Miscellaneous"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "message": "Want more information or schedule an interview or personalized meeting?",
+      "cta": "Don't hesitate to contact me!"
+    }
+  }
+}

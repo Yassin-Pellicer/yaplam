@@ -1,0 +1,274 @@
+{
+  "navigation": {
+    "sections": [
+      "Yassin",
+      "Experiencia",
+      "Habilidades",
+      "Proyectos",
+      "Contacto",
+      "Blog"
+    ]
+  },
+  "hero": {
+    "greeting": "Hola, soy...",
+    "title": "Desarrollador de Software | Graduado en Ingeniería Informática por la UPV",
+    "subtitle": "Especializado en ciencias de la computación 🤖",
+    "cta": "Más información"
+  },
+  "carousel": {
+    "dev": "¡En desarrollo! 🚀",
+    "items": [
+      {
+        "emoji": "💯",
+        "title": "Expediente académico notable",
+        "subtitle": "Media de 7.7 en un currículo impartido en inglés."
+      },
+      {
+        "emoji": "💼",
+        "title": "+2 Años de Experiencia en TIC",
+        "subtitle": "Desarrollo front-end, back-end y QA con tecnologías recientes."
+      },
+      {
+        "emoji": "🌍",
+        "title": "Welche Sprachen sprechen Sie?",
+        "subtitle": "Fluidez total en inglés, B1 en francés, y conocimientos básicos en Alemán. Nativo español y valencià."
+      },
+      {
+        "emoji": "🎓",
+        "title": "Graduado con Menciones",
+        "subtitle": "Ingeniería Informática UPV - Currículo en Inglés (Alto Rendimiento Académico)."
+      },
+      {
+        "emoji": "✨",
+        "title": "+1 Años de experiencia en desarrollo full-stack",
+        "subtitle": "Y cada día sigo aprendiendo."
+      },
+      {
+        "emoji": "🗒️",
+        "title": "Blog donde documento mi aprendizaje",
+        "subtitle": "¡Pronto publicaré mi primer post!",
+        "incoming": true
+      }
+    ]
+  },
+  "sections": {
+    "about": {
+      "title": "🤔 Sobre Mí",
+      "description": "Graduado en ingeniería informática por la UPV que busca crecer como profesional en el ámbito del desarrollo de soluciones software y de las tecnologías de front y back. Relacionado con frameworks como Next, Angular y librerías de front (React). Trabajado también con frameworks de backend en PHP (Symphony) en proyectos enfocados al retail y al monitoreo de transacciones en grandes superficies.",
+      "personal": "Cuando no estoy programando, me gusta ir al gimnasio, jugar videojuegos (sobre todo si son de estrategia) o escuchar música."
+    },
+    "experience": {
+      "title": "💼 Experiencia Laboral",
+      "openToWork": "Open to Work! 😊",
+      "experiences": [
+        {
+          "id": 4,
+          "company": "Freelance",
+          "position": "🤠 Desarrollador independiente",
+          "period": "2025 ~",
+          "description": "Desarrollador de productos software para particulares y diseñador de páginas web",
+          "content": {
+            "paragraph": "Compaginado con mi actual trabajo a jornada completa, me dedico a la creación de productos software, páginas y aplicaciones web para aquellos particulares que deseen anunciarse, ofrecer sus servicios o simplemente quieran tener una presencia online. Mis principales clientes son...",
+            "list": [
+              "Particulares que necesiten presencia web mediante un portfolio. Artistas, modelos, profesionales...",
+              "Tutores particulares mediante una plataforma que les permite organizar sus horarios de enseñanza y publicar contenido para sus alumnos a modo de blog."
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "company": "UNIVERSAL TICKETS S.L",
+          "position": "🎫 Desarrollador Full-Stack en empresa de venta de tickets online",
+          "period": "2025 ~",
+          "description": "Desarrollo, mantenimiento e implementación de código para el ERP de una empresa de venta de tickets online.",
+          "content": {
+            "paragraph": "En Universal Tickets S.L, la cuna de Servientradas®, he podido crecer como profesional desarrollando código en Javascript, HTML, CSS y PHP puros, en un sistema robusto y con años de recorrido y de la mano de profesionales veteranos en el sector de venta de entradas y entretenimiento. Entre las cosas de las que me he encargado destacamos...",
+            "list": [
+              "Diseño a la carta de páginas web. A petición del cliente y de sus necesidades se crea un diseño acorde a sus objetivos.",
+              "Integración de servicio de terceros: Integración de servicio de venta de entradas externo, adaptando las respuestas de su API a nuestro sistema."
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "company": "F1 CONNECTING",
+          "position": "🧠 Front-End Developer y Soporte Técnico",
+          "period": "2023 - 2025",
+          "description": "Mi experiencia en F1 Connecting ha sido clave para desarrollarme tanto como programador front-end como profesional del soporte técnico.",
+          "content": {
+            "paragraph": "He tenido la oportunidad de participar en tres proyectos distintos, cada uno con su propio enfoque y nivel de responsabilidad:",
+            "list": [
+              "Soporte Técnico en TPVs de Carrefour (2023 - 2024): atención y resolución de incidencias en sistemas de punto de venta.",
+              "Desarrollador en solución de gestión para retail (2024): creación de interfaces funcionales y diseño de flujos de usuario.",
+              "Desarrollador Front-End en sistema de monitorización de pagos (2024 - 2025): desarrollo de interfaces de usuario y optimización de rendimiento."
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "company": "LaCuesta Grup",
+          "position": "🍔 Camarero y responsable de sala",
+          "period": "2022 - 2023",
+          "description": "Mi primer contacto con el mundo laboral me permitió aprender a trabajar en equipo y a desarrollar competencias blandas.",
+          "content": {
+            "paragraph": "Durante mi tiempo en LaCuesta Grup aprendí a manejar la compostura en momentos clave de la jornada y a tratar a la gente amablemente sin importar la circunstancia. Entre otras competencias...",
+            "list": [
+              "Paciencia, comprensión y soltura al hablar con clientes.",
+              "Trabajo en equipo y colaboración con otros camareros.",
+              "Destreza física y equilibrio.",
+              "Habilidades sociales. Refuerzo de idiomas con clientes extranjeros."
+            ]
+          }
+        }
+      ]
+    },
+    "skills": {
+      "title": "✨ Habilidades",
+      "items": [
+        {
+          "name": "Frontend Development",
+          "icon": "devicon-react-original",
+          "level": "Avanzado",
+          "description": "Experiencia sólida construyendo interfaces con React y tecnologías modernas del frontend."
+        },
+        {
+          "name": "UI/UX Design",
+          "icon": "devicon-figma-plain",
+          "level": "Medio",
+          "description": "Diseño de interfaces intuitivas con enfoque en experiencia de usuario utilizando herramientas como Figma."
+        },
+        {
+          "name": "Backend Development",
+          "icon": "devicon-nodejs-plain",
+          "level": "Avanzado",
+          "description": "Desarrollo de APIs y lógica del servidor utilizando Node.js y Express."
+        },
+        {
+          "name": "Database Management",
+          "icon": "devicon-postgresql-plain",
+          "level": "Medio",
+          "description": "Gestión y diseño de bases de datos relacionales con PostgreSQL y MongoDB."
+        },
+        {
+          "name": "TypeScript",
+          "icon": "devicon-typescript-plain",
+          "level": "Medio",
+          "description": "Uso de TypeScript para garantizar tipado fuerte y escalabilidad en proyectos grandes."
+        },
+        {
+          "name": "Next.js",
+          "icon": "devicon-nextjs-plain",
+          "level": "Avanzado",
+          "description": "Framework principal para SSR y generación estática de páginas con React."
+        },
+        {
+          "name": "Git & GitHub",
+          "icon": "devicon-git-plain",
+          "level": "Avanzado",
+          "description": "Control de versiones eficiente y trabajo colaborativo mediante ramas y pull requests."
+        },
+        {
+          "name": "PHP",
+          "icon": "devicon-php-plain",
+          "level": "Medio",
+          "description": "Desarrollo de aplicaciones web dinámicas y gestión de servidores con PHP."
+        },
+        {
+          "name": "Tailwind CSS",
+          "icon": "devicon-tailwindcss-plain",
+          "level": "Avanzado",
+          "description": "Estilos y componentes reutilizables con Tailwind CSS para un diseño moderno y adaptable."
+        }
+      ]
+    },
+    "certifications": {
+      "title": "🎖️ Certificaciones",
+      "items": [
+        {
+          "id": 1,
+          "name": "Aprendizaje automático (machine learning) y ciencia de datos.",
+          "link": "https://courses.edx.org/certificates/701dafa629a54605844f0478cb45e488",
+          "platform": "edX",
+          "date": "2024",
+          "description": "Reconocer el valor de los datos para el negocio, aplicar técnicas de aprendizaje automático, usar herramientas de preparación y visualización de datos, y manejar R para análisis y modelado.",
+          "icon": "devicon-python-plain"
+        },
+        {
+          "id": 2,
+          "name": "Fundamentos de ciberseguridad.",
+          "link": "https://courses.edx.org/certificates/e741dbb335cc428a98532a61832520a8",
+          "platform": "edX",
+          "date": "2024",
+          "description": "Identificar los riesgos presentes en la web y como protegerse contra ellos, comprender la estructura de una red y entender la seguridad de los protocolos de transporte y aplicaciones.",
+          "icon": "devicon-kalilinux-original"
+        }
+      ],
+      "cta": "Certificado disponible"
+    },
+    "projects": {
+      "title": "💻 Proyectos",
+      "viewCode": "Ver código",
+      "developedIn": "🗓️ Desarrollado en",
+      "inDevelopment": "¡Actualmente en desarrollo! 🚀",
+      "comingSoon": "¡En camino! 🚀",
+      "items": [
+        {
+          "indev": true,
+          "route": "/tutorgo.png",
+          "title": "TutorGo, una herramienta para tutores particulares y profesionales",
+          "icon": "👨🏻‍🏫",
+          "technologies": [
+            "devicon-react-original",
+            "devicon-nodejs-plain",
+            "devicon-postgresql-plain",
+            "devicon-nextjs-plain",
+            "devicon-figma-plain",
+            "devicon-amazonwebservices-plain"
+          ],
+          "date": "2025",
+          "description": "Plataforma de gestión de tutorías y cursos online y presenciales, con funcionalidades de gestión de contenido.",
+          "link": "https://github.com/Yassin-Pellicer/s3md"
+        },
+        {
+          "route": "/pinpoint.png",
+          "title": "Pinpoint, la plataforma de eventos gratuita",
+          "icon": "🗺️",
+          "technologies": [
+            "devicon-react-original",
+            "devicon-nodejs-plain",
+            "devicon-postgresql-plain",
+            "devicon-nextjs-plain",
+            "devicon-figma-plain"
+          ],
+          "date": "2024",
+          "description": "Plataforma de publicación de eventos gratis, accesible y con características de red social en un mapa global.",
+          "link": "https://github.com/Yassin-Pellicer/pinpoint"
+        },
+        {
+          "route": "/gol.png",
+          "title": "Varios juegos y proyectos pequeños",
+          "icon": "🎮",
+          "technologies": [
+            "devicon-nodejs-plain",
+            "devicon-html5-plain",
+            "devicon-css3-plain",
+            "devicon-javascript-plain"
+          ],
+          "date": "2023",
+          "description": "Varios proyectos pequeños y juegos que me permiten aplicar mis habilidades en diferentes contextos.",
+          "link": "https://github.com/Yassin-Pellicer/Miscellaneous"
+        }
+      ]
+    },
+    "contact": {
+      "title": "☎️ Contacto",
+      "message": "Quieres más información o concertar una entrevista o cita personalizada?",
+      "cta": "¡No dudes en ponerte en contacto conmigo!",
+      "subtitle": "Aquí tienes mis datos de contacto."
+    },
+    "footer": {
+      "copyright": "© Yassin Pellicer Lamla. Todos los derechos reservados.",
+      "contact": "Contacto"
+    }
+  }
+}

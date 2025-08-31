@@ -1,4 +1,7 @@
 "use client";
+
+import "./lib/18n";
+
 import { useState, useEffect, useRef } from "react";
 import {
   Mail,
@@ -12,154 +15,20 @@ import {
   Database,
 } from "lucide-react";
 import { useInView } from "react-intersection-observer";
-import {
-  motion,
-  useAnimation,
-  useAnimationFrame,
-  useMotionValue,
-  useTransform,
-} from "framer-motion";
+
 import "devicon/devicon.min.css";
+import { Header } from "./components/header";
+import { Hero } from "./components/hero";
+import { InViewSection } from "./components/motion";
+import { About } from "./components/about";
+import { Experience } from "./components/experience";
 
-const items = [
-  {
-    emoji: "💯",
-    title: "Expediente académico notable",
-    subtitle: "Media de 7.7 en un currículo impartido en inglés.",
-  },
-  {
-    emoji: "💼",
-    title: "+2 Años de Experiencia en TIC",
-    subtitle: "Desarrollo front-end, back-end y QA con tecnologías recientes.",
-  },
-  {
-    emoji: "🌍",
-    title: "Welche Sprachen sprechen Sie?",
-    subtitle:
-      "Fluidez total en inglés, B1 en francés, y conocimientos básicos en Alemán. Nativo español y valencià.",
-  },
-  {
-    emoji: "🎓",
-    title: "Graduado con Menciones",
-    subtitle:
-      "Ingeniería Informática UPV - Currículo en Inglés (Alto Rendimiento Académico).",
-  },
-  {
-    emoji: "✨",
-    title: "+1 Años de experiencia en desarrollo full-stack",
-    subtitle: "Y cada día sigo aprendiendo.",
-  },
-  {
-    emoji: "🗒️",
-    title: "Blog donde documento mi aprendizaje",
-    subtitle: "¡Pronto publicaré mi primer post!",
-  },
-];
 
-function VerticalCarousel() {
-  const baseX = useMotionValue(0);
-  const itemHeight = 300; // px
-  const totalHeight = items.length * itemHeight;
-
-  useAnimationFrame((t) => {
-    baseX.set((t / 20) % (totalHeight + itemHeight / 2 - 20));
-  });
-
-  return (
-    <div className="flex relative items-center justify-center h-[300px] overflow-hidden">
-      <div
-        className="absolute inset-0 z-10 pointer-events-none"
-        style={{
-          background: `linear-gradient(to right, 
-            rgb(57, 119, 212) 0%, 
-            transparent 5%, 
-            transparent 95%, 
-            rgb(50, 104, 196) 100%)`,
-        }}
-      />
-      {/* Scrolling Items */}
-      <motion.div
-        className="flex flex-row  gap-6"
-        style={{
-          x: useTransform(baseX, (val) => -(val + itemHeight / 2)),
-        }}
-      >
-        {[...items, ...items, ...items].map((item, i) => (
-          <div
-            key={i}
-            className="w-[300px] bg-blue-200 h-[300px] rounded-xl shadow-xl border border-gray-200 px-6 py-4 flex flex-col justify-center relative"
-          >
-            {item.title === "Blog donde documento mi aprendizaje" && (
-              <div className="absolute top-4 right-4 flex flex-row items-center justify-center gap-2 bg-green-100 w-fit rounded-full px-1 text-black font-bold tracking-tighter border-2 border-red-500">
-                <div className="relative h-2 w-2 rounded-full bg-red-500 animate-pulse">
-                  <div className="absolute h-2 w-2 rounded-full bg-red-500 animate-[ping_0.75s_infinite]"></div>
-                </div>
-                <span className="text-xs"> ¡En camino! 🚀</span>
-              </div>
-            )}
-            <div className="text-8xl mb-4 text-center border-b border-black pb-4">
-              {item.emoji}
-            </div>
-            <div className="text-2xl font-bold text-gray-800 mb-2">
-              {item.title}
-            </div>
-            <div className="text-sm text-gray-500 ">{item.subtitle}</div>
-          </div>
-        ))}
-      </motion.div>
-    </div>
-  );
-}
-
-const InViewSection = ({ children, triggerKey }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: false });
-
-  // Initial scroll-into-view animation
-  useEffect(() => {
-    if (inView) {
-      controls.start({ opacity: 1, filter: "blur(0px)", y: 0 });
-    }
-  }, [inView, controls]);
-
-  // Re-trigger animation if triggerKey changes while in view
-  useEffect(() => {
-    if (triggerKey !== undefined && inView) {
-      controls.set({ opacity: 0, filter: "blur(20px)", y: 100 });
-      controls.start({ opacity: 1, filter: "blur(0px)", y: 0 });
-    }
-  }, [triggerKey]);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, filter: "blur(20px)", y: 100 }}
-      animate={controls}
-      transition={{
-        duration: triggerKey !== undefined ? 0.6 : 0.4,
-        ease: "easeOut",
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-};
 
 export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState("about");
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [selectedExperience, setSelectedExperience] = useState(4);
   const [selectedColor, setSelectedColor] = useState([]);
   const [selectedProject, setSelectedProject] = useState(0);
   const scrollRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     const baseColors = [
@@ -184,11 +53,6 @@ export default function Portfolio() {
       setSelectedColor((prev) => [...prev, random]);
     }
   }, []);
-
-  const scrollToSection = (sectionId) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
-    setActiveSection(sectionId);
-  };
 
   const skills = [
     {
@@ -395,77 +259,6 @@ export default function Portfolio() {
     },
   ];
 
-  const experiencesDetails = [
-    {
-      id: 4,
-      company: "Freelance",
-      position: "🤠 Desarrollador independiente",
-      period: "2025 ~",
-      description:
-        "Desarrollador de productos software para particulares y diseñador de páginas web",
-      content: `
-      <p class="text-white">Compaginado con mi actual trabajo a jornada completa, <b>me dedico a la creación de productos software, páginas y aplicaciones web para aquellos particulares </b> que deseen anunciarse,
-      ofrecer sus servicios o simplemente quieran tener una presencia online. Mis principales clientes son...</p>
-        <ul class="list-disc list-inside text-white mt-2">
-          <li class="mb-2"><span class="font-semibold">Particulares que necesiten presencia web mediante un portfolio.</span> Artistas, modelos, profesionales...</li>
-          <li class="mb-2"><span class="font-semibold">Tutores particulares</span> mediante una plataforma que les permite organizar sus horarios de enseñanza y publicar contenido para sus alumnos a modo de blog.</li>
-        </ul>
-      `,
-    },
-    {
-      id: 3,
-      company: "UNIVERSAL TICKETS S.L",
-      position:
-        "🎫 Desarrollador Full-Stack en empresa de venta de tickets online",
-      period: "2025 ~",
-      description:
-        "Desarrollo, mantenimiento e implementación de código para el ERP de una empresa de venta de tickets online.",
-      content: `
-<p class="text-white">En <span class="font-semibold">Universal Tickets S.L</span>, la cuna de <span class="font-semibold">Servientradas</span><sup>&reg;</sup>, he podido crecer como profesional
-desarrollando código en Javascript, HTML, CSS y PHP puros, en un sistema robusto y con años de recorrido y de la mano de profesionales veteranos en el sector de venta de entradas y entretenimiento.
-Entre las cosas de las que me he encargado destacamos...</p>
-        <ul class="list-disc list-inside text-white mt-2">
-          <li class="mb-2"><span class="font-semibold">Diseño a la carta de páginas web.</span> A petición del cliente y de sus necesidades se crea un diseño acorde a sus objetivos.</li>
-          <li class="mb-2"><span class="font-semibold">Integración de servicio de tereceros</span>: Integración de servicio de venta de entradas externo, adaptando las respuestas de su API a nuestro sistema.</li>
-        </ul>
-      `,
-    },
-    {
-      id: 2,
-      company: "F1 CONNECTING",
-      position: "🧠 Front-End Developer y Soporte Técnico",
-      period: "2023 - 2025",
-      description:
-        "Mi experiencia en F1 Connecting ha sido clave para desarrollarme tanto como programador front-end como profesional del soporte técnico.",
-      content: `
-        <p class="text-white">He tenido la oportunidad de participar en tres proyectos distintos, cada uno con su propio enfoque y nivel de responsabilidad:</p>
-        <ul class="list-disc list-inside text-white mt-2">
-          <li class="mb-2"><span class="font-semibold">Soporte Técnico en TPVs de Carrefour</span> (2023 - 2024): atención y resolución de incidencias en sistemas de punto de venta.</li>
-          <li class="mb-2"><span class="font-semibold">Desarrollador en solución de gestión para retail</span> (2024): creación de interfaces funcionales y diseño de flujos de usuario.</li>
-          <li><span class="font-semibold">Desarrollador Front-End en sistema de monitorización de pagos</span> (2024 - 2025): desarrollo de interfaces de usuario y optimización de rendimiento.</li>
-        </ul>
-      `,
-    },
-    {
-      id: 1,
-      company: "LaCuesta Grup",
-      position: "🍔 Camarero y responsable de sala",
-      period: "2022 - 2023",
-      description:
-        "Mi primer contacto con el mundo laboral me permitió aprender a trabajar en equipo y a desarrollar competencias blandas.",
-      content: `
-        <p class="text-white">Durante mi tiempo en LaCuesta Grup aprendí a manejar la compostura en momentos clave de la jornada y a 
-        tratar a la gente amablemente sin importar la circunstancia. Entre otras competencias... <br></br></p>
-        <ul class="list-disc list-inside text-white">
-          <li>Paciencia, comprensión y soltura al hablar con clientes.</li>
-          <li>Trabajo en equipo y colaboración con otros camareros.</li>
-          <li>Destreza física y equilibrio.</li>
-          <li>Habilidades sociales. Refuerzo de idiomas con clientes extranjeros.</li>
-        </ul>
-      `,
-    },
-  ];
-
   const certifications = [
     {
       id: 1,
@@ -491,234 +284,19 @@ Entre las cosas de las que me he encargado destacamos...</p>
 
   return (
     <div className="flex justify-center flex-col items-center bg-gradient-to-br from-blue-500 to-blue-900 select-none">
-      <section className="flex flex-col min-h-screen max-w-6xl sm:px-12 px-4">
-        {/* Header */}
-        <div className="flex justify-center flex-col items-center">
-          <header
-            className={`flex fixed top-0 w-fit justify-center z-50 transition-all duration-300 mt-4 rounded-full sm:px-4 px-1 ${
-              isScrolled ? "bg-black/20 backdrop-blur-lg" : "bg-transparent"
-            }`}
-          >
-            <div className="max-w-6xl mx-auto sm:px-4 px-2">
-              <nav className="flex justify-between items-center py-4">
-                <ul className="flex sm:space-x-8 sm:text-lg space-x-3 text-[12px]">
-                  {[
-                    "Yassin",
-                    "experiencia",
-                    "habilidades",
-                    "proyectos",
-                    "contacto",
-                    "blog",
-                  ].map((section) => (
-                    <li key={section}>
-                      <button
-                        onClick={() => scrollToSection(section)}
-                        className={`text-white hover:cursor-pointer hover:text-white transition-colors capitalize ${
-                          activeSection === section
-                            ? "text-white border-b-2 border-blue-400"
-                            : ""
-                        }`}
-                      >
-                        {section}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-          </header>
-        </div>
+      <section className="flex flex-col items-center min-h-screen max-w-6xl sm:px-12 px-4">
+        <Header></Header>
 
-        {/* Hero Section */}
-        <section className="flex items-center align-center sm:pt-24 pt-24 sm:py-20 py-8 border-b border-white w-full mb-12">
-          <div className="flex flex-col items-center max-w-6xl mx-auto text-center">
-            <p className="font-bold text-lg md:text-xl text-white mb-8">
-              Hola, soy...
-            </p>
-
-            {/* Image + Name side by side on md+, stacked on mobile */}
-            <div className="flex flex-col items-center justify-center gap-6 mb-4">
-              {/* Rounded Image */}
-              <img
-                src="/yo.jpg"
-                alt="Yassin Pellicer Lamla"
-                className="w-42 h-42 mb-4 rounded-full object-cover border-white shadow-lg"
-              />
-
-              {/* Name */}
-              <h1
-                className="text-6xl md:text-8xl font-bold text-white text-center "
-                style={{ fontFamily: "Over The Rainbow" }}
-              >
-                Yassin Pellicer <br></br>Lamla
-              </h1>
-            </div>
-
-            <p className="text-xl md:text-2xl font-bold text-white mb-8">
-              Desarrollador de Software | Graduado en Ingeniería Informática por
-              la UPV <br />
-              Especializado en ciencias de la computación 🤖
-            </p>
-
-            <div className="flex justify-center space-x-6">
-              <a
-                href="https://github.com/Yassin-Pellicer"
-                target="_blank"
-                className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all hover:scale-110"
-              >
-                <Github className="w-6 h-6 text-white" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/yassin-pellicer/"
-                target="_blank"
-                className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all hover:scale-110"
-              >
-                <Linkedin className="w-6 h-6 text-white" />
-              </a>
-              <a
-                href="mailto:yassinpellicerlamla@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all hover:scale-110"
-              >
-                <Mail className="w-6 h-6 text-white" />
-              </a>
-            </div>
-
-            <button
-              onClick={() => {
-                window.scrollTo({
-                  top: window.innerHeight,
-                  behavior: "smooth",
-                });
-              }}
-              className="flex gap-4 sm:mt-20 mt-8 text-white hover:cursor-pointer transition-colors items-center space-x-2 p-3 rounded-full backdrop-blur-md bg-gradient-to-b from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600"
-            >
-              <span className="material-symbols-outlined">arrow_downward</span>
-              Más información
-            </button>
-          </div>
-        </section>
-
-        {/* About Section */}
         <InViewSection>
-          <section id="Yassin" className="sm:py-20 py-8">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-5xl font-bold text-white mb-4 tracking-tighter">
-                {" "}
-                🤔 Sobre Mí
-              </h2>
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="space-y-6">
-                  <p className="text-xl text-white">
-                    Graduado en <b>ingeniería informática por la UPV </b>que
-                    busca crecer como profesional en el ámbito del desarrollo de
-                    soluciones software y de las tecnologías de front y back.
-                    Relacionado con frameworks como Next, Angular y librerías de
-                    front (React). Trabajado también con frameworks de backend
-                    en PHP (Symphony) en proyectos enfocados al retail y al
-                    monitoreo de transacciones en grandes superficies.
-                  </p>
-                  <p className="text-lg text-gray-300 leading-relaxed">
-                    Cuando no estoy programando, me gusta ir al gimnasio, jugar
-                    videojuegos (sobre todo si son de estrategia) o escuchar
-                    música.
-                  </p>
-                </div>
-                <VerticalCarousel />
-              </div>
-            </div>
-          </section>
+          <Hero></Hero>
         </InViewSection>
 
-        {/* Experience Section */}
         <InViewSection>
-          <section id="experiencia" className="sm:py-20 py-8">
-            <div className="flex flex-row flex-wrap justify-between AI-align-center items-center mb-6 gap-6">
-              <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter ">
-                {" "}
-                💼 Experiencia Laboral
-              </h2>
-              <div className="flex flex-row items-center justify-center gap-2 bg-green-100 w-fit rounded-full px-3 py-2 text-black font-bold tracking-tighter border-2 border-green-500">
-                <div className="relative h-4 w-4 rounded-full bg-green-500 animate-pulse">
-                  <div className="absolute h-4 w-4 rounded-full bg-green-500 animate-[ping_0.75s_infinite]"></div>
-                </div>
-                Open to Work! 😊
-              </div>
-            </div>
-            <div className=" grid md:grid-cols-2 gap-4 items-center">
-              <div className="max-w-6xl mx-auto space-y-4 w-full">
-                {experiencesDetails.map((exp, index) => (
-                  <div key={index} className="relative flex flex-row">
-                    <div
-                      onClick={() => setSelectedExperience(exp.id)}
-                      key={index}
-                      className={`hover:cursor-pointer bg-black/20 bg-opacity-50 backdrop-blur-lg rounded-2xl sm:p-6 px-4 py-2 border border-white/20 ${
-                        selectedExperience === exp.id ? "bg-blue-900" : ""
-                      } hover:bg-black/30 hover:bg-opacity-50 transition-all duration-300 hover:scale-[1.01] w-full`}
-                    >
-                      <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full">
-                        <div>
-                          <h3 className="tracking-tighter sm:text-2xl text-lg font-bold text-white mb-2 mr-8">
-                            {exp.position}
-                          </h3>
-                          <h4 className="sm:text-xl text-md text-white mb-2">
-                            {exp.company}
-                          </h4>
-                        </div>
-                        <span className="text-white sm:text-lg text-sm font-medium shrink-0">
-                          {exp.period}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="h-full bg-black/20 bg-opacity-50 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 w-full">
-                  <div className="flex flex-col">
-                    <h3 className="text-3xl tracking-tight font-bold text-white mb-2">
-                      {
-                        experiencesDetails.find(
-                          (exp) => exp.id === selectedExperience
-                        )?.position
-                      }
-                    </h3>
-                    <div className="flex flex-row justify-between items-center align-center mb-2">
-                      <h4 className="text-xl text-white ">
-                        {
-                          experiencesDetails.find(
-                            (exp) => exp.id === selectedExperience
-                          )?.period
-                        }
-                      </h4>
-                      <p className="text-gray-200 text-sm">
-                        {
-                          experiencesDetails.find(
-                            (exp) => exp.id === selectedExperience
-                          )?.company
-                        }
-                      </p>
-                    </div>
-                    <p className="text-white text-lg tracking-tight font-bold">
-                      {
-                        experiencesDetails.find(
-                          (exp) => exp.id === selectedExperience
-                        )?.description
-                      }
-                    </p>
-                  </div>
-                </div>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: experiencesDetails.find(
-                      (exp) => exp.id === selectedExperience
-                    )?.content,
-                  }}
-                ></div>
-              </div>
-            </div>
-          </section>
+          <About></About>
+        </InViewSection>
+         
+        <InViewSection>
+          <Experience></Experience> 
         </InViewSection>
 
         {/* Abilities and Certifications Section */}
