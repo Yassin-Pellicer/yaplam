@@ -2,11 +2,11 @@
 
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 
 type InViewSectionProps = {
   children: React.ReactNode;
-  triggerKey?: string | number; // 🔑 external trigger
+  triggerKey?: string | number | any; // 🔑 external trigger
 };
 
 export const InViewSection = ({ children, triggerKey }: InViewSectionProps) => {

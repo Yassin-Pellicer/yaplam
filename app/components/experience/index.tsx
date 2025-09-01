@@ -1,20 +1,27 @@
-"use client";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import { useTranslation } from "next-i18next";
 
 export const Experience = () => {
 
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
 
-  const experiences = t("sections.experience.experiences", { returnObjects: true }) as Array<{ content: { paragraph: string; list: string[] }, id: number; company: string; position: string; period: string; description: string }>;
-  const [selectedExperience, setSelectedExperience] = useState<{ content: { paragraph: string; list: string[] }, id: number; company: string; position: string; period: string; description: string } | null>(experiences[0]);
+  const rawExperiences = t("sections.experience.experiences", { returnObjects: true });
+  const experiences = Array.isArray(rawExperiences) ? rawExperiences : [];
+
+  const [selectedExperience, setSelectedExperience] = useState<{ content: { paragraph: string; list: string[] }, id: number; company: string; position: string; period: string; description: string } | null>(null);
+
+  useEffect(() => {
+    setSelectedExperience(
+      experiences.find((exp) => exp.id === selectedExperience?.id) || experiences[0]
+    );
+  }, [i18n.language]);
 
   return (
-    <section id="experiencia" className="sm:py-20 py-8">
+    <section id="1" className="sm:py-20 py-8">
       <div className="flex flex-row flex-wrap justify-between AI-align-center items-center mb-6 gap-6">
         <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter ">
           {" "}
-          💼 Experiencia Laboral
+          {t("sections.experience.title")}
         </h2>
         <div className="flex flex-row items-center justify-center gap-2 bg-green-100 w-fit rounded-full px-3 py-2 text-black font-bold tracking-tighter border-2 border-green-500">
           <div className="relative h-4 w-4 rounded-full bg-green-500 animate-pulse">
@@ -71,11 +78,11 @@ export const Experience = () => {
               <p className="text-white text-md mt-6 tracking-tight">
                 {selectedExperience?.content.paragraph}
               </p>
-                {selectedExperience?.content.list.map((item: string, index: number) => (
-                  <li key={index} className="text-white text-md mt-2 tracking-tight">
-                    {item}
-                  </li>
-                ))}
+              {selectedExperience?.content.list.map((item: string, index: number) => (
+                <li key={index} className="text-white text-md mt-2 tracking-tight">
+                  {item}
+                </li>
+              ))}
             </div>
           </div>
           <div

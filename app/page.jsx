@@ -2,6 +2,7 @@
 
 import "./lib/18n";
 
+
 import { useState, useEffect, useRef } from "react";
 import {
   Mail,
@@ -22,105 +23,14 @@ import { Hero } from "./components/hero";
 import { InViewSection } from "./components/motion";
 import { About } from "./components/about";
 import { Experience } from "./components/experience";
+import { AbsCerts } from "./components/abs&certs";
+import { Projects } from "./components/projects";
 
 
 
 export default function Portfolio() {
-  const [selectedColor, setSelectedColor] = useState([]);
-  const [selectedProject, setSelectedProject] = useState(0);
-  const scrollRef = useRef(null);
 
-  useEffect(() => {
-    const baseColors = [
-      "bg-orange-600/90",
-      "bg-blue-600/90",
-      "bg-green-600/90",
-      "bg-red-600/90",
-      "bg-yellow-600/90",
-      "bg-purple-600/90",
-      "bg-pink-600/90",
-      "bg-teal-600/90",
-      "bg-indigo-600/90",
-      "bg-gray-600/90",
-      "bg-rose-600/90",
-      "bg-lime-600/90",
-      "bg-emerald-600/90",
-      "bg-cyan-600/90",
-      "bg-violet-600/90",
-    ];
-    for (let i = 0; i < baseColors.length; i++) {
-      const random = baseColors[Math.floor(Math.random() * baseColors.length)];
-      setSelectedColor((prev) => [...prev, random]);
-    }
-  }, []);
-
-  const skills = [
-    {
-      name: "Frontend Development",
-      icon: "devicon-react-original",
-      level: "Avanzado",
-      description:
-        "Experiencia sólida construyendo interfaces con React y tecnologías modernas del frontend.",
-    },
-    {
-      name: "UI/UX Design",
-      icon: "devicon-figma-plain",
-      level: "Medio",
-      description:
-        "Diseño de interfaces intuitivas con enfoque en experiencia de usuario utilizando herramientas como Figma.",
-    },
-    {
-      name: "Backend Development",
-      icon: "devicon-nodejs-plain",
-      level: "Avanzado",
-      description:
-        "Desarrollo de APIs y lógica del servidor utilizando Node.js y Express.",
-    },
-    {
-      name: "Database Management",
-      icon: "devicon-postgresql-plain",
-      level: "Medio",
-      description:
-        "Gestión y diseño de bases de datos relacionales con PostgreSQL y MongoDB.",
-    },
-    {
-      name: "TypeScript",
-      icon: "devicon-typescript-plain",
-      level: "Medio",
-      description:
-        "Uso de TypeScript para garantizar tipado fuerte y escalabilidad en proyectos grandes.",
-    },
-    {
-      name: "Next.js",
-      icon: "devicon-nextjs-plain",
-      level: "Avanzado",
-      description:
-        "Framework principal para SSR y generación estática de páginas con React.",
-    },
-    {
-      name: "Git & GitHub",
-      icon: "devicon-git-plain",
-      level: "Avanzado",
-      description:
-        "Control de versiones eficiente y trabajo colaborativo mediante ramas y pull requests.",
-    },
-    {
-      name: "PHP",
-      icon: "devicon-php-plain",
-      level: "Medio",
-      description:
-        "Desarrollo de aplicaciones web dinámicas y gestión de servidores con PHP.",
-    },
-    {
-      name: "Tailwind CSS",
-      icon: "devicon-tailwindcss-plain",
-      level: "Avanzado",
-      description:
-        "Estilos y componentes reutilizables con Tailwind CSS para un diseño moderno y adaptable.",
-    },
-  ];
-
-  const projects = [
+   const projects = [
     {
       indev: true,
       route: "/tutorgo.png",
@@ -259,29 +169,7 @@ export default function Portfolio() {
     },
   ];
 
-  const certifications = [
-    {
-      id: 1,
-      name: "Aprendizaje automático (machine learning) y ciencia de datos.",
-      link: "https://courses.edx.org/certificates/701dafa629a54605844f0478cb45e488",
-      platform: "edX",
-      date: "2024",
-      description:
-        "Reconocer el valor de los datos para el negocio, aplicar técnicas de aprendizaje automático, usar herramientas de preparación y visualización de datos, y manejar R para análisis y modelado.",
-      icon: "devicon-python-plain",
-    },
-    {
-      id: 2,
-      name: "Fundamentos de ciberseguridad.",
-      link: "https://courses.edx.org/certificates/e741dbb335cc428a98532a61832520a8",
-      platform: "edX",
-      date: "2024",
-      description:
-        "Identificar los riesgos presentes en la web y como protegerse contra ellos, comprender la estructura de una red y entender la seguridad de los protocolos de transporte y aplicaciones.",
-      icon: "devicon-kalilinux-original",
-    },
-  ];
-
+  
   return (
     <div className="flex justify-center flex-col items-center bg-gradient-to-br from-blue-500 to-blue-900 select-none">
       <section className="flex flex-col items-center min-h-screen max-w-6xl sm:px-12 px-4">
@@ -301,257 +189,12 @@ export default function Portfolio() {
 
         {/* Abilities and Certifications Section */}
         <InViewSection>
-          <section
-            id="habilidades"
-            className="flex-col sm:pt-20 pt-8 sm:pb-0! pb-8"
-          >
-            <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
-              ✨ Habilidades
-            </h2>
-            <div className="grid md:grid-cols-3 grid-cols-2 gap-4">
-              {skills.map((skill, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={`${selectedColor[index]} backdrop-blur-md rounded-2xl sm:p-8 p-4 border border-white/10 hover:scale-[1.02] hover:shadow-md transition-all duration-200`}
-                  >
-                    <div className="flex flex-col mb-4">
-                      <div className="flex flex-row items-center gap-4 mb-4 flex-wrap">
-                        <i className={`${skill.icon} text-white text-3xl`}></i>
-                        <h3 className="sm:text-xl font-bold sm:mb-2 text-white">
-                          {skill.name}
-                        </h3>
-                      </div>
-                      <h3 className="sm:text-md text-sm text-white">
-                        {skill.description}
-                      </h3>
-                    </div>
-                    <span
-                      className={`bg-white/10 backdrop-blur-md rounded-full p-2 flex text-white text-sm w-fit px-4 py-2`}
-                    >
-                      {skill.level}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-
-          <section id="habilidades" className="flex-col sm:py-20">
-            <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
-              🎖️ Certificaciones
-            </h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              {certifications.map((skill, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={`${selectedColor[index]} backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:scale-[1.02] hover:shadow-md transition-all duration-200 hover:cursor-pointer`}
-                    onClick={() => window.open(skill.link, "_blank")}
-                  >
-                    <div className="flex flex-col mb-4">
-                      <div className="flex flex-row items-center gap-4 mb-2">
-                        <i className={`${skill.icon} text-white text-3xl`}></i>
-                        <h3 className="text-xl font-bold mb-2 text-white">
-                          {skill.name}
-                        </h3>
-                      </div>
-                      <div className="flex flex-row justify-between items-center gap-4 mb-2">
-                        <h3 className="text-xl font-bold mb-2 text-white">
-                          🏫 {skill.platform}
-                        </h3>
-                        <h3 className="text-xl font-bold mb-2 text-white">
-                          🗓️ {skill.date}
-                        </h3>
-                      </div>
-                      <h3 className="text-md text-white mb-10">
-                        {skill.description}
-                      </h3>
-                    </div>
-                    <div className="absolute bottom-6 left-6 flex flex-row items-center justify-center gap-2 bg-green-100 w-fit rounded-full px-3 py-2 text-black font-bold tracking-tighter border-2 border-green-500">
-                      <div className="relative h-4 w-4 rounded-full bg-green-500 animate-pulse">
-                        <div className="absolute h-4 w-4 rounded-full bg-green-500 animate-[ping_0.75s_infinite]"></div>
-                      </div>
-                      Certificado disponible{" "}
-                      <span
-                        className="material-symbols-outlined"
-                        style={{ fontSize: "18px" }}
-                      >
-                        open_in_new
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
+          <AbsCerts></AbsCerts>
         </InViewSection>
 
         {/* Projects Section */}
         <InViewSection>
-          <section id="proyectos" className="sm:py-20 pb-0! py-16">
-            <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
-              💻 Proyectos
-            </h2>
-            {/* Left scroll button */}
-            <div
-              ref={scrollRef}
-              className="overflow-y-hidden scrollbar-hide w-full cursor-grab active:cursor-grabbing scroll-smooth"
-            >
-              <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 mb-4">
-                {projects.map((skill, index) => (
-                  <div
-                    key={index}
-                    onClick={(e) => {
-                      setSelectedProject(index);
-                    }}
-                    className={`snap-center relative ${
-                      selectedColor[index + 2]
-                    } pb-4 backdrop-blur-md rounded-2xl p-6 border ${
-                      selectedProject === index
-                        ? "border-white"
-                        : "border-white/10"
-                    } hover:shadow-md hover:${
-                      selectedColor[index + 2]
-                    }/10 transition-all duration-200 cursor-pointer w-full flex-wrap`}
-                  >
-                    {skill.indev && (
-                      <div className="absolute bottom-4 right-4 flex flex-row shadow-xl items-center justify-center gap-2 bg-green-100 w-fit rounded-full px-3 text-black font-bold tracking-tighter border-2 border-red-500">
-                        <div className="relative h-2 w-2 rounded-full bg-red-500 animate-pulse">
-                          <div className="absolute h-2 w-2 rounded-full bg-red-500 animate-[ping_0.75s_infinite]"></div>
-                        </div>
-                        <span className="text-sm">🚀</span>
-                      </div>
-                    )}
-                    <div className="flex flex-col mb-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-5xl">{skill.icon}</span>
-                        <h3 className="text-xl tracking-tight font-bold text-white">
-                          {skill.title}
-                        </h3>
-                      </div>
-                      <div className="flex justify-between items-center gap-4">
-                        <h3 className="text-sm font-bold text-white">
-                          🗓️ Desarrollado en {skill.date}
-                        </h3>
-                        <div className="flex gap-2">
-                          {skill.technologies.map((tech, index) => (
-                            <i className={`${tech} text-white text-md`}></i>
-                          ))}
-                        </div>
-                      </div>
-                      <hr className="border-t-2 border-white/50 my-4" />
-                      <p className="text-white text-sm">{skill.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="flex justify-between flex-row items-center w-full mb-4">
-              <button
-                onClick={() => {
-                  if (selectedProject > 0) {
-                    setSelectedProject(selectedProject - 1);
-                  } else {
-                    setSelectedProject(projects.length - 1);
-                  }
-                }}
-                aria-label="Scroll left"
-                className="flex flex-col justify-center w-10 h-10 z-10 0 bg-black/40 hover:bg-black/70 text-white rounded-full shrink-0"
-                style={{ userSelect: "none" }}
-              >
-                <span className="material-symbols-outlined">chevron_left</span>
-              </button>
-
-              <button
-                onClick={() => {
-                  if (selectedProject < projects.length - 1) {
-                    setSelectedProject(selectedProject + 1);
-                  } else {
-                    setSelectedProject(0);
-                  }
-                }}
-                aria-label="Scroll left"
-                className="flex flex-col justify-center w-10 h-10 z-10 0 bg-black/40 hover:bg-black/70 text-white rounded-full shrink-0"
-                style={{ userSelect: "none" }}
-              >
-                <span className="material-symbols-outlined">chevron_right</span>
-              </button>
-            </div>
-          </section>
-        </InViewSection>
-
-        <InViewSection triggerKey={selectedProject}>
-          <div
-            className={`snap-center relative backdrop-blur-md rounded-2xl p-6 border bg-blue-900 border-white/10 hover:shadow-md transition-all duration-200 cursor-pointer pb-8`}
-          >
-            {projects.find((p, i) => i === selectedProject)?.indev && (
-              <div className="absolute top-4 left-4 flex flex-row shadow-xl items-center justify-center gap-2 bg-green-100 w-fit rounded-full px-3 text-black font-bold tracking-tighter border-2 border-red-500">
-                <div className="relative h-2 w-2 rounded-full bg-red-500 animate-pulse">
-                  <div className="absolute h-2 w-2 rounded-full bg-red-500 animate-[ping_0.75s_infinite]"></div>
-                </div>
-                <span className="text-md"> ¡Actualmente en desarrollo! 🚀</span>
-              </div>
-            )}
-            <div className="flex flex-wrap md:flex-nowrap gap-4 flex-row mb-6">
-              <img
-                src={projects.find((p, i) => i === selectedProject)?.route}
-                className="w-full h-68 rounded-lg object-cover"
-                alt=""
-              />
-              <div className="flex flex-col md:ml-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-5xl">
-                    {projects.find((p, i) => i === selectedProject)?.icon}
-                  </span>
-                  <h3 className="text-2xl font-bold text-white">
-                    {projects.find((p, i) => i === selectedProject)?.title}
-                  </h3>
-                </div>
-                <div className="flex justify-between items-center gap-4">
-                  <h3 className="text-lg font-bold text-white">
-                    🗓️ Desarrollado en{" "}
-                    {projects.find((p, i) => i === selectedProject)?.date}
-                  </h3>
-                  <div className="flex gap-2">
-                    {projects
-                      .find((p, i) => i === selectedProject)
-                      ?.technologies.map((tech, index) => (
-                        <i className={`${tech} text-white text-xl`}></i>
-                      ))}
-                  </div>
-                </div>
-                <hr className="border-t-2 border-white/50 my-4" />
-                <p className="text-white text-lg">
-                  {projects.find((p, i) => i === selectedProject)?.description}
-                </p>
-              </div>
-            </div>
-
-            <div
-              className="mb-18"
-              dangerouslySetInnerHTML={{
-                __html: projects.find((exp, index) => index === selectedProject)
-                  ?.content,
-              }}
-            ></div>
-
-            <div
-              onClick={() =>
-                window.open(
-                  projects.find((p, i) => i === selectedProject)?.link,
-                  "_blank"
-                )
-              }
-              className="hover:bg-green-500 hover:text-white absolute bottom-6 left-6 flex items-center gap-2 bg-green-100 w-fit rounded-full px-3 py-2 text-black font-bold tracking-tighter border-2 border-green-500 transition-all duration-200"
-            >
-              Ver código
-              <span
-                className="devicon-github-plain"
-                style={{ fontSize: "18px" }}
-              ></span>
-            </div>
-          </div>
+          <Projects></Projects>
         </InViewSection>
 
         {/* Contact Section */}

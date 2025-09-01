@@ -12,7 +12,7 @@
   "hero": {
     "greeting": "Hello, my name is...",
     "title": "Software Developer | Graduated in Computer Science by the UPV",
-    "subtitle": "Specialized in computer science",
+    "subtitle": "Specialized in computer science 🤖",
     "cta": "More information"
   },
   "carousel": {
@@ -58,13 +58,13 @@
       "personal": "When I'm not programming, I like to go to the gym, play video games (especially strategy ones) or listen to music."
     },
     "experience": {
-      "title": "Experience",
+      "title": "💼 Experience",
       "openToWork": "Open to Work! 😊",
       "experiences": [
         {
           "id": 4,
           "company": "Freelance",
-          "position": "🤠 Independent Developer",
+          "position": "Independent Developer",
           "period": "2025 ~",
           "description": "Developer of software products for individuals and web designer",
           "content": {
@@ -78,7 +78,7 @@
         {
           "id": 3,
           "company": "UNIVERSAL TICKETS S.L",
-          "position": "🎫 Full-Stack Developer in an online ticketing company",
+          "position": "Full-Stack Developer in an online ticketing company",
           "period": "2025 ~",
           "description": "Development, maintenance and implementation of code for the ERP of an online ticketing company.",
           "content": {
@@ -92,7 +92,7 @@
         {
           "id": 2,
           "company": "F1 CONNECTING",
-          "position": "🧠 Front-End Developer and Technical Support",
+          "position": "Front-End Developer and Technical Support",
           "period": "2023 - 2025",
           "description": "My experience at F1 Connecting has been key to developing myself as a front-end developer and technical support professional.",
           "content": {
@@ -107,7 +107,7 @@
         {
           "id": 1,
           "company": "LaCuesta Grup",
-          "position": "🍔 Waiter and shift leader",
+          "position": "Waiter and shift leader",
           "period": "2022 - 2023",
           "description": "My first contact with the working world allowed me to learn to work in a team and develop soft skills.",
           "content": {
@@ -123,66 +123,75 @@
       ]
     },
     "skills": {
-      "title": "Skills",
+      "title": "✨ Skills",
       "items": [
         {
           "name": "Frontend Development",
           "icon": "devicon-react-original",
           "level": "Advanced",
-          "description": "Solid experience building interfaces with React and modern frontend technologies."
+          "description": "Solid experience building interfaces with React and modern frontend technologies.",
+          "color": "bg-blue-600"
         },
         {
           "name": "UI/UX Design",
           "icon": "devicon-figma-plain",
           "level": "Medium",
-          "description": "Designing intuitive interfaces with a focus on user experience using tools like Figma."
+          "description": "Designing intuitive interfaces with a focus on user experience using tools like Figma.",
+          "color": "bg-green-600"
         },
         {
           "name": "Backend Development",
           "icon": "devicon-nodejs-plain",
           "level": "Advanced",
-          "description": "Developing APIs and server-side logic using Node.js and Express."
+          "description": "Developing APIs and server-side logic using Node.js and Express.",
+          "color": "bg-amber-600"
         },
         {
           "name": "Database Management",
           "icon": "devicon-postgresql-plain",
           "level": "Medium",
-          "description": "Managing and designing relational databases with PostgreSQL and MongoDB."
+          "description": "Managing and designing relational databases with PostgreSQL and MongoDB.",
+          "color": "bg-indigo-600"
         },
         {
           "name": "TypeScript",
           "icon": "devicon-typescript-plain",
           "level": "Medium",
-          "description": "Using TypeScript to ensure strong typing and scalability in large projects."
+          "description": "Using TypeScript to ensure strong typing and scalability in large projects.",
+          "color": "bg-purple-600"
         },
         {
           "name": "Next.js",
           "icon": "devicon-nextjs-plain",
           "level": "Advanced",
-          "description": "Main framework for SSR and static site generation with React."
+          "description": "Main framework for SSR and static site generation with React.",
+          "color": "bg-pink-600"
         },
         {
           "name": "Git & GitHub",
           "icon": "devicon-git-plain",
           "level": "Advanced",
-          "description": "Efficient version control and collaborative work through branches and pull requests."
+          "description": "Efficient version control and collaborative work through branches and pull requests.",
+          "color": "bg-red-600"
         },
         {
           "name": "PHP",
           "icon": "devicon-php-plain",
           "level": "Medium",
-          "description": "Developing dynamic web applications and managing servers with PHP."
+          "description": "Developing dynamic web applications and managing servers with PHP.",
+          "color": "bg-orange-600"
         },
         {
           "name": "Tailwind CSS",
           "icon": "devicon-tailwindcss-plain",
           "level": "Advanced",
-          "description": "Styling and componentizing with Tailwind CSS for a modern and adaptable design."
+          "description": "Styling and componentizing with Tailwind CSS for a modern and adaptable design.",
+          "color": "bg-teal-600"
         }
       ]
     },
     "certifications": {
-      "title": "Certifications",
+      "title": "🎖️ Certifications",
       "items": [
         {
           "id": 1,
@@ -206,7 +215,7 @@
       "cta": "Certificate available"
     },
     "projects": {
-      "title": "Projects",
+      "title": "💻 Projects",
       "viewCode": "View code",
       "developedIn": "Developed in",
       "inDevelopment": "Currently in development! 🚀",
@@ -227,7 +236,15 @@
           ],
           "date": "2025",
           "description": "Platform for managing tutoring and online courses, with content management features.",
-          "link": "https://github.com/Yassin-Pellicer/s3md"
+          "link": "https://github.com/Yassin-Pellicer/s3md",
+          "color": "bg-blue-600",
+          "content": [
+            "<0>TutorGo</0> is a platform for managing tutoring and online courses, designed for private tutors and professionals who want to digitize and organize their educational offer.",
+            "It allows creating, organizing and controlling tutoring sessions, managing schedules, students and educational materials in an efficient way.",
+            "It offers tools for planning online or in-person courses in an intuitive way and optimizing the time of tutors.",
+            "<1>Complete management of educational content, students and sessions</1>, including materials, attendance and progress tracking.",
+            "Integration with AWS services for storage, security and scalable deployment, ensuring reliability and performance."
+          ]
         },
         {
           "route": "/pinpoint.png",
@@ -242,7 +259,14 @@
           ],
           "date": "2024",
           "description": "Free event platform, accessible and with social network features on a global map.",
-          "link": "https://github.com/Yassin-Pellicer/pinpoint"
+          "link": "https://github.com/Yassin-Pellicer/pinpoint",
+          "color": "bg-green-600",
+          "content": [
+            "<0>Pinpoint</0> is a web platform that allows users to create, share and explore events and itineraries through geolocalized control points on an interactive map.",
+            "Each control point can include multimedia information, QR codes and additional details, making the user experience richer and more complete.",
+            "<1>Highlighted features:</1> creation of public or private events, registration management, customized visibility and notifications.",
+            "Implemented with Next.js and React, integrating internationalization (i18n) and user-centered design to simplify navigation and event discovery."
+          ]
         },
         {
           "route": "/gol.png",
@@ -255,8 +279,15 @@
             "devicon-javascript-plain"
           ],
           "date": "2023",
-          "description": "Various small projects and games that allow me to apply my skills in different contexts.",
-          "link": "https://github.com/Yassin-Pellicer/Miscellaneous"
+          "description": "Various small projects and games that allow me to apply my skills in different contexts of programming.",
+          "link": "https://github.com/Yassin-Pellicer/Miscellaneous",
+          "color": "bg-yellow-600",
+          "content": [
+            "<0>This repository</0> includes various personal projects that allow me to apply my skills in different contexts, from compilers to games and graphic simulations.",
+            "Among them are a compiler for a subset of the C language, Wikipedia scraping tools, interactive visualizations of fractal sets and Turing machine simulators.",
+            "There are also implementations of classic games, such as Snake and Brick Breaker, which helped me practice graphical interfaces, game logic and animations.",
+            "<1>These projects</1> not only reinforced my technical knowledge in programming, data structures and algorithms, but also provided an excellent opportunity to experiment with interactive visualizations and creating engaging user experiences."
+          ]
         }
       ]
     },

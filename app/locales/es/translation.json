@@ -64,7 +64,7 @@
         {
           "id": 4,
           "company": "Freelance",
-          "position": "🤠 Desarrollador independiente",
+          "position": "Desarrollador independiente",
           "period": "2025 ~",
           "description": "Desarrollador de productos software para particulares y diseñador de páginas web",
           "content": {
@@ -78,7 +78,7 @@
         {
           "id": 3,
           "company": "UNIVERSAL TICKETS S.L",
-          "position": "🎫 Desarrollador Full-Stack en empresa de venta de tickets online",
+          "position": "Desarrollador Full-Stack en empresa de venta de tickets online",
           "period": "2025 ~",
           "description": "Desarrollo, mantenimiento e implementación de código para el ERP de una empresa de venta de tickets online.",
           "content": {
@@ -92,7 +92,7 @@
         {
           "id": 2,
           "company": "F1 CONNECTING",
-          "position": "🧠 Front-End Developer y Soporte Técnico",
+          "position": "Front-End Developer y Soporte Técnico",
           "period": "2023 - 2025",
           "description": "Mi experiencia en F1 Connecting ha sido clave para desarrollarme tanto como programador front-end como profesional del soporte técnico.",
           "content": {
@@ -107,7 +107,7 @@
         {
           "id": 1,
           "company": "LaCuesta Grup",
-          "position": "🍔 Camarero y responsable de sala",
+          "position": "Camarero y responsable de sala",
           "period": "2022 - 2023",
           "description": "Mi primer contacto con el mundo laboral me permitió aprender a trabajar en equipo y a desarrollar competencias blandas.",
           "content": {
@@ -129,55 +129,64 @@
           "name": "Frontend Development",
           "icon": "devicon-react-original",
           "level": "Avanzado",
-          "description": "Experiencia sólida construyendo interfaces con React y tecnologías modernas del frontend."
+          "description": "Experiencia sólida construyendo interfaces con React y tecnologías modernas del frontend.",
+          "color": "bg-blue-600"
         },
         {
           "name": "UI/UX Design",
           "icon": "devicon-figma-plain",
           "level": "Medio",
-          "description": "Diseño de interfaces intuitivas con enfoque en experiencia de usuario utilizando herramientas como Figma."
+          "description": "Diseño de interfaces intuitivas con enfoque en experiencia de usuario utilizando herramientas como Figma.",
+          "color": "bg-green-600"
         },
         {
           "name": "Backend Development",
           "icon": "devicon-nodejs-plain",
           "level": "Avanzado",
-          "description": "Desarrollo de APIs y lógica del servidor utilizando Node.js y Express."
+          "description": "Desarrollo de APIs y lógica del servidor utilizando Node.js y Express.",
+          "color": "bg-amber-600"
         },
         {
           "name": "Database Management",
           "icon": "devicon-postgresql-plain",
           "level": "Medio",
-          "description": "Gestión y diseño de bases de datos relacionales con PostgreSQL y MongoDB."
+          "description": "Gestión y diseño de bases de datos relacionales con PostgreSQL y MongoDB.",
+          "color": "bg-indigo-600"
         },
         {
           "name": "TypeScript",
           "icon": "devicon-typescript-plain",
           "level": "Medio",
-          "description": "Uso de TypeScript para garantizar tipado fuerte y escalabilidad en proyectos grandes."
+          "description": "Uso de TypeScript para garantizar tipado fuerte y escalabilidad en proyectos grandes.",
+          "color": "bg-purple-600"
         },
         {
           "name": "Next.js",
           "icon": "devicon-nextjs-plain",
           "level": "Avanzado",
-          "description": "Framework principal para SSR y generación estática de páginas con React."
+          "description": "Framework principal para SSR y generación estática de páginas con React.",
+          "color": "bg-pink-600"
         },
         {
           "name": "Git & GitHub",
           "icon": "devicon-git-plain",
           "level": "Avanzado",
-          "description": "Control de versiones eficiente y trabajo colaborativo mediante ramas y pull requests."
+          "description": "Control de versiones eficiente y trabajo colaborativo mediante ramas y pull requests.",
+          "color": "bg-red-600"
         },
         {
           "name": "PHP",
           "icon": "devicon-php-plain",
           "level": "Medio",
-          "description": "Desarrollo de aplicaciones web dinámicas y gestión de servidores con PHP."
+          "description": "Desarrollo de aplicaciones web dinámicas y gestión de servidores con PHP.",
+          "color": "bg-orange-600"
         },
         {
           "name": "Tailwind CSS",
           "icon": "devicon-tailwindcss-plain",
           "level": "Avanzado",
-          "description": "Estilos y componentes reutilizables con Tailwind CSS para un diseño moderno y adaptable."
+          "description": "Estilos y componentes reutilizables con Tailwind CSS para un diseño moderno y adaptable.",
+          "color": "bg-teal-600"
         }
       ]
     },
@@ -208,7 +217,7 @@
     "projects": {
       "title": "💻 Proyectos",
       "viewCode": "Ver código",
-      "developedIn": "🗓️ Desarrollado en",
+      "developedIn": "Desarrollado en",
       "inDevelopment": "¡Actualmente en desarrollo! 🚀",
       "comingSoon": "¡En camino! 🚀",
       "items": [
@@ -227,7 +236,15 @@
           ],
           "date": "2025",
           "description": "Plataforma de gestión de tutorías y cursos online y presenciales, con funcionalidades de gestión de contenido.",
-          "link": "https://github.com/Yassin-Pellicer/s3md"
+          "link": "https://github.com/Yassin-Pellicer/s3md",
+          "color": "bg-blue-600",
+          "content": [
+            "<0>TutorGo</0> es una plataforma de gestión de tutorías y cursos online y presenciales, diseñada para tutores particulares y profesionales que buscan digitalizar y organizar su oferta educativa.",
+            "Permite crear, organizar y controlar sesiones de tutoría, gestionar horarios, alumnos y materiales educativos de manera eficiente.",
+            "Ofrece herramientas para planificar cursos presenciales u online de forma intuitiva y optimizar el tiempo de los tutores.",
+            "<1>Gestión completa de contenido educativo, alumnos y sesiones</1>, incluyendo materiales, asistencia y seguimiento de progreso.",
+            "Integración con servicios de AWS para almacenamiento, seguridad y despliegue escalable, asegurando confiabilidad y rendimiento."
+          ]
         },
         {
           "route": "/pinpoint.png",
@@ -242,7 +259,14 @@
           ],
           "date": "2024",
           "description": "Plataforma de publicación de eventos gratis, accesible y con características de red social en un mapa global.",
-          "link": "https://github.com/Yassin-Pellicer/pinpoint"
+          "link": "https://github.com/Yassin-Pellicer/pinpoint",
+          "color": "bg-green-600",
+          "content": [
+            "<0>Pinpoint</0> es una plataforma web que permite a los usuarios crear, compartir y explorar eventos e itinerarios mediante puntos de control geolocalizados sobre un mapa interactivo.",
+            "Cada punto de control puede incluir información multimedia, códigos QR y detalles adicionales, haciendo la experiencia de usuario más rica y completa.",
+            "<1>Funcionalidades destacadas:</1> creación de eventos públicos o privados, gestión de inscripciones, visibilidad personalizada y notificaciones.",
+            "Implementada con Next.js y React, integrando internacionalización (i18n) y diseño centrado en la experiencia del usuario para simplificar la navegación y el descubrimiento de eventos."
+          ]
         },
         {
           "route": "/gol.png",
@@ -255,8 +279,15 @@
             "devicon-javascript-plain"
           ],
           "date": "2023",
-          "description": "Varios proyectos pequeños y juegos que me permiten aplicar mis habilidades en diferentes contextos.",
-          "link": "https://github.com/Yassin-Pellicer/Miscellaneous"
+          "description": "Diversos proyectos personales y juegos que permiten explorar y aplicar habilidades en distintos contextos de programación.",
+          "link": "https://github.com/Yassin-Pellicer/Miscellaneous",
+          "color": "bg-yellow-600",
+          "content": [
+            "<0>Este repositorio</0> incluye varios proyectos personales que me permiten aplicar mis habilidades en distintos contextos, desde compiladores hasta juegos y simulaciones gráficas.",
+            "Entre ellos se encuentran un compilador para un subconjunto del lenguaje C, herramientas de scraping de Wikipedia, visualizaciones interactivas de conjuntos fractales y simuladores de máquinas de Turing.",
+            "También hay implementaciones de juegos clásicos, como Snake y Brick Breaker, que me ayudaron a practicar interfaces gráficas, lógica de juego y animaciones.",
+            "<1>Estos proyectos</1> no solo han reforzado mis conocimientos técnicos en programación, estructuras de datos y algoritmia, sino que también han sido una excelente oportunidad para experimentar con visualizaciones interactivas y la creación de experiencias de usuario atractivas."
+          ]
         }
       ]
     },
