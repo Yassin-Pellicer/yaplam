@@ -1,7 +1,7 @@
 import { t } from "i18next";
 import { motion, useAnimationFrame, useMotionValue, useTransform } from "motion/react";
 
-export const Carousel = ({ items }: any) => {
+export const Carousel = ({ items }: { items: Array<any> }) => {
   const baseX = useMotionValue(0);
   const itemHeight = 300;
   const totalHeight = items.length * itemHeight;
