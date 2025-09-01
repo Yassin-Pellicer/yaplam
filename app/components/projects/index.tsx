@@ -132,7 +132,7 @@ export const Projects = () => {
                 </h3>
                 <div className="flex gap-2">
                   {selectedProject.technologies.map((tech, index) => (
-                    <i className={`${tech} text-white text-xl`}></i>
+                    <i key={index} className={`${tech} text-white text-xl`}></i>
                   ))}
                 </div>
               </div>
