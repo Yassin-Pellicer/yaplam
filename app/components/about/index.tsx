@@ -11,7 +11,6 @@ export const About = () => {
   }, []);
 
   if (!mounted) {
-    // Prevent hydration mismatch
     return <div className="sm:py-20 py-8" style={{ minHeight: "400px" }} />;
   }
 

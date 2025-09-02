@@ -3,7 +3,7 @@ import { Trans, useTranslation } from "next-i18next";
 import { InView } from "react-intersection-observer";
 import { InViewSection } from "../motion";
 
-export const Projects = () => {
+export default () => {
 
   const { t } = useTranslation();
 
@@ -17,12 +17,22 @@ export const Projects = () => {
     description: string;
     content: string[];
     link: string;
-    color: string,
+    color: string;
+    gallery?: {
+      images: Array<string>;
+      videos: Array<string>;
+      maxH: number;
+    };
+    projects?: string;
   }>;
 
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
   const selectedProject = projects[selectedProjectIndex];
   const [option, setOption] = useState("about");
+
+  useEffect(() => {
+    if (!selectedProject.gallery) setOption("about");
+  }, [selectedProject]);
 
   return (
     <>
@@ -30,7 +40,6 @@ export const Projects = () => {
         <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
           {t("sections.projects.title")}
         </h2>
-        {/* Left scroll button */}
         <div
           className="overflow-y-hidden scrollbar-hide w-full cursor-grab active:cursor-grabbing scroll-smooth"
         >
@@ -41,12 +50,9 @@ export const Projects = () => {
                 onClick={(e) => {
                   setSelectedProjectIndex(index);
                 }}
-                className={`snap-center relative ${project.color
-                  } pb-4 backdrop-blur-md rounded-2xl p-6 border ${selectedProjectIndex === index
-                    ? "border-white"
-                    : "border-white/10"
-                  } hover:shadow-md hover:${project.color
-                  }/10 transition-all duration-200 cursor-pointer w-full flex-wrap`}
+                className={`snap-center relative ${project.color} pb-4 backdrop-blur-md rounded-2xl p-6 border ${selectedProjectIndex === index
+                  ? "border-white"
+                  : "border-white/10"} hover:shadow-md hover:${project.color}/10 transition-all duration-200 cursor-pointer w-full flex-wrap`}
               >
                 {project.indev && (
                   <div className="absolute bottom-4 right-4 flex flex-row shadow-xl items-center justify-center gap-2 bg-green-100 w-fit rounded-full px-3 text-black font-bold tracking-tighter border-2 border-red-500">
@@ -114,11 +120,10 @@ export const Projects = () => {
       </section>
       <InViewSection triggerKey={selectedProject.title}>
         <div
-          className={`snap-center relative backdrop-blur-md rounded-2xl p-6 border bg-blue-900 border-white/10 hover:shadow-md transition-all duration-200 cursor-pointer pb-8`}
+          className={`snap-center relative backdrop-blur-md rounded-2xl p-6 border bg-blue-900 border-white/10 hover:shadow-md transition-all duration-200 pb-8`}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 flex-wrap md:flex-nowrap flex-row">
-            <div className="flex flex-col">
-
+          <div className="flex flex-col md:flex-row gap-6 flex-wrap md:flex-nowrap">
+            <div className="flex flex-col w-full md:w-1/2">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-5xl">{selectedProject.icon}</span>
                 <h3 className="text-2xl font-bold text-white">
@@ -136,66 +141,93 @@ export const Projects = () => {
                   ))}
                 </div>
               </div>
-              <img src={selectedProject.route} className="object-cover mt-4 rounded-xl w-full h-[200px]"></img>
+              <img src={selectedProject.route} className="object-cover mt-4 rounded-xl w-full max-h-[250px]"></img>
               <hr className="border-t-2 border-white/50 my-4" />
               <p className="text-white text-md font-bold">
                 {selectedProject.description}
               </p>
-              <div
-                onClick={() =>
-                  window.open(selectedProject.link, "_blank")
-                }
-                className="hover:bg-green-500 hover:text-white flex items-center gap-2 bg-green-100 w-fit rounded-full px-3 py-2 text-black font-bold tracking-tighter border-2 border-green-500 transition-all duration-200 mt-4"
-              >
-                Ver código
-                <span
-                  className="devicon-github-plain"
-                  style={{ fontSize: "18px" }}
-                ></span>
+              <div className="grid grid-cols-[40%_60%] gap-2 items-stretch mt-4">
+                <div
+                  onClick={() => window.open(selectedProject.link, "_blank")}
+                  className="hover:bg-green-500 w-full justify-center hover:text-white flex items-center gap-2 bg-green-100 rounded-xl px-3 py-2 text-black font-bold tracking-tighter border-2 border-green-500 transition-all duration-200 h-full"
+                >
+                  Ver código
+                  <span
+                    className="devicon-github-plain"
+                    style={{ fontSize: "18px" }}
+                  ></span>
+                </div>
+
+                {selectedProject.indev && (
+                  <div className="flex flex-row shadow-xl items-center justify-center gap-2 bg-green-100 w-full rounded-xl px-3 text-black font-bold tracking-tighter border-2 border-red-500 h-full">
+                    <div className="relative h-2 w-2 rounded-full bg-red-500 animate-pulse">
+                      <div className="absolute h-2 w-2 rounded-full bg-red-500 animate-[ping_0.75s_infinite]"></div>
+                    </div>
+                    <span className="text-md">{t("sections.projects.inDevelopment")}</span>
+                  </div>
+                )}
               </div>
             </div>
-            <div>
-              {selectedProject.indev && (
-                <div className="mb-4 flex flex-row shadow-xl items-center justify-center gap-2 bg-green-100 w-fit rounded-full px-3 text-black font-bold tracking-tighter border-2 border-red-500">
-                  <div className="relative h-2 w-2 rounded-full bg-red-500 animate-pulse">
-                    <div className="absolute h-2 w-2 rounded-full bg-red-500 animate-[ping_0.75s_infinite]"></div>
-                  </div>
-                  <span className="text-md">{t("sections.projects.inDevelopment")}</span>
-                </div>
-              )}
+            <div className="flex flex-col w-full md:w-1/2">
               <div className="flex justify-between text-white! bg-transparent mb-8">
                 <button
-                  className={`flex w-full py-2 font-bold tracking-tighter px-4 transition-all hover:cursor-pointer duration-50 items-center align-center justify-center ${option === "about" ? "border-b-2 border-white mt-[-1px]" : ""
-                    }`}
+                  className={`flex w-full py-2 font-bold tracking-tighter px-4 transition-all hover:cursor-pointer duration-50 items-center align-center justify-center ${option === "about" ? "border-b-2 border-white mt-[-1px]" : ""}`}
                   onClick={() => setOption("about")}
                 >
                   <span className="material-symbols-outlined mr-2">info</span> About the project
                 </button>
-                <button
-                  className={`flex w-full py-2 font-bold tracking-tighter px-4 transition-all hover:cursor-pointer duration-50 items-center align-center justify-center ${option === "gallery" ? "border-b-2 border-white mt-[-1px]" : ""
-                    }`}
+                {selectedProject.gallery && <button
+                  className={`flex w-full py-2 font-bold tracking-tighter px-4 transition-all hover:cursor-pointer duration-50 items-center align-center justify-center ${option === "gallery" ? "border-b-2 border-white mt-[-1px]" : ""}`}
                   onClick={() => setOption("gallery")}
                 >
                   <span className="material-symbols-outlined mr-2">photo</span> Gallery and demos
-                </button>
+                </button>}
               </div>
               {option === "about" && selectedProject.content.map((line, index) => (
-                <p key={index} className="text-white text-base mb-2">
+                <p key={index} className="text-white text-base">
                   <Trans
                     i18nKey={line}
                     components={[
                       <span key="0" className="font-bold text-white" />,
                       <b key="1" className="text-white text-xl" />,
-                    ]}
-                  />
+                    ]} />
                 </p>
               ))}
+              {option === "gallery" && (() => {
+                const media = [
+                  ...(selectedProject.gallery?.images?.map(src => ({ type: "image", src })) || []),
+                  ...(selectedProject.gallery?.videos?.map(src => ({ type: "video", src })) || []),
+                ];
 
+                const maxHeight = selectedProject.gallery?.maxH || 400;
+
+                return (
+                  <div className="grid gap-4 overflow-auto" style={{ maxHeight: `${maxHeight}px` }}>
+                    {media.map((item, index) => item.type === "image" ? (
+                      <img
+                        key={index}
+                        src={item.src}
+                        className="object-cover w-full rounded-xl select-none hover:cursor-default"
+                      />
+                    ) : (
+                      <video
+                        key={index}
+                        src={item.src}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="object-cover w-full h-full rounded-xl"
+                      />
+                    ))}
+                  </div>
+                );
+              })()}
             </div>
           </div>
         </div>
       </InViewSection>
 
     </>
-  )
-}
+  );
+};

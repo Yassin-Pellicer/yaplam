@@ -220,6 +220,8 @@
       "developedIn": "Developed in",
       "inDevelopment": "Currently in development! 🚀",
       "comingSoon": "Coming soon! 🚀",
+      "about": "About the project",
+      "gallery": "Gallery and demos",
       "items": [
         {
           "indev": true,
@@ -244,7 +246,16 @@
             "It offers tools for planning online or in-person courses in an intuitive way and optimizing the time of tutors.",
             "<1>Complete management of educational content, students and sessions</1>, including materials, attendance and progress tracking.",
             "Integration with AWS services for storage, security and scalable deployment, ensuring reliability and performance."
-          ]
+          ],
+          "gallery": {
+            "images": [
+              "/s3md/second.png",
+              "/s3md/third.png",
+              "/s3md/fourth.png",
+              "/s3md/first.png"
+            ],
+            "maxH": 435
+          }
         },
         {
           "route": "/pinpoint.png",
@@ -266,7 +277,15 @@
             "Each control point can include multimedia information, QR codes and additional details, making the user experience richer and more complete.",
             "<1>Highlighted features:</1> creation of public or private events, registration management, customized visibility and notifications.",
             "Implemented with Next.js and React, integrating internationalization (i18n) and user-centered design to simplify navigation and event discovery."
-          ]
+          ],
+          "gallery": {
+            "images": [
+              "/pinpoint/second.png",
+              "/pinpoint/third.png",
+              "/pinpoint/first.png"
+            ],
+            "maxH": 440
+          }
         },
         {
           "route": "/gol.png",
@@ -279,7 +298,7 @@
             "devicon-javascript-plain"
           ],
           "date": "2023",
-          "description": "Various small projects and games that allow me to apply my skills in different contexts of programming.",
+          "description": "Various personal projects and games that allow me to apply my skills in different contexts of programming.",
           "link": "https://github.com/Yassin-Pellicer/Miscellaneous",
           "color": "bg-yellow-600",
           "content": [
@@ -287,14 +306,52 @@
             "Among them are a compiler for a subset of the C language, Wikipedia scraping tools, interactive visualizations of fractal sets and Turing machine simulators.",
             "There are also implementations of classic games, such as Snake and Brick Breaker, which helped me practice graphical interfaces, game logic and animations.",
             "<1>These projects</1> not only reinforced my technical knowledge in programming, data structures and algorithms, but also provided an excellent opportunity to experiment with interactive visualizations and creating engaging user experiences."
-          ]
+          ],
+          "projects": "lineart"
+        },
+        {
+          "indev": true,
+          "route": "/ude/first.png",
+          "title": "Up And Down English",
+          "icon": "🗽",
+          "technologies": [
+            "devicon-react-original",
+            "devicon-nodejs-plain",
+            "devicon-nextjs-plain",
+            "devicon-figma-plain"
+          ],
+          "date": "2023",
+          "description": "Website for an English language academy.",
+          "color": "bg-pink-400",
+          "link": "https://github.com/Yassin-Pellicer/up_and_down_english",
+          "content": [
+            "<0>Up And Down English</0> is a website for an English language academy, designed for students of different levels.",
+            "Developed with Next.js and React, it offers an intuitive and scalable user interface.",
+            "The features include customized course creation, student management, grades and notifications.",
+            "It also includes authentication and authorization features, and uses libraries like React Hook Form to handle forms and React Query to handle data caching."
+          ],
+          "gallery": {
+            "videos": [
+              "/ude/second.mp4"
+            ],
+            "images": [
+              "/ude/third.png"
+            ],
+            "maxH": 315
+          }
         }
       ]
     },
     "contact": {
       "title": "Contact",
       "message": "Want more information or schedule an interview or personalized meeting?",
-      "cta": "Don't hesitate to contact me!"
+      "cta": "Don't hesitate to contact me!",
+      "subtitle": "Here are my contact details.",
+      "cv": "You can also download my CV!"
+    },
+    "footer": {
+      "copyright": "© Yassin Pellicer Lamla. All rights reserved.",
+      "contact": "Contact"
     }
   }
 }
