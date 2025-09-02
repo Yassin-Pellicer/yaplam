@@ -36,7 +36,7 @@ export default () => {
 
   return (
     <>
-      <section id="proyectos" className="sm:py-20 pb-0! py-16">
+      <section id="3" className="sm:py-20 pb-0! py-16">
         <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
           {t("sections.projects.title")}
         </h2>

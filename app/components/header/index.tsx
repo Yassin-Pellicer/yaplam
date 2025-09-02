@@ -6,70 +6,109 @@ export const Header = () => {
   const { i18n, t } = useTranslation();
   const rawSections = t("navigation.sections", { returnObjects: true });
   const sections = Array.isArray(rawSections) ? rawSections : [];
-  
-  const [activeSection, setActiveSection] = useState("");
+
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isClient, setIsClient] = useState(false);
+  const [menuOverlay, setMenuOverlay] = useState(false);
+
 
   useEffect(() => {
-    setIsClient(true);
-    if (sections.length > 0) {
-      setActiveSection(sections[0]);
-    }
-  }, [sections]);
-
-  useEffect(() => {
-    if (!isClient) return;
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     setIsScrolled(window.scrollY > 50);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isClient]);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOverlay ? "hidden" : "unset";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [menuOverlay]);
 
   const scrollToSection = (section: string) => {
     document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
-    setActiveSection(section);
+    setMenuOverlay(false);
   };
 
-  if (!isClient) {
-    return(
-      <></>
-    )
-  }
-
   return (
-    <header
-      className={`flex fixed top-0 w-fit justify-center z-50 transition-all duration-300 mt-4 rounded-full sm:px-4 px-1 ${
-        isScrolled ? "bg-black/20 backdrop-blur-lg" : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-6xl mx-auto sm:px-4 px-2">
-        <nav className="flex justify-between items-center py-4">
-          <ul className="flex sm:space-x-8 sm:text-lg space-x-3 text-[12px]">
-            {sections.map((section, index) => (
-              <li key={`${section}-${index}`}>
-                <button
-                  onClick={() => scrollToSection(section)}
-                  className={`text-white hover:cursor-pointer transition-colors capitalize ${
-                    activeSection === section ? "border-b-2 border-blue-400" : ""
-                  }`}
-                >
-                  {section}
-                </button>
-              </li>
-            ))}
+    <>
+      <header
+        className={`flex fixed top-0 w-full justify-between z-50 transition-all duration-300 px-4 py-2 sm:px-8 ${
+          isScrolled ? "bg-black/20 backdrop-blur-lg" : "bg-transparent"
+        }`}
+      >
+        <img
+          src="/yo.jpg"
+          alt="Logo"
+          className={`h-8 w-8 rounded-full sm:h-12 sm:w-12 transition-opacity duration-300 ${
+            isScrolled ? "opacity-100" : "opacity-0"
+          }`}
+        />
+        <nav className="hidden lg:flex gap-8 items-center">
+          {sections.map((section, index) => (
+            <button
+              key={`${section}-${index}`}
+              onClick={() => {scrollToSection(index.toString());}}
+              className={`text-white capitalize px-4 py-2 hover:bg-blue-400 hover:cursor-pointer rounded-2xl transition-colors`}
+            >
+              {section}
+            </button>
+          ))}
 
           <button
             onClick={() =>
               i18n.changeLanguage(i18n.language === "es" ? "en" : "es")
             }
-            className="material-symbols-outlined text-white hover:cursor-pointer" style={{ fontSize: "16px" }}
+            className="material-symbols-outlined text-white hover:cursor-pointer"
+            style={{ fontSize: "24px" }}
           >
             translate
           </button>
-          </ul>
         </nav>
-      </div>
-    </header>
+
+        <div className="lg:hidden flex items-center">
+          <span
+            className="material-symbols-outlined text-white hover:cursor-pointer"
+            style={{ fontSize: "28px" }}
+            onClick={() => setMenuOverlay(!menuOverlay)}
+          >
+            menu
+          </span>
+        </div>
+      </header>
+
+      {menuOverlay && (
+        <div
+          className="fixed top-0 left-0 w-full h-screen bg-black/50 backdrop-blur-sm z-40"
+          onClick={() => setMenuOverlay(false)}
+        >
+          <div
+            className="flex flex-col h-full divide-y divide-white/30 overflow-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex flex-col gap-4 p-4 mt-4">
+              {sections.map((section, index) => (
+                <button
+                  key={`${section}-${index}`}
+                  onClick={() => scrollToSection(index.toString())}
+                  className="text-white text-2xl py-2 px-4 rounded-xl text-left hover:bg-white/20 transition-colors"
+                >
+                  {section}
+                </button>
+              ))}
+
+              <button
+                onClick={() =>
+                  i18n.changeLanguage(i18n.language === "es" ? "en" : "es")
+                }
+                className="material-symbols-outlined text-white text-left ml-4 text-2xl mt-4"
+              >
+                translate
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
