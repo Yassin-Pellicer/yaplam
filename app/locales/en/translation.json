@@ -295,7 +295,9 @@
             "devicon-nodejs-plain",
             "devicon-html5-plain",
             "devicon-css3-plain",
-            "devicon-javascript-plain"
+            "devicon-javascript-plain",
+            "devicon-matplotlib-plain",
+            "devicon-react-plain"
           ],
           "date": "2023",
           "description": "Various personal projects and games that allow me to apply my skills in different contexts of programming.",
