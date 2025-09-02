@@ -33,7 +33,7 @@ export const Header = () => {
   return (
     <>
       <header
-        className={`flex fixed top-0 w-full justify-between z-50 transition-all duration-300 px-4 py-2 sm:px-8 ${
+        className={`flex fixed top-0 w-full justify-between z-50 transition-all duration-300 px-4 py-4 sm:px-8 ${
           isScrolled ? "bg-black/20 backdrop-blur-lg" : "bg-transparent"
         }`}
       >
