@@ -86,7 +86,7 @@ export const Header = () => {
             className="flex flex-col h-full divide-y divide-white/30 overflow-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex flex-col gap-4 p-4 mt-4">
+            <div className="flex flex-col gap-4 p-4 mt-16">
               {sections.map((section, index) => (
                 <button
                   key={`${section}-${index}`}
