@@ -141,7 +141,7 @@ export default () => {
                   ))}
                 </div>
               </div>
-              <img src={selectedProject.route} className="object-cover mt-4 rounded-xl w-full max-h-[250px]"></img>
+              <img key={selectedProject.title} src={selectedProject.route} className="object-cover mt-4 rounded-xl w-full max-h-[250px]"></img>
               <hr className="border-t-2 border-white/50 my-4" />
               <p className="text-white text-md font-bold">
                 {selectedProject.description}
@@ -198,36 +198,41 @@ export default () => {
                   ...(selectedProject.gallery?.images?.map(src => ({ type: "image", src })) || []),
                   ...(selectedProject.gallery?.videos?.map(src => ({ type: "video", src })) || []),
                 ];
-
                 const maxHeight = selectedProject.gallery?.maxH || 400;
-
                 return (
-                  <div className="grid gap-4 overflow-auto" style={{ maxHeight: `${maxHeight}px` }}>
-                    {media.map((item, index) => item.type === "image" ? (
-                      <img
-                        key={index}
-                        src={item.src}
-                        className="object-cover w-full rounded-xl select-none hover:cursor-default"
-                      />
-                    ) : (
-                      <video
-                        key={index}
-                        src={item.src}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="object-cover w-full h-full rounded-xl"
-                      />
-                    ))}
+                  <div
+                    key={selectedProjectIndex}
+                    className="grid gap-4 overflow-auto"
+                    style={{ maxHeight: `${maxHeight}px` }}
+                  >
+                    {media.map((item, index) =>
+                      item.type === "image" ? (
+                        <img
+                          key={`${selectedProjectIndex}-img-${index}`}
+                          src={item.src}
+                          className="object-cover w-full rounded-xl select-none hover:cursor-default"
+                        />
+                      ) : (
+                        <video
+                          key={`${selectedProjectIndex}-vid-${index}`}
+                          src={item.src}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="object-cover w-full h-full rounded-xl"
+                        />
+                      )
+                    )}
                   </div>
                 );
               })()}
+
             </div>
           </div>
         </div>
       </InViewSection>
-
     </>
   );
 };
+

@@ -42,7 +42,7 @@ export default function Portfolio() {
           <Contact></Contact>
         </InViewSection>
       </section>
-      <Footer></Footer>
+      <Footer style="black"></Footer>
     </div>
   );
 }
