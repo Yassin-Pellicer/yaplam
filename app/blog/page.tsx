@@ -56,9 +56,9 @@ export default function Portfolio() {
   ];
 
   return (
-    <div className="flex justify-center flex-col items-center bg-gradient-to-br from-[#f4f2ee] to-[#e4e4e4] select-none">
+    <div className="flex justify-center flex-col items-center bg-gradient-to-br from-[#87ceeb] to-[#4682b4] select-none">
       <section className="flex flex-col items-center min-h-screen max-w-[1400px] px-4">
-        <Header style="black"/>
+        <Header/>
         <div className="w-full py-16 mt-2">
           <div className="flex flex-row gap-4">
             <div className="hidden h-full md:flex flex-col sticky top-32 w-1/4 self-start">
@@ -223,8 +223,8 @@ export default function Portfolio() {
             </div>
             <div className="flex flex-col w-2/5 h-fit">
               <h1 className="text-4xl font-bold tracking-tighter mb-4">
-                <span className="bg-clip-text text-black ">
-                  📓Publicaciones
+                <span className="bg-clip-text text-white ">
+                  Publicaciones
                 </span>
               </h1>
               <div className="grid md:grid-cols-1 grid-cols-1 gap-4 ">
