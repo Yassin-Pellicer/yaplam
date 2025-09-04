@@ -355,5 +355,43 @@
       "copyright": "© Yassin Pellicer Lamla. All rights reserved.",
       "contact": "Contact"
     }
+  },
+  "posts": {
+    "portfolio": {
+      "id": "portfolio",
+      "title": "How I built my Portfolio with Next.js, i18n and Tailwind",
+      "date": "2025-09-02",
+      "excerpt": "A deep dive into how I built my personal portfolio using Next.js, Tailwind, and i18n for multilingual support. Learn how I improved my previous portfolio projects and how I used Next.js to create a modern and responsive page.",
+      "link": "/blog/nextjs-portfolio",
+      "tags": [
+        "Next.js",
+        "Tailwind",
+        "i18n"
+      ],
+      "image": "/blog/blog.png",
+      "technologies": [
+        "devicon-nextjs-plain",
+        "devicon-tailwindcss-plain",
+        "devicon-react-plain"
+      ]
+    },
+    "lineart": {
+      "id": "lineart",
+      "title": "How I used Python and Pillow to Create a Line Art Generator",
+      "date": "2025-09-03",
+      "excerpt": "Dive into the world of line art generation, where I share my journey of using Python, Pillow, and some creative coding to turn any image into a stunning piece of line art.",
+      "link": "/blog/line-art-generator",
+      "tags": [
+        "Python",
+        "Pillow",
+        "Line Art"
+      ],
+      "image": "/blog/lineart.png",
+      "technologies": [
+        "devicon-python-plain",
+        "devicon-pillow-plain",
+        "devicon-matplotlib-plain"
+      ]
+    }
   }
 }

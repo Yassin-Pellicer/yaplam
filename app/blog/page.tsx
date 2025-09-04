@@ -4,64 +4,34 @@ import { Header } from "../components/header";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import "../lib/18n";
 import "devicon/devicon.min.css";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/navigation";
 
 export default function Portfolio() {
 
-  const posts = [
-    {
-      title: "How I built my Portfolio with Next.js, i18n and Tailwind",
-      date: "2025-09-02",
-      excerpt:
-        "A deep dive into how I built my personal portfolio using Next.js, Tailwind, and i18n for multilingual support. Learn how I improved my previous portfolio projects and how I used Next.js to create a modern and responsive page.",
-      link: "/blog/nextjs-portfolio",
-      tags: ["Next.js", "Tailwind", "i18n"],
-      image: "/blog/blog.png",
-    },
-    {
-      title: "How I used Python and Pillow to Create a Line Art Generator",
-      date: "2025-09-03",
-      excerpt:
-        "Dive into the world of line art generation, where I share my journey of using Python, Pillow, and some creative coding to turn any image into a stunning piece of line art.",
-      link: "/blog/line-art-generator",
-      tags: ["Python", "Pillow", "Line Art"],
-      image: "/s3md/second.png",
-    },
-    {
-      title: "From Idea to Deployment with Vercel",
-      date: "2025-07-28",
-      excerpt:
-        "My process of taking a project from scratch and deploying it seamlessly with Vercel.",
-      link: "/blog/vercel-deployment",
-      tags: ["Vercel", "Deployment", "Workflow"],
-      image: "/s3md/third.png",
-    },
-    {
-      title: "10 Tips for Building a Fast and Scalable Next.js App",
-      date: "2025-09-05",
-      excerpt:
-        "Learn how to improve the performance of your Next.js app with these 10 tips and tricks.",
-      link: "/blog/nextjs-performance",
-      tags: ["Next.js", "Performance", "Optimization"],
-      image: "/blog/pinpoint.png",
-    },
-    {
-      title: "How I Created a Custom Tailwind CSS Plugin for my Portfolio",
-      date: "2025-09-10",
-      excerpt:
-        "Discover how I created a custom Tailwind CSS plugin to add custom components and utilities to my portfolio website.",
-      link: "/blog/tailwind-plugin",
-      tags: ["Tailwind", "Plugin", "Customization"],
-      image: "/blog/blog.png",
-    },
-  ];
+  const { t } = useTranslation();
+  const router = useRouter();
+
+  const rawPosts = t("posts", { returnObjects: true }) as Record<string, {
+    id: string;
+    title: string;
+    date: string;
+    excerpt: string;
+    link: string;
+    tags: string[];
+    image: string;
+    technologies: string[];
+  }>;
+
+  const posts = Object.values(rawPosts);
 
   return (
-    <div className="flex justify-center flex-col items-center bg-gradient-to-br from-[#87ceeb] to-[#4682b4] select-none">
-      <section className="flex flex-col items-center min-h-screen max-w-[1400px] px-4">
-        <Header/>
-        <div className="w-full py-16 mt-2">
+    <div className="flex justify-center flex-col items-center bg-[#f4f2ee] select-none">
+      <section className="flex flex-col items-center min-h-screen max-w-[1600px] px-4">
+        <Header style="black" />
+          <div className="w-full sm:py-24 py-12 mt-2">
           <div className="flex flex-row gap-4">
-            <div className="hidden h-full md:flex flex-col sticky top-32 w-1/4 self-start">
+            <div className="hidden h-full md:flex flex-col w-2/5 self-start">
               <div className="flex shadow-md flex-col w-full rounded-2xl overflow-hidden bg-white mb-4">
                 <img
                   src="/blog/blog.png"
@@ -74,8 +44,8 @@ export default function Portfolio() {
                     alt="Profile"
                     className="w-20 h-20 rounded-full border-white object-cover"
                   />
-                  <b className="mt-2 text-md text-gray-800">Yassin Pellicer Lamla</b>
-                  <p className="text-xs text-gray-800">
+                  <b className="mt-2 text-lg text-gray-800">Yassin Pellicer Lamla</b>
+                  <p className="text-sm text-gray-800">
                     Software Engineer | Especializado en Ciencias de la Computación
                   </p>
                   <p className="text-xs text-gray-500 mt-1">
@@ -173,27 +143,6 @@ export default function Portfolio() {
                         <option value="za">Z → A</option>
                       </select>
                     </div>
-                    <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-2">Reading Time</label>
-                      <div className="flex flex-col gap-1 text-sm">
-                        <label className="flex items-center gap-2 cursor-pointer">
-                          <input type="radio" name="readingTime" value="any" className="accent-blue-600" defaultChecked />
-                          <span>Any length</span>
-                        </label>
-                        <label className="flex items-center gap-2 cursor-pointer">
-                          <input type="radio" name="readingTime" value="short" className="accent-blue-600" />
-                          <span>Quick read (5 min)</span>
-                        </label>
-                        <label className="flex items-center gap-2 cursor-pointer">
-                          <input type="radio" name="readingTime" value="medium" className="accent-blue-600" />
-                          <span>Medium (5-10 min)</span>
-                        </label>
-                        <label className="flex items-center gap-2 cursor-pointer">
-                          <input type="radio" name="readingTime" value="long" className="accent-blue-600" />
-                          <span>Long read (10+ min)</span>
-                        </label>
-                      </div>
-                    </div>
                   </div>
                 </div>
                 <div className="bg-white rounded-b-lg border-gray-200">
@@ -221,29 +170,25 @@ export default function Portfolio() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-2/5 h-fit">
-              <h1 className="text-4xl font-bold tracking-tighter mb-4">
-                <span className="bg-clip-text text-white ">
-                  Publicaciones
-                </span>
-              </h1>
-              <div className="grid md:grid-cols-1 grid-cols-1 gap-4 ">
+            <div className="flex flex-col w-full h-fit">
+              <div className="grid md:grid-cols-1 grid-cols-1 gap-4 w-full">
                 {posts.map((post, originalIndex) => {
                   const actualIndex = originalIndex * 2;
                   return (
                     <article
                       key={actualIndex}
-                      className="flex md:flex-col flex-row bg-white shadow-md text-gray-800 backdrop-blur-md rounded-lg tracking-tight border border-gray-200 hover:cursor-pointer transition-all duration-50"
+                      className="flex md:flex-col flex-row bg-white shadow-md text-gray-800 backdrop-blur-md rounded-2xl tracking-tight border border-gray-200 hover:cursor-pointer transition-all duration-50"
+                      onClick={() => router.push(`/blog/${post.id}`)}
                     >
-                      {post.image && <img src={post.image} className="md:block hidden rounded-t-lg  object-cover border-b border-gray-200 max-h-[225px]"></img>}
+                      {post.image && <img src={post.image} className="md:block hidden rounded-t-2xl object-cover border-b border-gray-200 max-h-[225px]"></img>}
                       <div className="flex flex-col justify-between px-4 py-2 h-full">
                         <div>
-                          <h3 className="text-xl tracking-tighter font-bold mb-2">
+                          <h3 className="text-2xl tracking-tighter font-bold mb-2">
                             {post.title}
                           </h3>
-                          <p className="text-xs tracking-tight mb-4">{post.excerpt}</p>
+                          <p className="text-md tracking-tight mb-4">{post.excerpt}</p>
                           <div className="flex flex-wrap gap-1 mb-4">
-                            {post.tags.map((tag, i) => (
+                            {post.tags.map((tag: string, i: number) => (
                               <span
                                 key={i}
                                 className="bg-blue-700/60 text-xs text-white px-2 py-0.5 rounded-full"
@@ -283,8 +228,8 @@ export default function Portfolio() {
             </div>
 
 
-            <div className="hidden md:flex flex-col sticky top-32 w-1/4 self-start h-fit">
-              <div className="bg-white rounded-lg p-4 border border-gray-200  shadow-md">
+            <div className="hidden md:flex flex-col w-2/5 self-start h-fit">
+              <div className="bg-white rounded-2xl p-4 border border-gray-200  shadow-md">
                 <h3 className="text-lg font-bold mb-3 text-gray-800">Recent Posts</h3>
                 <div className="space-y-3">
                   {posts.slice(0, 5).map((post, index) => (

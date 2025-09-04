@@ -1,14 +1,17 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
+import { useRouter, usePathname } from "next/navigation";
 
-export const Header = ({style = ""}: {style?: string}) => {
+export const Header = ({ style = "" }: { style?: string }) => {
   const { i18n, t } = useTranslation();
   const rawSections = t("navigation.sections", { returnObjects: true });
   const sections = Array.isArray(rawSections) ? rawSections : [];
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOverlay, setMenuOverlay] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -18,6 +21,12 @@ export const Header = ({style = ""}: {style?: string}) => {
   }, []);
 
   const scrollToSection = (section: string) => {
+    if (section === "5") {
+      router.push("/blog");
+    } else if (pathname !== "/" && section !== "blog") {
+      router.push("/")
+      setTimeout(() => document.getElementById(section)?.scrollIntoView({ behavior: "smooth" }), 400);
+    }
     document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
     setMenuOverlay(false);
   };
@@ -25,22 +34,21 @@ export const Header = ({style = ""}: {style?: string}) => {
   return (
     <>
       <header
-        className={`flex fixed top-0 w-full justify-between z-50 transition-all duration-300 px-4 py-4 sm:px-8 ${
-          isScrolled ? `bg-black/20 backdrop-blur-sm text-white` : `bg-transparent ${style === "black" ? "text-black" : "text-white"}`
-        }`}
+        className={`flex fixed top-0 w-full justify-between items-center  align-center z-50 transition-all duration-300 px-4 py-3 sm:px-8 ${isScrolled ? `bg-black/20 backdrop-blur-sm text-white` : `bg-transparent ${style === "black" ? "text-black" : "text-white"}`
+          }`}
       >
         <img
           src="/yo.jpg"
           alt="Logo"
-          className={`h-8 w-8 rounded-full sm:h-12 sm:w-12 transition-opacity duration-300 ${
-            isScrolled ? "opacity-100" : "opacity-0"
-          }`}
+          onClick={() => router.push("/")}
+          className={`h-8 w-8 rounded-full sm:h-8 sm:w-8 transition-opacity duration-300 ${isScrolled ? "opacity-100" : "opacity-0"
+            }`}
         />
         <nav className="hidden lg:flex gap-8 items-center">
           {sections.map((section, index) => (
             <button
               key={`${section}-${index}`}
-              onClick={() => {scrollToSection(index.toString());}}
+              onClick={() => { scrollToSection(index.toString()); }}
               className={`px-4 py-2 hover:bg-blue-400 hover:cursor-pointer rounded-2xl transition-colors`}
             >
               {section}
@@ -74,15 +82,15 @@ export const Header = ({style = ""}: {style?: string}) => {
           onClick={() => setMenuOverlay(false)}
         >
           <div
-            className="flex flex-col h-full divide-y divide-white/30 overflow-auto"
+            className="flex flex-col h-full overflow-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex flex-col gap-4 p-4 mt-16">
+            <div className="flex flex-col mt-10 divide-y border-t border-white/50 divide-white/50">
               {sections.map((section, index) => (
                 <button
                   key={`${section}-${index}`}
                   onClick={() => scrollToSection(index.toString())}
-                  className="text-white text-2xl py-2 px-4 rounded-xl text-left hover:bg-white/20 transition-colors"
+                  className="text-white text-2xl text-right py-4 px-4 hover:bg-white/20 transition-colors"
                 >
                   {section}
                 </button>
@@ -92,8 +100,8 @@ export const Header = ({style = ""}: {style?: string}) => {
                 onClick={() =>
                   i18n.changeLanguage(i18n.language === "es" ? "en" : "es")
                 }
-                className="material-symbols-outlined text-left ml-4 text-2xl mt-4"
-                style={{ color:"white" }}
+                className="material-symbols-outlined text-right px-4 border-b pb-5 text-2xl mt-4"
+                style={{ color: "white" }}
               >
                 translate
               </button>

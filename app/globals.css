@@ -34,3 +34,22 @@ html {
   width: 0px;
   background: transparent;
 }
+
+.markdown > * {
+  all: revert;
+}
+
+.markdown {
+  width: 100%;
+}
+
+.markdown pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.markdown code {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
