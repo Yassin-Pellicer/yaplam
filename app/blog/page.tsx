@@ -173,7 +173,7 @@ export default function Portfolio() {
               </div>
               <div className="md:border-x-1 md:border-0 border-b-1 border-gray-300 flex flex-col w-full ">
                 <div className="grid md:grid-cols-1 divide-y divide-gray-200 grid-cols-1 w-full">
-                  <h1 className="md:text-2xl text-xl font-bold tracking-tighter px-4 bg-white py-4">✒️ Publicaciones Destacadas </h1>
+                  <h1 className="md:text-2xl text-xl font-bold tracking-tighter px-4 bg-white text-black py-4">✒️ Publicaciones Destacadas </h1>
                   {posts.map((post, originalIndex) => {
                     const actualIndex = originalIndex * 2;
                     return (
