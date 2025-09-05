@@ -34,7 +34,12 @@ export const Header = ({ style = "" }: { style?: string }) => {
   return (
     <>
       <header
-        className={`flex fixed top-0 w-full justify-between items-center  align-center z-50 transition-all duration-300 px-4 py-3 sm:px-8 ${isScrolled ? `bg-black/20 backdrop-blur-sm text-white` : `bg-transparent ${style === "black" ? "text-black" : "text-white"}`
+        className={`flex fixed top-0 w-full justify-between items-center align-center z-50 transition-all duration-300 px-4 py-3 sm:px-8  
+    ${style === "black"
+            ? "bg-white text-black border-b border-gray-200"
+            : isScrolled
+              ? "bg-black/20 backdrop-blur-sm text-white border-white/20"
+              : "bg-transparent text-white border-transparent"
           }`}
       >
         <img
@@ -49,7 +54,7 @@ export const Header = ({ style = "" }: { style?: string }) => {
             <button
               key={`${section}-${index}`}
               onClick={() => { scrollToSection(index.toString()); }}
-              className={`px-4 py-2 hover:bg-blue-400 hover:cursor-pointer rounded-2xl transition-colors`}
+              className={`px-4 py-2 hover:text-white hover:bg-blue-400 hover:cursor-pointer rounded-2xl transition-colors`}
             >
               {section}
             </button>
@@ -100,7 +105,7 @@ export const Header = ({ style = "" }: { style?: string }) => {
                 onClick={() =>
                   i18n.changeLanguage(i18n.language === "es" ? "en" : "es")
                 }
-                className="material-symbols-outlined text-right px-4 border-b pb-5 text-2xl mt-4"
+                className="material-symbols-outlined text-right px-4 border-b-[1px] border-white/50 pb-5 text-2xl mt-4"
                 style={{ color: "white" }}
               >
                 translate

@@ -57,70 +57,79 @@ export default function Portfolio() {
   }, [id, i18n.language]);
 
   if (!post) {
-    return <div className="flex justify-center flex-col items-center bg-gradient-to-br from-[#87ceeb] to-[#87ceeb] select-none"></div>;
+    return <div className="flex justify-center flex-col items-center bg-white select-none"></div>;
   }
 
   return (
-    <div className="flex justify-center flex-col items-center bg-[#f4f2ee] select-none">
-      <section className="flex flex-col items-center min-h-screen max-w-[1000px] px-4">
+    <div className="flex justify-center flex-col items-center bg-[#f5f5f5] select-none">
+      <section className="flex flex-col h-full items-center min-h-screen">
         <Header style="black" />
-        <InViewSection>
-          <div className="w-full sm:py-24 py-0 mt-2">
-            <div className="flex flex-row gap-4">
-              <div className="flex flex-col h-fit">
-                <h1 className="text-4xl font-bold tracking-tighter mb-2">
-                  <span onClick={() => router.push("/blog")}
-                    className="material-symbols-outlined text-black hover:bg-black/10 p-2 hover:cursor-pointer rounded-full" style={{ fontSize: "26px" }}>arrow_back
-                  </span>
-                </h1>
-                <article className="flex flex-col bg-white shadow-md text-gray-800 backdrop-blur-md rounded-2xl tracking-tight border border-gray-200 hover:cursor-pointer">
-                  {post.image && <img src={post.image} className="rounded-t-2xl object-cover border-b border-gray-200 max-h-[500px]"></img>}
-                  <div className="flex flex-col justify-between px-4 py-2 h-full">
-                    <div>
-                      <h3 className="text-4xl py-2 tracking-tighter font-bold mb-2">
-                        {post.title}
-                      </h3>
-                      <p className="text-md tracking-tight mb-4">{post.excerpt}</p>
-                      <div className="flex flex-wrap gap-1 mb-4">
-                        {post.tags.map((tag, i) => (
-                          <span
-                            key={i}
-                            className="bg-blue-700/60 text-xs text-white px-2 py-0.5 rounded-full"
-                          >
-                            #{tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex flex-row items-center justify-between mt-auto">
-                      <p className="flex items-center gap-1 text-xs ">
-                        <span
-                          className="material-symbols-outlined"
-                          style={{ fontSize: "16px" }}
+        <div className="sm:pt-14 h-full pt-12  mt-2">
+          <div className="w-full bg-white">
+            <div className="flex md:flex-row flex-col w-full max-w-[1000px] mx-auto">
+              <InViewSection>
+                <div className="w-full">
+                  <div className="flex flex-row">
+                    <div className="flex flex-col w-max-[1200px] w-full h-fit">
+                      <article className="flex flex-col bg-white text-gray-800 backdrop-blur-md tracking-tight border-x border-gray-300">
+                        <button
+                          onClick={() => router.push("/blog")}
+                          className="absolute top-4 left-4"
                         >
-                          calendar_month
-                        </span>
-                        {new Date(post.date).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </p>
+                          <span className="hover:cursor-pointer material-symbols-outlined bg-white rounded-full p-1 hover:bg-blue-600 hover:text-white transition duration-100" style={{ fontSize: "24px" }}>
+                            arrow_back
+                          </span>
+                        </button>
+                        {post.image && <img src={post.image} className=" object-cover border-b border-gray-300 max-h-[500px]"></img>}
+                        <div className="flex flex-col justify-between px-4 py-2 h-full">
+                          <div>
+                            <h3 className="text-3xl mt-2 tracking-tighter font-bold mb-2">
+                              {post.title}
+                            </h3>
+                            <p className="text-sm tracking-tight mb-4">{post.excerpt}</p>
+                            <div className="flex flex-wrap gap-1 mb-4">
+                              {post.tags.map((tag, i) => (
+                                <span
+                                  key={i}
+                                  className="bg-blue-700/60 text-xs text-white px-2 py-0.5 rounded-lg"
+                                >
+                                  #{tag}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="flex flex-row items-center justify-between mt-auto">
+                            <p className="flex items-center gap-1 text-xs ">
+                              <span
+                                className="material-symbols-outlined"
+                                style={{ fontSize: "16px" }}
+                              >
+                                calendar_month
+                              </span>
+                              {new Date(post.date).toLocaleDateString("en-US", {
+                                year: "numeric",
+                                month: "long",
+                                day: "numeric",
+                              })}
+                            </p>
+                          </div>
+                        </div>
+
+                        {markdown && (
+                          <div className="markdown px-4 border-t mt-4 mb-8 border-gray-300">
+                            <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
+                              {markdown}
+                            </ReactMarkdown>
+                          </div>
+                        )}
+                      </article>
                     </div>
                   </div>
-
-                  {markdown && (
-                    <div className="markdown px-4 border-t mt-4 border-gray-200">
-                      <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
-                        {markdown}
-                      </ReactMarkdown>
-                    </div>
-                  )}
-                </article>
-              </div>
+                </div>
+              </InViewSection>
             </div>
           </div>
-        </InViewSection>
+        </div>
       </section>
       <Footer style={"black"} />
     </div>
