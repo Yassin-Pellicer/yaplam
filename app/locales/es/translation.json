@@ -376,13 +376,13 @@
     },
     "lineart": {
       "id": "lineart",
-      "title": "Cómo utilicé Python y Pillow para crear un generador de arte de línea",
+      "title": "Cómo utilicé Python y Pillow para crear un generador de string art",
       "date": "2025-09-03",
-      "excerpt": "Sumérgete en el mundo de la generación de arte de línea, donde comparto mi viaje de utilizar Python, Pillow y algo de codificación creativa para convertir cualquier imagen en una impresionante pieza de arte de línea.",
+      "excerpt": "Sumérgete en el mundo de la generación de string art, donde comparto mi viaje de utilizar Python, Pillow y algo de codificación creativa para convertir cualquier imagen en una impresionante pieza de string art.",
       "tags": [
         "Python",
         "Pillow",
-        "Arte de línea"
+        "string art"
       ],
       "image": "/blog/lineart.png",
       "technologies": [

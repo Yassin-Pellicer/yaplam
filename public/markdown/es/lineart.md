@@ -2,11 +2,11 @@
 
 Crear arte digital a partir de fotografías siempre me ha fascinado, pero quería abordar algo único: **convertir imágenes en string art**. El desafío no era solo sobre procesamiento de imágenes, sino sobre desarrollar un algoritmo que pudiera conectar inteligentemente puntos alrededor de un círculo para recrear la esencia de una fotografía usando únicamente líneas rectas.
 
-Este proyecto se convirtió en una exploración de **visión por computadora, algoritmos de optimización y programación creativa**. En este post, explicaré cómo construí un algoritmo greedy que transforma cualquier retrato en arte de hilo hipnotizante, junto con las decisiones técnicas y optimizaciones que lo hicieron funcionar.
+Este proyecto se convirtió en una exploración de **visión por computadora, algoritmos de optimización y programación creativa**. En este post, explicaré cómo construí un algoritmo greedy que transforma cualquier retrato en string art, junto con las decisiones técnicas y optimizaciones que lo hicieron funcionar.
 
 ## El Desafío: De Píxeles a Líneas
 
-El string art tradicionalmente involucra envolver hilo alrededor de clavos colocados en el perímetro de un círculo. El artista crea una imagen conectando estratégicamente estos puntos con hilo, construyendo áreas más oscuras a través de líneas superpuestas. Mi objetivo era **automatizar este proceso digitalmente** mientras mantenía la estética orgánica y artesanal.
+El string art tradicionalmente involucra envolver hilo alrededor de clavos colocados en el perímetro de un círculo. El artista crea una imagen conectando estratégicamente estos puntos con hilo, construyendo áreas más oscuras a través de líneas superpuestas. Mi objetivo era **automatizar este proceso digitalmente**.
 
 Los desafíos principales fueron:
 - **Preprocesamiento de imagen**: Convertir fotos en imágenes circulares en escala de grises con alto contraste
@@ -186,4 +186,4 @@ Puedes experimentar con diferentes parámetros para crear varios efectos artíst
 - **Más líneas** (3000-5000) para texturas más densas y ricas
 - **Diferentes tamaños** para varias resoluciones de salida
 
-*El link al repositorio puedes encontrarlo en mi [GitHub](https://github.com/Yassin-Pellicer/Miscellaneous/tree/master/python/stringart), ¡Pruébalo con tus propios retratos y ve cómo el algoritmo interpreta las características únicas de cada rostro!*
+*El link al repositorio puedes encontrarlo en mi [GitHub](https://github.com/Yassin-Pellicer/Miscellaneous/tree/master/python/string art), ¡Pruébalo con tus propios retratos y ve cómo el algoritmo interpreta las características únicas de cada rostro!*

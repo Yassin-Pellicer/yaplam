@@ -184,4 +184,4 @@ You can experiment with different parameters to create various artistic effects:
 - **More lines** (3000-5000) for denser, richer textures
 - **Different sizes** for various output resolutions
 
-*You can find the link to the repo by clicking on the following word: [GitHub](https://github.com/Yassin-Pellicer/Miscellaneous/tree/master/python/stringart),Try it with your own portraits and see how the algorithm interprets the unique features of each face!*
+*You can find the link to the repo by clicking on the following word: [GitHub](https://github.com/Yassin-Pellicer/Miscellaneous/tree/master/python/string art),Try it with your own portraits and see how the algorithm interprets the unique features of each face!*
