@@ -34,7 +34,7 @@ export const Header = ({ style = "" }: { style?: string }) => {
   return (
     <>
       <header
-        className={`flex fixed top-0 w-full justify-between items-center align-center z-50 transition-all duration-300 px-4 py-3 sm:px-8  
+        className={`flex fixed top-0 w-full justify-between items-center align-center h-14! z-50 transition-all duration-300 px-4 py-3 sm:px-8  
     ${style === "black"
             ? "bg-white text-black border-b border-gray-200"
             : isScrolled

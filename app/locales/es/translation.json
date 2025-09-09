@@ -387,9 +387,24 @@
       "image": "/blog/lineart.png",
       "technologies": [
         "devicon-python-plain",
-        "devicon-pillow-plain",
         "devicon-matplotlib-plain"
       ]
     }
-  }
+  },
+  "postCounter": 2,
+  "allTags": [
+    "Next.js",
+    "Tailwind",
+    "i18n",
+    "Python",
+    "Pillow",
+    "Line Art"
+  ],
+  "allTechnologies": [
+    "devicon-nextjs-plain",
+    "devicon-tailwindcss-plain",
+    "devicon-react-plain",
+    "devicon-python-plain",
+    "devicon-matplotlib-plain"
+  ]
 }

@@ -284,7 +284,7 @@
               "/pinpoint/third.png",
               "/pinpoint/first.png"
             ],
-            "maxH": 440
+            "maxH": 420
           }
         },
         {
@@ -389,9 +389,24 @@
       "image": "/blog/lineart.png",
       "technologies": [
         "devicon-python-plain",
-        "devicon-pillow-plain",
         "devicon-matplotlib-plain"
       ]
     }
-  }
+  },
+  "postCounter": 2,
+  "allTags": [
+    "Next.js",
+    "Tailwind",
+    "i18n",
+    "Python",
+    "Pillow",
+    "Line Art"
+  ],
+  "allTechnologies": [
+    ["devicon-nextjs-plain", "Next.js"],
+    ["devicon-tailwindcss-plain", "Tailwind CSS"],
+    ["devicon-react-plain", "React"],
+    ["devicon-python-plain", "Python"],
+    ["devicon-matplotlib-plain", "Matplotlib"]
+  ]
 }

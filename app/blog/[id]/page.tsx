@@ -64,7 +64,7 @@ export default function Portfolio() {
     <div className="flex justify-center flex-col items-center bg-[#f5f5f5] select-none">
       <section className="flex flex-col h-full items-center min-h-screen">
         <Header style="black" />
-        <div className="sm:pt-14 h-full pt-12  mt-2">
+        <div className="sm:pt-14 h-full pt-12">
           <div className="w-full bg-white">
             <div className="flex md:flex-row flex-col w-full max-w-[1000px] mx-auto">
               <InViewSection>
@@ -88,14 +88,27 @@ export default function Portfolio() {
                             </h3>
                             <p className="text-sm tracking-tight mb-4">{post.excerpt}</p>
                             <div className="flex flex-wrap gap-1 mb-4">
-                              {post.tags.map((tag, i) => (
-                                <span
-                                  key={i}
-                                  className="bg-blue-700/60 text-xs text-white px-2 py-0.5 rounded-lg"
-                                >
-                                  #{tag}
-                                </span>
-                              ))}
+                              <div className="flex flex-row items-center align-center w-full justify-between">
+                                <div className="flex items-center align-center flex-wrap gap-1">
+                                  {post.tags.map((tag: string, i: number) => (
+                                    <span
+                                      key={i}
+                                      className="bg-blue-700/60 text-xs text-white px-2 h-fit py-0.5 rounded-full"
+                                    >
+                                      #{tag}
+                                    </span>
+                                  ))}
+                                </div>
+                                <div className="flex flex-wrap gap-1">
+                                  {post.technologies.map((tag: string, i: number) => (
+                                    <span
+                                      key={i}
+                                      className={`${tag}  text-xl text-gray-600 rounded-full`}
+                                    >
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <div className="flex flex-row items-center justify-between mt-auto">
