@@ -401,10 +401,25 @@
     "Line Art"
   ],
   "allTechnologies": [
-    "devicon-nextjs-plain",
-    "devicon-tailwindcss-plain",
-    "devicon-react-plain",
-    "devicon-python-plain",
-    "devicon-matplotlib-plain"
+    [
+      "devicon-nextjs-plain",
+      "Next.js"
+    ],
+    [
+      "devicon-tailwindcss-plain",
+      "Tailwind CSS"
+    ],
+    [
+      "devicon-react-plain",
+      "React"
+    ],
+    [
+      "devicon-python-plain",
+      "Python"
+    ],
+    [
+      "devicon-matplotlib-plain",
+      "Matplotlib"
+    ]
   ]
 }

@@ -47,7 +47,7 @@ export default function FilterMenu() {
       <button
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center px-3 py-1 border rounded text-sm hover:bg-gray-50 transition-colors ${
+        className={`flex items-center px-2 py-0.5 border rounded text-sm hover:bg-gray-50 transition-colors ${
           hasActiveFilters
             ? "border-blue-500 bg-blue-50 text-blue-700"
             : "border-gray-300 text-gray-600"
@@ -56,7 +56,7 @@ export default function FilterMenu() {
         <Filter className="w-4 h-4 mr-1" />
         Filter
         {activeFiltersCount > 0 && (
-          <span className="ml-1 px-1.5 py-0.5 text-xs bg-blue-600 text-white rounded-full">
+          <span className="ml-1 px-1  text-xs bg-blue-600 text-white rounded-full">
             {activeFiltersCount}
           </span>
         )}
@@ -70,7 +70,7 @@ export default function FilterMenu() {
       {isOpen && (
         <div
           ref={menuRef}
-          className="absolute right-0 top-full mt-1 w-80 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+          className="absolute left-[-60px] right-0 top-full mt-1 w-80 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
         >
           <div className="p-4">
             {/* Header */}
@@ -116,11 +116,11 @@ export default function FilterMenu() {
               <div className="flex flex-wrap gap-2 max-h-32 overflow-y-auto">
                 {allTechnologies.map((tech) => {
                   const isSelected = searchContext.technologies.some(
-                    (t) => t[0] === tech[0]
+                    (t) => t[0] === tech[0] && t[1] === tech[1]
                   );
                   return (
                     <button
-                      key={tech[0]}
+                      key={`${tech[0]}-${tech[1]}`}
                       onClick={() => searchContext.toggleTechnology(tech)}
                       className={`inline-flex items-center px-2 py-1 rounded text-xs transition-colors ${
                         isSelected
@@ -159,7 +159,7 @@ export default function FilterMenu() {
                   ))}
                   {searchContext.technologies.map((tech) => (
                     <span
-                      key={`active-tech-${tech[0]}`}
+                      key={`active-tech-${tech[0]}-${tech[1]}`} 
                       className="inline-flex items-center px-2 py-1 bg-green-100 text-green-800 rounded text-xs"
                     >
                       <span className={`${tech[0]} text-sm mr-1`}></span>

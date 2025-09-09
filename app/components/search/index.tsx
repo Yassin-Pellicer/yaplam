@@ -6,18 +6,16 @@ import { Search as SearchIcon } from "lucide-react";
 export default function Search() {
   const hooks = useSearch();
   const searchContext = useSearchStore();
-  
+
   return (
     <div className="bg-white border-b border-gray-300">
       <div className="px-4 py-3">
-        {/* Header */}
         <div className="flex items-center justify-between flex-wrap gap-3">
           <h1 className="md:text-2xl text-xl font-bold tracking-tighter text-black">
             ✒️ Publicaciones Destacadas
           </h1>
         </div>
-        
-        {/* Controls */}
+
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mt-3">
           <div className="relative w-full md:w-64">
             <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -29,35 +27,30 @@ export default function Search() {
               onChange={(e) => searchContext.setSearchTerm(e.target.value)}
             />
           </div>
-          
-          {/* Count + Controls */}
+
           <div className="flex flex-row gap-4 items-center">
-            <span className="text-sm text-gray-600">
+            <span className="md:text-sm text-center text-xs text-gray-600">
               {hooks.total} Publicaciones
             </span>
-            
-            {/* Filter Menu */}
+
             <FilterMenu />
-            
-            {/* Sort buttons */}
-            <div className="flex items-center gap-2 flex-wrap">
+
+            <div className="flex justify-center items-center gap-2 flex-wrap">
               <button
                 onClick={() => searchContext.setSortBy("Latest")}
-                className={`px-2 hover:cursor-pointer rounded py-1 text-gray-700 ${
-                  searchContext.sortBy === "Latest"
+                className={`px-2 hover:cursor-pointer md:text-sm text-xs rounded py-1 text-gray-700 ${searchContext.sortBy === "Latest"
                     ? "outline bg-gray-100"
                     : "hover:bg-gray-200 transition duration-100"
-                } text-sm`}
+                  } text-sm`}
               >
                 Latest
               </button>
               <button
                 onClick={() => searchContext.setSortBy("Oldest")}
-                className={`px-2 hover:cursor-pointer rounded py-1 text-gray-700 ${
-                  searchContext.sortBy === "Oldest"
+                className={`px-2 hover:cursor-pointer md:text-sm text-xs rounded py-1 text-gray-700 ${searchContext.sortBy === "Oldest"
                     ? "outline bg-gray-100"
                     : "hover:bg-gray-200 transition duration-100"
-                } text-sm`}
+                  } text-sm`}
               >
                 Oldest
               </button>
