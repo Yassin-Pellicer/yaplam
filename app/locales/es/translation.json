@@ -389,6 +389,23 @@
         "devicon-python-plain",
         "devicon-matplotlib-plain"
       ]
+    },
+    "traffic" : {
+      "id": "traffic",
+      "title": "YOLOv8, OpenCV y una red neuronal convolucional para detectar las señales de tráfico en tiempo real",
+      "date": "2025-09-13",
+      "excerpt": "En este proyecto explico cómo diseño el pipeline de procesamiento de imágenes para detectar las señales de tráfico en tiempo real y clasificarlas en sus respectivas categorías.",
+      "tags": [
+        "Computer Vision",
+        "IA",
+        "CNNs"
+      ],
+      "image": "/blog/traffic.png",
+      "technologies": [
+        "devicon-opencv-plain",
+        "devicon-python-plain",
+        "devicon-keras-plain"
+      ] 
     }
   },
   "postCounter": 2,
