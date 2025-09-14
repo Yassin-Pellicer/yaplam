@@ -391,16 +391,36 @@
         "devicon-python-plain",
         "devicon-matplotlib-plain"
       ]
+    },
+    "traffic": {
+      "id": "traffic",
+      "title": "YOLOv8, OpenCV, and a Convolutional Neural Network for Real-Time Traffic Sign Detection",
+      "date": "2025-09-13",
+      "excerpt": "In this project, I explain how I design the image processing pipeline to detect traffic signs in real time and classify them into their respective categories.",
+      "tags": [
+        "Computer Vision",
+        "AI",
+        "CNNs"
+      ],
+      "image": "/blog/traffic.png",
+      "technologies": [
+        "devicon-opencv-plain",
+        "devicon-python-plain",
+        "devicon-keras-plain"
+      ]
     }
   },
-  "postCounter": 2,
+  "postCounter": 3,
   "allTags": [
     "Next.js",
     "Tailwind",
     "i18n",
     "Python",
     "Pillow",
-    "Line Art"
+    "Line Art",
+    "Computer Vision",
+    "IA",
+    "CNNs"
   ],
   "allTechnologies": [
     [
@@ -422,6 +442,14 @@
     [
       "devicon-matplotlib-plain",
       "Matplotlib"
+    ],
+    [
+      "devicon-opencv-plain",
+      "OpenCV"
+    ],
+    [
+      "devicon-keras-plain",
+      "Keras"
     ]
   ]
 }

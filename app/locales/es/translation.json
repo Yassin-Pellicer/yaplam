@@ -408,14 +408,17 @@
       ] 
     }
   },
-  "postCounter": 2,
+  "postCounter": 3,
   "allTags": [
     "Next.js",
     "Tailwind",
     "i18n",
     "Python",
     "Pillow",
-    "Line Art"
+    "Line Art",
+    "Computer Vision",
+    "IA",
+    "CNNs"
   ],
   "allTechnologies": [
     [
@@ -437,6 +440,14 @@
     [
       "devicon-matplotlib-plain",
       "Matplotlib"
+    ],
+    [
+      "devicon-opencv-plain",
+      "OpenCV"
+    ],
+    [
+      "devicon-keras-plain",
+      "Keras"
     ]
   ]
 }
