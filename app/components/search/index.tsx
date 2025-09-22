@@ -2,17 +2,19 @@ import { useSearchStore } from "./context";
 import useSearch from "./hooks";
 import FilterMenu from "./filter";
 import { Search as SearchIcon } from "lucide-react";
+import { useTranslation } from "next-i18next";
 
 export default function Search() {
   const hooks = useSearch();
   const searchContext = useSearchStore();
-
+  const { t } = useTranslation();
+  
   return (
     <div className="bg-white border-b border-gray-300">
       <div className="px-4 py-3">
         <div className="flex items-center justify-between flex-wrap gap-3">
           <h1 className="md:text-2xl text-xl font-bold tracking-tighter text-black">
-            ✒️ Publicaciones Destacadas
+            {t("blog.title")} 
           </h1>
         </div>
 

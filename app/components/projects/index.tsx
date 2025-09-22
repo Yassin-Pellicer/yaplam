@@ -183,16 +183,12 @@ export default () => {
                   <span className="material-symbols-outlined mr-2">photo</span> Gallery and demos
                 </button>}
               </div>
-              {option === "about" && selectedProject.content.map((line, index) => (
-                <p key={index} className="text-white text-base">
-                  <Trans
-                    i18nKey={line}
-                    components={[
-                      <span key="0" className="font-bold text-white" />,
-                      <b key="1" className="text-white text-xl" />,
-                    ]} />
-                </p>
-              ))}
+              {option === "about" &&
+                <div
+                  className="text-white text-base"
+                  dangerouslySetInnerHTML={{ __html: selectedProject.content }}
+                />
+              }
               {option === "gallery" && (() => {
                 const media = [
                   ...(selectedProject.gallery?.images?.map(src => ({ type: "image", src })) || []),

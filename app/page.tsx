@@ -11,6 +11,7 @@ import { AbsCerts } from "./components/abs&certs";
 import Projects from "./components/projects";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
+import { LatestOnBlog } from "./components/lastOnBlog";
 
 
 export default function Portfolio() {
@@ -36,6 +37,10 @@ export default function Portfolio() {
 
         <InViewSection>
           <Projects></Projects>
+        </InViewSection>
+
+        <InViewSection>
+          <LatestOnBlog></LatestOnBlog>
         </InViewSection>
 
         <InViewSection>

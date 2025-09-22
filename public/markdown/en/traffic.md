@@ -57,7 +57,9 @@ Beyond the algorithmic improvements, I implemented several technical optimizatio
 
 ## Some Results
 
-[Traffic Sign Detection Video: Click Me! 👈🏻](https://www.youtube.com/watch?v=AQusYhU3np8)
+<div style="background-color: black; display: flex; align-items: center; justify-content: center;">
+  <video controls width="90%" ><source src="/source/traffic_detection.mp4"></video>
+</div>
 
 ## About the results
 

@@ -46,8 +46,7 @@
       {
         "emoji": "🗒️",
         "title": "Blog donde documento mi aprendizaje",
-        "subtitle": "¡Pronto publicaré mi primer post!",
-        "incoming": true
+        "subtitle": "¡En constante actualización!"
       }
     ]
   },
@@ -240,13 +239,7 @@
           "description": "Plataforma de gestión de tutorías y cursos online y presenciales, con funcionalidades de gestión de contenido.",
           "link": "https://github.com/Yassin-Pellicer/s3md",
           "color": "bg-blue-600",
-          "content": [
-            "<0>TutorGo</0> es una plataforma de gestión de tutorías y cursos online y presenciales, diseñada para tutores particulares y profesionales que buscan digitalizar y organizar su oferta educativa.",
-            "Permite crear, organizar y controlar sesiones de tutoría, gestionar horarios, alumnos y materiales educativos de manera eficiente.",
-            "Ofrece herramientas para planificar cursos presenciales u online de forma intuitiva y optimizar el tiempo de los tutores.",
-            "<1>Gestión completa de contenido educativo, alumnos y sesiones</1>, incluyendo materiales, asistencia y seguimiento de progreso.",
-            "Integración con servicios de AWS para almacenamiento, seguridad y despliegue escalable, asegurando confiabilidad y rendimiento."
-          ],
+          "content": "<strong>TutorGo</strong> es una plataforma de gestión de tutorías y cursos online y presenciales, diseñada para tutores particulares y profesionales que buscan digitalizar y organizar su oferta educativa.<br/><br/><b>Funcionalidades destacadas:</b><ul><li>Creación, organización y control de sesiones de tutoría.</li><li>Gestión de horarios, alumnos y materiales educativos de manera eficiente.</li><li>Planificación de cursos presenciales u online de forma intuitiva.</li><li>Optimización del tiempo de los tutores.</li></ul><br/><b>Gestión completa de contenido educativo, alumnos y sesiones</b>, incluyendo materiales, asistencia y seguimiento de progreso.<br/><br/>Integración con servicios de AWS para almacenamiento, seguridad y despliegue escalable. Asegura confiabilidad y rendimiento.",
           "gallery": {
             "images": [
               "/s3md/second.png",
@@ -272,12 +265,7 @@
           "description": "Plataforma de publicación de eventos gratis, accesible y con características de red social en un mapa global.",
           "link": "https://github.com/Yassin-Pellicer/pinpoint",
           "color": "bg-green-600",
-          "content": [
-            "<0>Pinpoint</0> es una plataforma web que permite a los usuarios crear, compartir y explorar eventos e itinerarios mediante puntos de control geolocalizados sobre un mapa interactivo.",
-            "Cada punto de control puede incluir información multimedia, códigos QR y detalles adicionales, haciendo la experiencia de usuario más rica y completa.",
-            "<1>Funcionalidades destacadas:</1> creación de eventos públicos o privados, gestión de inscripciones, visibilidad personalizada y notificaciones.",
-            "Implementada con Next.js y React, integrando internacionalización (i18n) y diseño centrado en la experiencia del usuario para simplificar la navegación y el descubrimiento de eventos."
-          ],
+          "content": "<strong>Pinpoint</strong> es una plataforma web que permite a los usuarios crear, compartir y explorar eventos e itinerarios mediante puntos de control geolocalizados sobre un mapa interactivo.<br/><br/>Cada punto de control puede incluir información multimedia, códigos QR y detalles adicionales. Esto hace la experiencia de usuario más rica y completa.<br/><br/><b>Funcionalidades destacadas:</b><ul><li>Creación de eventos públicos o privados.</li><li>Gestión de inscripciones.</li><li>Visibilidad personalizada.</li><li>Notificaciones.</li></ul><br/><b>Implementada con Next.js y React, integrando internacionalización (i18n)</b> y diseño centrado en la experiencia del usuario. Simplifica la navegación y el descubrimiento de eventos.",
           "gallery": {
             "images": [
               "/pinpoint/second.png",
@@ -303,12 +291,7 @@
           "description": "Diversos proyectos personales y juegos que permiten explorar y aplicar habilidades en distintos contextos de programación.",
           "link": "https://github.com/Yassin-Pellicer/Miscellaneous",
           "color": "bg-yellow-600",
-          "content": [
-            "<0>Este repositorio</0> incluye varios proyectos personales que me permiten aplicar mis habilidades en distintos contextos, desde compiladores hasta juegos y simulaciones gráficas.",
-            "Entre ellos se encuentran un compilador para un subconjunto del lenguaje C, herramientas de scraping de Wikipedia, visualizaciones interactivas de conjuntos fractales y simuladores de máquinas de Turing.",
-            "También hay implementaciones de juegos clásicos, como Snake y Brick Breaker, que me ayudaron a practicar interfaces gráficas, lógica de juego y animaciones.",
-            "<1>Estos proyectos</1> no solo han reforzado mis conocimientos técnicos en programación, estructuras de datos y algoritmia, sino que también han sido una excelente oportunidad para experimentar con visualizaciones interactivas y la creación de experiencias de usuario atractivas."
-          ],
+          "content": "<strong>Este repositorio</strong> incluye varios proyectos personales que me permiten aplicar mis habilidades en distintos contextos, desde compiladores hasta juegos y simulaciones gráficas.<br/><br/><b>Proyectos incluidos:</b><ul><li>Un compilador para un subconjunto del lenguaje C.</li><li>Herramientas de scraping de Wikipedia.</li><li>Visualizaciones interactivas de conjuntos fractales.</li><li>Simuladores de máquinas de Turing.</li><li>Implementaciones de juegos clásicos como Snake y Brick Breaker.</li></ul><br/>Estos proyectos me ayudaron a practicar interfaces gráficas, lógica de juego y animaciones.<br/><br/><b>Beneficios obtenidos:</b> refuerzo de conocimientos técnicos en programación, estructuras de datos y algoritmia, además de la oportunidad de experimentar con visualizaciones interactivas y la creación de experiencias atractivas.",
           "projects": "lineart"
         },
         {
@@ -323,15 +306,10 @@
             "devicon-figma-plain"
           ],
           "date": "2023",
-          "description": "Página web para academia de clases de inglés.",
+          "description": "Página web para academia de clases de inglés. Cuenta con traducciones al polaco y un blog integrado.",
           "color": "bg-pink-400",
           "link": "https://github.com/Yassin-Pellicer/up_and_down_english",
-          "content": [
-            "<0>Up And Down English</0> es una web de academia dedicada a impartir clases de inglés a estudiantes de diferentes niveles.",
-            "Desarrollada con Next.js y React, ofrece una interfaz de usuario intuitiva y escalable.",
-            "Entre las funcionalidades destacadas se encuentran la creación de cursos personalizados, la gestión de alumnos, las calificaciones y las notificaciones.",
-            "También se han implementado funcionalidades de autenticación y autorización, y se han utilizado librerías como React Hook Form para manejar formularios y React Query para manejar la cache de datos."
-          ],
+          "content": "<strong>Up And Down English</strong> es una web de academia dedicada a impartir clases de inglés a estudiantes de diferentes niveles.<br/>Desarrollada con Next.js y React. Ofrece una interfaz de usuario intuitiva y escalable.<br/><br/><b>Funcionalidades destacadas:</b><ul><li>Creación de cursos personalizados.</li><li>Gestión de alumnos.</li><li>Calificaciones.</li><li>Notificaciones.</li></ul><br/>Incluye autenticación y autorización. Se utilizan librerías como React Hook Form para formularios y React Query para manejar la caché de datos.",
           "gallery": {
             "videos": [
               "/ude/second.mp4"
@@ -390,7 +368,7 @@
         "devicon-matplotlib-plain"
       ]
     },
-    "traffic" : {
+    "traffic": {
       "id": "traffic",
       "title": "YOLOv8, OpenCV y una red neuronal convolucional para detectar las señales de tráfico en tiempo real",
       "date": "2025-09-13",
@@ -405,10 +383,27 @@
         "devicon-opencv-plain",
         "devicon-python-plain",
         "devicon-keras-plain"
-      ] 
+      ]
+    },
+    "hands": {
+      "id": "hands",
+      "title": "Mediapipe y OpenCV para la detección y clasificación de gestos de lenguaje de signos en tiempo real gracias a la inteligencia artificial",
+      "date": "2025-09-22",
+      "excerpt": "Un proyecto que combina la tecnología de mediapipe y opencv para detectar y clasificar gestos de lenguaje de signos en tiempo real gracias a la inteligencia artificial (y con el que también he aprendido un par de signos de LSE).",
+      "tags": [
+        "Computer Vision",
+        "IA",
+        "CNNs"
+      ],
+      "image": "/blog/hands.png",
+      "technologies": [
+        "devicon-opencv-plain",
+        "devicon-python-plain",
+        "devicon-keras-plain"
+      ]
     }
   },
-  "postCounter": 3,
+  "postCounter": 4,
   "allTags": [
     "Next.js",
     "Tailwind",
@@ -449,5 +444,8 @@
       "devicon-keras-plain",
       "Keras"
     ]
-  ]
+  ],
+  "blog": {
+    "title" : "✒️ ¡Lo último en mi blog!"
+  }
 }

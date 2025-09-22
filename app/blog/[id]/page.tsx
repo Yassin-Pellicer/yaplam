@@ -130,7 +130,7 @@ export default function Portfolio() {
 
                         {markdown && (
                           <div className="markdown px-4 border-t mt-4 mb-8 border-gray-300">
-                            <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
+                            <ReactMarkdown rehypePlugins={[rehypeRaw, rehypeHighlight]}>
                               {markdown}
                             </ReactMarkdown>
                           </div>

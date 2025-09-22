@@ -226,7 +226,7 @@
         {
           "indev": true,
           "route": "/tutorgo.png",
-          "title": "TutorGo, a tool for private tutors and professionals",
+          "title": "TutorGo, a tool for private and professional tutors",
           "icon": "👨🏻‍🏫",
           "technologies": [
             "devicon-react-original",
@@ -237,16 +237,10 @@
             "devicon-amazonwebservices-plain"
           ],
           "date": "2025",
-          "description": "Platform for managing tutoring and online courses, with content management features.",
+          "description": "Platform for managing tutoring sessions and online or in-person courses, with content management features.",
           "link": "https://github.com/Yassin-Pellicer/s3md",
           "color": "bg-blue-600",
-          "content": [
-            "<0>TutorGo</0> is a platform for managing tutoring and online courses, designed for private tutors and professionals who want to digitize and organize their educational offer.",
-            "It allows creating, organizing and controlling tutoring sessions, managing schedules, students and educational materials in an efficient way.",
-            "It offers tools for planning online or in-person courses in an intuitive way and optimizing the time of tutors.",
-            "<1>Complete management of educational content, students and sessions</1>, including materials, attendance and progress tracking.",
-            "Integration with AWS services for storage, security and scalable deployment, ensuring reliability and performance."
-          ],
+          "content": "<strong>TutorGo</strong> is a platform for managing tutoring sessions and online or in-person courses, designed for private and professional tutors who want to digitize and organize their educational offer.<br/><br/><b>Main features:</b><ul><li>Creation, organization, and control of tutoring sessions.</li><li>Efficient management of schedules, students, and learning materials.</li><li>Planning of in-person or online courses in an intuitive way.</li><li>Optimization of tutors’ time.</li></ul><br/><b>Comprehensive management of educational content, students, and sessions</b>, including materials, attendance, and progress tracking.<br/><br/>Integration with AWS services for storage, security, and scalable deployment. Ensures reliability and performance.",
           "gallery": {
             "images": [
               "/s3md/second.png",
@@ -259,7 +253,7 @@
         },
         {
           "route": "/pinpoint.png",
-          "title": "Pinpoint, the free event platform",
+          "title": "Pinpoint, the free events platform",
           "icon": "🗺️",
           "technologies": [
             "devicon-react-original",
@@ -269,22 +263,17 @@
             "devicon-figma-plain"
           ],
           "date": "2024",
-          "description": "Free event platform, accessible and with social network features on a global map.",
+          "description": "Free event publishing platform, accessible and with social network features on a global map.",
           "link": "https://github.com/Yassin-Pellicer/pinpoint",
           "color": "bg-green-600",
-          "content": [
-            "<0>Pinpoint</0> is a web platform that allows users to create, share and explore events and itineraries through geolocalized control points on an interactive map.",
-            "Each control point can include multimedia information, QR codes and additional details, making the user experience richer and more complete.",
-            "<1>Highlighted features:</1> creation of public or private events, registration management, customized visibility and notifications.",
-            "Implemented with Next.js and React, integrating internationalization (i18n) and user-centered design to simplify navigation and event discovery."
-          ],
+          "content": "<strong>Pinpoint</strong> is a web platform that allows users to create, share, and explore events and itineraries through geolocated checkpoints on an interactive map.<br/><br/>Each checkpoint can include multimedia information, QR codes, and additional details. This makes the user experience richer and more complete.<br/><br/><b>Main features:</b><ul><li>Creation of public or private events.</li><li>Registration management.</li><li>Custom visibility.</li><li>Notifications.</li></ul><br/><b>Implemented with Next.js and React, integrating internationalization (i18n)</b> and a user-centered design. Simplifies navigation and event discovery.",
           "gallery": {
             "images": [
               "/pinpoint/second.png",
               "/pinpoint/third.png",
               "/pinpoint/first.png"
             ],
-            "maxH": 420
+            "maxH": 435
           }
         },
         {
@@ -300,15 +289,10 @@
             "devicon-react-plain"
           ],
           "date": "2023",
-          "description": "Various personal projects and games that allow me to apply my skills in different contexts of programming.",
+          "description": "Various personal projects and games that allow exploring and applying skills in different programming contexts.",
           "link": "https://github.com/Yassin-Pellicer/Miscellaneous",
           "color": "bg-yellow-600",
-          "content": [
-            "<0>This repository</0> includes various personal projects that allow me to apply my skills in different contexts, from compilers to games and graphic simulations.",
-            "Among them are a compiler for a subset of the C language, Wikipedia scraping tools, interactive visualizations of fractal sets and Turing machine simulators.",
-            "There are also implementations of classic games, such as Snake and Brick Breaker, which helped me practice graphical interfaces, game logic and animations.",
-            "<1>These projects</1> not only reinforced my technical knowledge in programming, data structures and algorithms, but also provided an excellent opportunity to experiment with interactive visualizations and creating engaging user experiences."
-          ],
+          "content": "<strong>This repository</strong> includes several personal projects that allow me to apply my skills in different contexts, from compilers to games and graphical simulations.<br/><br/><b>Included projects:</b><ul><li>A compiler for a subset of the C language.</li><li>Wikipedia scraping tools.</li><li>Interactive visualizations of fractal sets.</li><li>Turing machine simulators.</li><li>Implementations of classic games like Snake and Brick Breaker.</li></ul><br/>These projects helped me practice graphical interfaces, game logic, and animations.<br/><br/><b>Benefits obtained:</b> reinforcement of technical knowledge in programming, data structures, and algorithms, as well as the opportunity to experiment with interactive visualizations and the creation of engaging experiences.",
           "projects": "lineart"
         },
         {
@@ -323,15 +307,10 @@
             "devicon-figma-plain"
           ],
           "date": "2023",
-          "description": "Website for an English language academy.",
+          "description": "Website for an English academy. It has polish translation on the fly and an incorporated blog.",
           "color": "bg-pink-400",
           "link": "https://github.com/Yassin-Pellicer/up_and_down_english",
-          "content": [
-            "<0>Up And Down English</0> is a website for an English language academy, designed for students of different levels.",
-            "Developed with Next.js and React, it offers an intuitive and scalable user interface.",
-            "The features include customized course creation, student management, grades and notifications.",
-            "It also includes authentication and authorization features, and uses libraries like React Hook Form to handle forms and React Query to handle data caching."
-          ],
+          "content": "<strong>Up And Down English</strong> is a website for an academy dedicated to teaching English classes to students of different levels.<br/><br/>Developed with Next.js and React. It offers an intuitive and scalable user interface.<br/><br/><b>Main features:</b><ul><li>Creation of personalized courses.</li><li>Student management.</li><li>Grades.</li><li>Notifications.</li></ul><br/>Includes authentication and authorization. Libraries such as React Hook Form are used for forms, and React Query for data caching.",
           "gallery": {
             "videos": [
               "/ude/second.mp4"
@@ -408,6 +387,23 @@
         "devicon-python-plain",
         "devicon-keras-plain"
       ]
+    },
+    "hands": {
+      "id": "hands",
+      "title": "Mediapipe and OpenCV for Real-Time Sign Language Detection and Classification Using Artificial Intelligence",
+      "date": "2025-09-22",
+      "excerpt": "A project that combines mediapipe and OpenCV technology to detect and classify sign language gestures in real time using artificial intelligence (and with which I also learned a few signs of LSE).",
+      "tags": [
+        "Computer Vision",
+        "AI",
+        "CNNs"
+      ],
+      "image": "/blog/hands.png",
+      "technologies": [
+        "devicon-opencv-plain",
+        "devicon-python-plain",
+        "devicon-keras-plain"
+      ]
     }
   },
   "postCounter": 3,
@@ -419,7 +415,7 @@
     "Pillow",
     "Line Art",
     "Computer Vision",
-    "IA",
+    "AI",
     "CNNs"
   ],
   "allTechnologies": [
@@ -451,5 +447,8 @@
       "devicon-keras-plain",
       "Keras"
     ]
-  ]
+  ],
+  "blog": {
+    "title": "✒️ Latest Posts on My Blog"
+  }
 }
