@@ -37,7 +37,7 @@ export const LatestOnBlog = () => {
           {t("blog.title")}
         </h2>
         <div className="grid grid-rows md:grid-cols-2 gap-2">
-          {rawPosts?.slice(0, 1).map((post, index) => {
+          {rawPosts?.slice(0, 2).map((post, index) => {
             return (
               <article
                 key={post.title}
