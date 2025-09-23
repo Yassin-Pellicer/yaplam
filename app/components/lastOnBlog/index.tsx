@@ -41,7 +41,7 @@ export const LatestOnBlog = () => {
             return (
               <article
                 key={post.title}
-                className={`flex rounded-xl md:flex-col pt-2 flex-row hover:cursor-pointer transition-all duration-300 w-full 
+                className={`flex text-black rounded-xl md:flex-col pt-2 flex-row hover:cursor-pointer transition-all duration-300 w-full 
                 ${index === 2 || index === 3
                   ? "bg-white md:[mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0)_60%)] [mask-repeat:no-repeat] [mask-size:100%_100%] [mask-position:top]"
                   : "bg-white"}`}
