@@ -2,7 +2,6 @@
 import { useTranslation } from 'react-i18next';
 import i18next from "i18next";
 import { useRouter } from 'next/navigation';
-import { use } from 'react';
 
 export const LatestOnBlog = () => {
 
@@ -41,6 +40,7 @@ export const LatestOnBlog = () => {
             return (
               <article
                 key={post.title}
+                onClick={() => router.push("/blog/" + post.id)}
                 className={`md:hidden flex text-black rounded-xl pt-2 flex-col hover:cursor-pointer transition-all duration-300 w-full 
                 ${index === 1
                   ? "bg-white [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0)_60%)] [mask-repeat:no-repeat] [mask-size:100%_100%] [mask-position:top]"
@@ -108,6 +108,7 @@ export const LatestOnBlog = () => {
             return (
               <article
                 key={`desktop-${post.title}`}
+                onClick={() => router.push("/blog/" + post.id)}
                 className={`hidden md:flex text-black rounded-xl md:flex-col pt-2 flex-row hover:cursor-pointer transition-all duration-300 w-full 
                 ${index === 2 || index === 3
                   ? "bg-white [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0)_60%)] [mask-repeat:no-repeat] [mask-size:100%_100%] [mask-position:top]"
