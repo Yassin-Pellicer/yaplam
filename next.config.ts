@@ -1,11 +1,20 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
 
-const nextConfig: NextConfig = {
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "es"],
+const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/:lang(es|en)/:rest*",
+        destination: "/:rest*",
+        permanent: false,
+      },
+      {
+        source: "/:lang(es|en)",
+        destination: "/",
+        permanent: false,
+      },
+    ];
   },
-  react: { useSuspense: false }
 };
 
-export default nextConfig;
+module.exports = nextConfig;
