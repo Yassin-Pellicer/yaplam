@@ -7,11 +7,11 @@ import { Hero } from "./components/hero";
 import { InViewSection } from "./components/motion";
 import { About } from "./components/about";
 import { Experience } from "./components/experience";
-import { AbsCerts } from "./components/abs&certs";
+import { AbsCerts } from "./components/abs-certs";
 import Projects from "./components/projects";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
-import { LatestOnBlog } from "./components/lastOnBlog";
+import { LatestOnBlog } from "./components/last-on-blog";
 
 
 export default function Portfolio() {
