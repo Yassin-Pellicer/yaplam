@@ -1,0 +1,9 @@
+[functions]
+  node_bundler = "esbuild"
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[experimental]
+  edge_functions = false
