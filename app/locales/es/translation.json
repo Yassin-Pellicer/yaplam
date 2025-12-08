@@ -76,9 +76,23 @@
         },
         {
           "id": 3,
+          "company": "NTT DATA SPAIN",
+          "position": "Ingeniero de software Front-End",
+          "period": "2025 ~",
+          "description": "Responsable del diseño de evolutivos y funcionalidades en una plataforma de gestión de clientes para una entidad bancaria líder en España.",
+          "content": {
+            "paragraph": "En 2025 NTT DATA apostó por mi talento y me ofreció incorporarme a un proyecto de gran envergadura para una entidad bancaria líder en el mundo: BBVA. Desde que empecé mi recorrido en NTT DATA he tenido la oportunidad de trabajar con metodologías punteras y un enfoque basado en componentes que me han enseñado mucho sobre el know-how de los más grandes. Entre mis responsabilidades destacan...",
+            "list": [
+              "Desarrollo de funcionalidades a petición de los requisitos del cliente.",
+              "Control total sobre el ciclo de desarrollo de software: desde la especificación de requisitos, pasando por la implementación, testing (E2E, unitario) y despliegue continuo con versionado de componentes."
+            ]
+          }
+        },
+        {
+          "id": 2,
           "company": "UNIVERSAL TICKETS S.L",
           "position": "Desarrollador Full-Stack en empresa de venta de tickets online",
-          "period": "2025 ~",
+          "period": "2025",
           "description": "Desarrollo, mantenimiento e implementación de código para el ERP de una empresa de venta de tickets online.",
           "content": {
             "paragraph": "En Universal Tickets S.L, la cuna de Servientradas®, he podido crecer como profesional desarrollando código en Javascript, HTML, CSS y PHP puros, en un sistema robusto y con años de recorrido y de la mano de profesionales veteranos en el sector de venta de entradas y entretenimiento. Entre las cosas de las que me he encargado destacamos...",
@@ -89,7 +103,7 @@
           }
         },
         {
-          "id": 2,
+          "id": 1,
           "company": "F1 CONNECTING",
           "position": "Front-End Developer y Soporte Técnico",
           "period": "2023 - 2025",
@@ -100,22 +114,6 @@
               "Soporte Técnico en TPVs de Carrefour (2023 - 2024): atención y resolución de incidencias en sistemas de punto de venta.",
               "Desarrollador en solución de gestión para retail (2024): creación de interfaces funcionales y diseño de flujos de usuario.",
               "Desarrollador Front-End en sistema de monitorización de pagos (2024 - 2025): desarrollo de interfaces de usuario y optimización de rendimiento."
-            ]
-          }
-        },
-        {
-          "id": 1,
-          "company": "LaCuesta Grup",
-          "position": "Camarero y responsable de sala",
-          "period": "2022 - 2023",
-          "description": "Mi primer contacto con el mundo laboral me permitió aprender a trabajar en equipo y a desarrollar competencias blandas.",
-          "content": {
-            "paragraph": "Durante mi tiempo en LaCuesta Grup aprendí a manejar la compostura en momentos clave de la jornada y a tratar a la gente amablemente sin importar la circunstancia. Entre otras competencias...",
-            "list": [
-              "Paciencia, comprensión y soltura al hablar con clientes.",
-              "Trabajo en equipo y colaboración con otros camareros.",
-              "Destreza física y equilibrio.",
-              "Habilidades sociales. Refuerzo de idiomas con clientes extranjeros."
             ]
           }
         }
@@ -319,6 +317,40 @@
             ],
             "maxH": 315
           }
+        },
+        {
+          "route": "/blog/hands.png",
+          "title": "Proyectos de Visión por computador y Machine Learning",
+          "icon": "🤖",
+          "technologies": [
+            "devicon-python-plain",
+            "devicon-opencv-plain",
+            "devicon-keras-plain",
+            "devicon-tensorflow-original"
+          ],
+          "date": "2023",
+          "description": "Proyectos con los que he aprendido a utilizar técnicas de visión por computador e inteligencia artificial.",
+          "link": "https://github.com/Yassin-Pellicer/Miscellaneous",
+          "color": "bg-blue-400",
+          "content": "<strong>Con estos proyuectos</strong> He podido reforzar mis conocimientos en Machine learning, ciencia de datos y visión por computador, usando herramientas como Python, OpenCV, Keras y Tensorflow.<br/><br/><b>Proyectos incluidos:</b><ul><li>Un clasificador en tiempo real de lenguaje de signos en español.</li><li>Un reconocedor de señales de tráfico en tiempo real.</li></ul><br/>Estos proyectos, aunque se centran por ahora en reconocimiento de imágenes (y sus patrones) y posterior clasificación me han ayudado a entender el proceso de entrenamiento e inferencia de los modelos de inteligencia artificial.<br/><br/><b>Beneficios obtenidos:</b> refuerzo de conocimientos técnicos en programación, estructuras de datos y algoritmia. También suponen una base sólida para futuros proyectos en el ámbito de la visión por computador y la inteligencia artificial.",
+          "projects": "computer-vision"
+        },
+        {
+          "indev": true,
+          "route": "/blog/vocab.png",
+          "title": "Vocabulario interactivo con Electron y Tailwind CSS",
+          "icon": "📚",
+          "technologies": [
+            "devicon-electron-original",
+            "devicon-tailwindcss-plain",
+            "devicon-vite-plain"
+          ],
+          "date": "2023",
+          "description": "Un vocabulario interactivo de escritorio construido con Electron, Tailwind CSS y almacenamiento en archivos JSON.",
+          "link": "https://github.com/Yassin-Pellicer/vocab_project",
+          "color": "bg-red-500",
+          "content": "<strong>Este proyecto</strong> nace a raíz de una necesidad personal: necesitaba aprender alemán y quería que el proceso no fuera tedioso. Mi problema con los idiomas es que aprenderlos se me hace pesado si no hay interacción de por medio. Las listas de vocabulario resultan engorrosas, y la gramática aburrida. <br/><br/><b>Por eso decidí crear una aplicación con las siguientes características:</b><ul><li>Aprendizaje de vocabulario mediante tests de traducción.</li><li>Almacenaje del vocabulario aprendido en archivos JSON.</li><li><br>Posibilidad de guardar palabras con significados similares y sus variantes bajo una misma 'acepción' con la posibilidad de asociar definiciones.</li><li><br>Opción de crear un archivo markdown con explicaciones de cada palabra si así se requiere.</li></ul><br/>",
+          "projects": "vocabulary-app"
         }
       ]
     },
@@ -335,6 +367,25 @@
     }
   },
   "posts": {
+    "vocab": {
+      "id": "vocab",
+      "title": "Creación de una aplicación de vocabulario con Electron, Tailwind y almacenamiento sencillo en archivos JSON",
+      "date": "2025-12-08",
+      "excerpt": "Un proyecto en el que doy mis primeros pasos con Electron para crear una aplicación de escritorio multiplataforma para el aprendizaje del vocabulario, utilizando Tailwind para el diseño y archivos JSON sencillos para el almacenamiento de datos.",
+      "link": "/blog/vocabulary-app",
+      "tags": [
+        "React",
+        "Tailwind",
+        "i18n",
+        "Electron"
+      ],
+      "image": "/blog/vocab.png",
+      "technologies": [
+        "devicon-react-plain",
+        "devicon-tailwindcss-plain",
+        "devicon-electron-original"
+      ]
+    },
     "portfolio": {
       "id": "portfolio",
       "title": "Cómo creé mi portafolio con Next.js, i18n y Tailwind",
@@ -403,7 +454,7 @@
       ]
     }
   },
-  "postCounter": 4,
+  "postCounter": 5,
   "allTags": [
     "Next.js",
     "Tailwind",
@@ -443,9 +494,13 @@
     [
       "devicon-keras-plain",
       "Keras"
+    ],
+    [
+      "devicon-electron-original",
+      "Electron"
     ]
   ],
   "blog": {
-    "title" : "✒️ ¡Lo último en mi blog!"
+    "title": "✒️ ¡Lo último en mi blog!"
   }
 }

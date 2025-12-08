@@ -21,7 +21,7 @@ export default function Portfolio() {
     <div className="flex justify-center flex-col items-center bg-white select-none">
       <section className="flex flex-col h-full items-center min-h-screen">
         <Header style="black" />
-        
+
         <div className="sm:py-14 h-full py-12">
           <div className="w-full bg-white">
             <div className="flex md:flex-row flex-col w-full max-w-[1400px] mx-auto">

@@ -77,9 +77,23 @@
         },
         {
           "id": 3,
+          "company": "NTT DATA SPAIN",
+          "position": "Front-End Software Engineer",
+          "period": "2025 ~",
+          "description": "Responsible for designing evolutions and functionalities in a customer management platform for a leading bank in Spain.",
+          "content": {
+            "paragraph": "In 2025, NTT DATA trusted my talent and offered me to join a large-scale project for a leading bank in the world: BBVA. Since I started my journey at NTT DATA, I have had the opportunity to work with cutting-edge methodologies and a component-based approach that has taught me a lot about the know-how of the biggest players. Among my responsibilities, we highlight...",
+            "list": [
+              "Functionalities development at the request of the client and their needs.",
+              "Total control over the software development lifecycle: from requirements specification, through implementation, testing (E2E, unit testing) and continuous deployment with versioned components."
+            ]
+          }
+        },
+        {
+          "id": 2,
           "company": "UNIVERSAL TICKETS S.L",
           "position": "Full-Stack Developer in an online ticketing company",
-          "period": "2025 ~",
+          "period": "2025",
           "description": "Development, maintenance and implementation of code for the ERP of an online ticketing company.",
           "content": {
             "paragraph": "In Universal Tickets S.L, the cradle of Servientradas, I have been able to grow as a professional developing code in Javascript, HTML, CSS and PHP, in a robust system with years of experience and with the hand of experienced professionals in the ticketing and entertainment industry. Among the things I have been in charge of, we highlight...",
@@ -90,7 +104,7 @@
           }
         },
         {
-          "id": 2,
+          "id": 1,
           "company": "F1 CONNECTING",
           "position": "Front-End Developer and Technical Support",
           "period": "2023 - 2025",
@@ -101,22 +115,6 @@
               "Technical Support in Carrefour TPVs (2023 - 2024): attention and resolution of incidents in point-of-sale systems.",
               "Developer in retail management solution (2024): creation of functional interfaces and design of user flows.",
               "Front-End Developer in payment monitoring system (2024 - 2025): development of user interfaces and performance optimization."
-            ]
-          }
-        },
-        {
-          "id": 1,
-          "company": "LaCuesta Grup",
-          "position": "Waiter and shift leader",
-          "period": "2022 - 2023",
-          "description": "My first contact with the working world allowed me to learn to work in a team and develop soft skills.",
-          "content": {
-            "paragraph": "During my time at LaCuesta Grup, I learned to handle the composure at key moments of the day and to treat people kindly regardless of the situation. Among other skills, I developed...",
-            "list": [
-              "Patience, understanding and ease of speaking with customers.",
-              "Teamwork and collaboration with other waiters.",
-              "Physical dexterity and balance.",
-              "Social skills. Reinforcement of languages with foreign clients."
             ]
           }
         }
@@ -320,6 +318,40 @@
             ],
             "maxH": 315
           }
+        },
+        {
+          "route": "/blog/hands.png",
+          "title": "Computer Vision and Machine Learning Projects",
+          "icon": "🤖",
+          "technologies": [
+            "devicon-python-plain",
+            "devicon-opencv-plain",
+            "devicon-keras-plain",
+            "devicon-tensorflow-original"
+          ],
+          "date": "2023",
+          "description": "Projects in which I have learned to use computer vision and machine learning techniques.",
+          "link": "https://github.com/Yassin-Pellicer/Miscellaneous",
+          "color": "bg-blue-400",
+          "content": "<strong>With these projects</strong> I have reinforced my knowledge in Machine learning, data science, and computer vision, using tools such as Python, OpenCV, Keras, and TensorFlow.<br/><br/><b>Projects included:</b><ul><li>A real-time sign language classifier in Spanish.</li><li>A real-time traffic sign recognizer.</li></ul><br/>These projects, although they are currently focused on image recognition (and its patterns) and posterior classification, have helped me understand the training and inference process of artificial intelligence models.<br/><br/><b>Benefits obtained:</b> reinforcement of technical knowledge in programming, data structures, and algorithms. Also a solid foundation for future projects in the field of computer vision and artificial intelligence.",
+          "projects": "computer-vision"
+        },
+        {
+          "indev": true,
+          "route": "/blog/vocab.png",
+          "title": "Interactive Vocabulary App with Electron and Tailwind CSS",
+          "icon": "📚",
+          "technologies": [
+            "devicon-electron-original",
+            "devicon-tailwindcss-plain",
+            "devicon-vite-plain"
+          ],
+          "date": "2023",
+          "description": "An interactive desktop vocabulary app built with Electron, Tailwind CSS, and JSON file storage.",
+          "link": "https://github.com/Yassin-Pellicer/vocab_project",
+          "color": "bg-red-500",
+          "content": "<strong>This project</strong> was born from a personal need: I needed to learn German and I wanted the process not to be tedious. My problem with languages is that learning them becomes tedious if there is no interaction involved. Vocabulary lists become overwhelming, and grammar is obscure. <br/><br/><b>So I decided to create an application with the following features:</b><ul><li>Vocabulary learning through translation tests.</li><li>Storage of learned vocabulary in JSON files.</li><li><br>Option to save words with similar meanings and their variants under the same 'acepción' with the ability to associate definitions.</li><li><br>Option to create a markdown file with explanations for each word if needed.</li></ul><br/>",
+          "projects": "vocabulary-app"
         }
       ]
     },
@@ -336,6 +368,25 @@
     }
   },
   "posts": {
+    "vocab": {
+      "id": "vocab",
+      "title": "Building a Vocabulary App with Electron, Tailwind, and a simple JSON storage approach",
+      "date": "2025-12-08",
+      "excerpt": "A project in which i take my first steps with Electron to create a cross-platform desktop application for vocabulary learning, using Tailwind for styling and a simple JSON files for data storage.",
+      "link": "/blog/vocabulary-app",
+      "tags": [
+        "React",
+        "Tailwind",
+        "i18n",
+        "Electron"
+      ],
+      "image": "/blog/vocab.png",
+      "technologies": [
+        "devicon-react-plain",
+        "devicon-tailwindcss-plain",
+        "devicon-electron-original"
+      ]
+    },
     "portfolio": {
       "id": "portfolio",
       "title": "How I built my Portfolio with Next.js, i18n and Tailwind",
@@ -406,7 +457,7 @@
       ]
     }
   },
-  "postCounter": 3,
+  "postCounter": 4,
   "allTags": [
     "Next.js",
     "Tailwind",
@@ -446,6 +497,10 @@
     [
       "devicon-keras-plain",
       "Keras"
+    ],
+    [
+      "devicon-electron-original",
+      "Electron"
     ]
   ],
   "blog": {

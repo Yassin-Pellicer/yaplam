@@ -23,21 +23,21 @@ export const AbsCerts = () => {
             return (
               <div
                 key={index}
-                className={`${skill.color} backdrop-blur-md rounded-2xl sm:p-8 p-4 border border-white/10 hover:shadow-md transition-all duration-200`}
+                className={`${skill.color} backdrop-blur-md rounded-2xl sm:p-6 p-4 border border-white/10 hover:shadow-md transition-all duration-200`}
               >
-                <div className="flex flex-col mb-4">
-                  <div className="flex flex-row items-center gap-4 mb-4 flex-wrap">
+                <div className="flex flex-col sm:mb-4 mb-2">
+                  <div className="flex flex-row items-center gap-2 mb-2 flex-wrap">
                     <i className={`${skill.icon} text-white text-3xl`}></i>
-                    <h3 className="sm:text-xl font-bold sm:mb-2 text-white">
+                    <h3 className="sm:text-xl font-bold sm:mb-2 mb-0 text-white">
                       {skill.name}
                     </h3>
                   </div>
-                  <h3 className="sm:text-md text-sm text-white">
+                  <h3 className="text-xs sm:text-lg text-white">
                     {skill.description}
                   </h3>
                 </div>
                 <span
-                  className={`bg-white/10 backdrop-blur-md rounded-full p-2 flex text-white text-sm w-fit px-4 py-2`}
+                  className={`bg-white/10 backdrop-blur-md sm:text-sm rounded-full py-1 px-2 flex text-white text-xs w-fit sm:px-4 sm:py-2`}
                 >
                   {skill.level}
                 </span>
