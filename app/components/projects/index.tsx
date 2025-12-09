@@ -36,40 +36,45 @@ export default () => {
 
   return (
     <>
-      <section id="3" className="sm:py-20 pb-0! py-16">
+      <section id="3">
         <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
           {t("sections.projects.title")}
         </h2>
         <div
           className="overflow-y-hidden scrollbar-hide w-full cursor-grab active:cursor-grabbing scroll-smooth"
         >
-          <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 mb-4">
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
             {projects.map((project, index) => (
               <div
                 key={index}
                 onClick={(e) => {
                   setSelectedProjectIndex(index);
                 }}
-                className={`snap-center relative ${project.color} pb-4 backdrop-blur-md rounded-2xl p-6 border ${selectedProjectIndex === index
+                className={`snap-center relative ${project.color} pb-4 backdrop-blur-md rounded-2xl border ${selectedProjectIndex === index
                   ? "border-white"
                   : "border-white/10"} hover:shadow-md hover:${project.color}/10 transition-all duration-200 cursor-pointer w-full flex-wrap`}
               >
                 {project.indev && (
-                  <div className="absolute bottom-4 right-4 flex flex-row shadow-xl items-center justify-center gap-2 bg-green-100 w-fit rounded-full px-3 text-black font-bold tracking-tighter border-2 border-red-500">
+                  <div className="absolute top-4 right-4 flex flex-row shadow-xl items-center justify-center gap-2 bg-green-100 w-fit rounded-full px-3 text-black font-bold tracking-tighter border-2 border-red-500">
                     <div className="relative h-2 w-2 rounded-full bg-red-500 animate-pulse">
                       <div className="absolute h-2 w-2 rounded-full bg-red-500 animate-[ping_0.75s_infinite]"></div>
                     </div>
                     <span className="text-sm">🚀</span>
                   </div>
                 )}
-                <div className="flex flex-col mb-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-5xl">{project.icon}</span>
-                    <h3 className="text-xl tracking-tight font-bold text-white mt-1 align-center">
+                <div className="flex flex-col mb-2">
+                  <img
+                    src={project.gallery?.images[0]}
+                    alt={project.title}
+                    className="rounded-t-xl mb-4 px-[-10px] max-h-[250px] object-cover"
+                  />
+                  <div className="flex items-center gap-2 mb-2 px-4">
+                    <span className="text-4xl">{project.icon}</span>
+                    <h3 className="text-2xl tracking-tight font-bold text-white mt-1 align-center">
                       {project.title}
                     </h3>
                   </div>
-                  <div className="flex justify-between items-center gap-4">
+                  <div className="flex justify-between items-center gap-4 px-6">
                     <h3 className="text-lg font-bold text-white items-center flex gap-2">
                       <span className="material-symbols-outlined">event</span>{t("sections.projects.developedIn")}{" "}
                       {project.date}
@@ -81,7 +86,7 @@ export default () => {
                     </div>
                   </div>
                   <hr className="border-t-2 border-white/50 my-4" />
-                  <p className="text-white text-sm">{project.description}</p>
+                  <p className="text-white text-lg px-6">{project.description}</p>
                 </div>
               </div>
             ))}
@@ -125,7 +130,7 @@ export default () => {
           <div className="flex flex-col md:flex-row gap-6 flex-wrap md:flex-nowrap">
             <div className="flex flex-col w-full md:w-1/2">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-5xl">{selectedProject.icon}</span>
+                <span className="text-4xl">{selectedProject.icon}</span>
                 <h3 className="text-2xl font-bold text-white">
                   {selectedProject.title}
                 </h3>
@@ -176,7 +181,7 @@ export default () => {
                 >
                   <span className="material-symbols-outlined mr-2">info</span> About the project
                 </button>
-                {selectedProject.gallery && <button
+                {selectedProject.gallery && selectedProject.gallery.images.length > 1 && <button
                   className={`flex w-full py-2 font-bold tracking-tighter px-4 transition-all hover:cursor-pointer duration-50 items-center align-center justify-center ${option === "gallery" ? "border-b-2 border-white mt-[-1px]" : ""}`}
                   onClick={() => setOption("gallery")}
                 >
@@ -223,7 +228,6 @@ export default () => {
                   </div>
                 );
               })()}
-
             </div>
           </div>
         </div>

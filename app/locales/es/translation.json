@@ -290,7 +290,13 @@
           "link": "https://github.com/Yassin-Pellicer/Miscellaneous",
           "color": "bg-yellow-600",
           "content": "<strong>Este repositorio</strong> incluye varios proyectos personales que me permiten aplicar mis habilidades en distintos contextos, desde compiladores hasta juegos y simulaciones gráficas.<br/><br/><b>Proyectos incluidos:</b><ul><li>Un compilador para un subconjunto del lenguaje C.</li><li>Herramientas de scraping de Wikipedia.</li><li>Visualizaciones interactivas de conjuntos fractales.</li><li>Simuladores de máquinas de Turing.</li><li>Implementaciones de juegos clásicos como Snake y Brick Breaker.</li></ul><br/>Estos proyectos me ayudaron a practicar interfaces gráficas, lógica de juego y animaciones.<br/><br/><b>Beneficios obtenidos:</b> refuerzo de conocimientos técnicos en programación, estructuras de datos y algoritmia, además de la oportunidad de experimentar con visualizaciones interactivas y la creación de experiencias atractivas.",
-          "projects": "lineart"
+          "projects": "lineart",
+          "gallery": {
+            "images": [
+              "/blog/lineart.png"
+            ],
+            "maxH": 435
+          }
         },
         {
           "indev": true,
@@ -333,7 +339,13 @@
           "link": "https://github.com/Yassin-Pellicer/Miscellaneous",
           "color": "bg-blue-400",
           "content": "<strong>Con estos proyuectos</strong> He podido reforzar mis conocimientos en Machine learning, ciencia de datos y visión por computador, usando herramientas como Python, OpenCV, Keras y Tensorflow.<br/><br/><b>Proyectos incluidos:</b><ul><li>Un clasificador en tiempo real de lenguaje de signos en español.</li><li>Un reconocedor de señales de tráfico en tiempo real.</li></ul><br/>Estos proyectos, aunque se centran por ahora en reconocimiento de imágenes (y sus patrones) y posterior clasificación me han ayudado a entender el proceso de entrenamiento e inferencia de los modelos de inteligencia artificial.<br/><br/><b>Beneficios obtenidos:</b> refuerzo de conocimientos técnicos en programación, estructuras de datos y algoritmia. También suponen una base sólida para futuros proyectos en el ámbito de la visión por computador y la inteligencia artificial.",
-          "projects": "computer-vision"
+          "projects": "computer-vision",
+          "gallery": {
+            "images": [
+              "/blog/traffic.png"
+            ],
+            "maxH": 435
+          }
         },
         {
           "indev": true,
@@ -350,7 +362,13 @@
           "link": "https://github.com/Yassin-Pellicer/vocab_project",
           "color": "bg-red-500",
           "content": "<strong>Este proyecto</strong> nace a raíz de una necesidad personal: necesitaba aprender alemán y quería que el proceso no fuera tedioso. Mi problema con los idiomas es que aprenderlos se me hace pesado si no hay interacción de por medio. Las listas de vocabulario resultan engorrosas, y la gramática aburrida. <br/><br/><b>Por eso decidí crear una aplicación con las siguientes características:</b><ul><li>Aprendizaje de vocabulario mediante tests de traducción.</li><li>Almacenaje del vocabulario aprendido en archivos JSON.</li><li><br>Posibilidad de guardar palabras con significados similares y sus variantes bajo una misma 'acepción' con la posibilidad de asociar definiciones.</li><li><br>Opción de crear un archivo markdown con explicaciones de cada palabra si así se requiere.</li></ul><br/>",
-          "projects": "vocabulary-app"
+          "projects": "vocabulary-app",
+          "gallery": {
+            "images": [
+              "/blog/vocab.png"
+            ],
+            "maxH": 435
+          }
         }
       ]
     },
@@ -501,6 +519,6 @@
     ]
   ],
   "blog": {
-    "title": "✒️ ¡Lo último en mi blog!"
+    "title": "✒️ ¡Últimas publicaciones!"
   }
 }

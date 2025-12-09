@@ -237,7 +237,7 @@
           "date": "2025",
           "description": "Platform for managing tutoring sessions and online or in-person courses, with content management features.",
           "link": "https://github.com/Yassin-Pellicer/s3md",
-          "color": "bg-blue-600",
+          "color": "bg-blue-800",
           "content": "<strong>TutorGo</strong> is a platform for managing tutoring sessions and online or in-person courses, designed for private and professional tutors who want to digitize and organize their educational offer.<br/><br/><b>Main features:</b><ul><li>Creation, organization, and control of tutoring sessions.</li><li>Efficient management of schedules, students, and learning materials.</li><li>Planning of in-person or online courses in an intuitive way.</li><li>Optimization of tutors’ time.</li></ul><br/><b>Comprehensive management of educational content, students, and sessions</b>, including materials, attendance, and progress tracking.<br/><br/>Integration with AWS services for storage, security, and scalable deployment. Ensures reliability and performance.",
           "gallery": {
             "images": [
@@ -289,9 +289,15 @@
           "date": "2023",
           "description": "Various personal projects and games that allow exploring and applying skills in different programming contexts.",
           "link": "https://github.com/Yassin-Pellicer/Miscellaneous",
-          "color": "bg-yellow-600",
+          "color": "bg-blue-900",
           "content": "<strong>This repository</strong> includes several personal projects that allow me to apply my skills in different contexts, from compilers to games and graphical simulations.<br/><br/><b>Included projects:</b><ul><li>A compiler for a subset of the C language.</li><li>Wikipedia scraping tools.</li><li>Interactive visualizations of fractal sets.</li><li>Turing machine simulators.</li><li>Implementations of classic games like Snake and Brick Breaker.</li></ul><br/>These projects helped me practice graphical interfaces, game logic, and animations.<br/><br/><b>Benefits obtained:</b> reinforcement of technical knowledge in programming, data structures, and algorithms, as well as the opportunity to experiment with interactive visualizations and the creation of engaging experiences.",
-          "projects": "lineart"
+          "projects": "lineart",
+          "gallery": {
+            "images": [
+              "/blog/lineart.png"
+            ],
+            "maxH": 435
+          }
         },
         {
           "indev": true,
@@ -334,7 +340,13 @@
           "link": "https://github.com/Yassin-Pellicer/Miscellaneous",
           "color": "bg-blue-400",
           "content": "<strong>With these projects</strong> I have reinforced my knowledge in Machine learning, data science, and computer vision, using tools such as Python, OpenCV, Keras, and TensorFlow.<br/><br/><b>Projects included:</b><ul><li>A real-time sign language classifier in Spanish.</li><li>A real-time traffic sign recognizer.</li></ul><br/>These projects, although they are currently focused on image recognition (and its patterns) and posterior classification, have helped me understand the training and inference process of artificial intelligence models.<br/><br/><b>Benefits obtained:</b> reinforcement of technical knowledge in programming, data structures, and algorithms. Also a solid foundation for future projects in the field of computer vision and artificial intelligence.",
-          "projects": "computer-vision"
+          "projects": "computer-vision",
+          "gallery": {
+            "images": [
+              "/blog/traffic.png"
+            ],
+            "maxH": 435
+          }
         },
         {
           "indev": true,
@@ -351,7 +363,13 @@
           "link": "https://github.com/Yassin-Pellicer/vocab_project",
           "color": "bg-red-500",
           "content": "<strong>This project</strong> was born from a personal need: I needed to learn German and I wanted the process not to be tedious. My problem with languages is that learning them becomes tedious if there is no interaction involved. Vocabulary lists become overwhelming, and grammar is obscure. <br/><br/><b>So I decided to create an application with the following features:</b><ul><li>Vocabulary learning through translation tests.</li><li>Storage of learned vocabulary in JSON files.</li><li><br>Option to save words with similar meanings and their variants under the same 'acepción' with the ability to associate definitions.</li><li><br>Option to create a markdown file with explanations for each word if needed.</li></ul><br/>",
-          "projects": "vocabulary-app"
+          "projects": "vocabulary-app",
+                    "gallery": {
+            "images": [
+              "/blog/vocab.png"
+            ],
+            "maxH": 435
+          }
         }
       ]
     },
@@ -504,6 +522,6 @@
     ]
   ],
   "blog": {
-    "title": "✒️ Latest Posts on My Blog"
+    "title": "✒️ Latest on my blog!"
   }
 }

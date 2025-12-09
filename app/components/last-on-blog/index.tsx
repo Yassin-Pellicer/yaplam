@@ -30,7 +30,7 @@ export const LatestOnBlog = () => {
     <>
       <section
         id="2"
-        className="flex-col sm:pt-20 pt-8 sm:pb-42! pb-8"
+        className="flex-col pt-10 sm:mb-[-120px] mb-[-160px]"
       >
         <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
           {t("blog.title")}
@@ -43,11 +43,12 @@ export const LatestOnBlog = () => {
                 onClick={() => router.push("/blog/" + post.id)}
                 className={`md:hidden flex text-black rounded-xl pt-2 flex-col hover:cursor-pointer transition-all duration-300 w-full 
                 ${index === 1
-                  ? "bg-white [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0)_60%)] [mask-repeat:no-repeat] [mask-size:100%_100%] [mask-position:top]"
-                  : "bg-white"}`}
+                    ? "bg-white [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0)_60%)] [mask-repeat:no-repeat] [mask-size:100%_100%] [mask-position:top]"
+                    : "bg-white"}`}
               >
                 <div className="flex flex-col w-full justify-between px-4 py-2 h-full">
                   <div>
+                    <img src={post.image} alt={post.title} className="rounded-xl mb-4" />
                     <h3 className="text-xl tracking-tighter font-bold mb-2">
                       {post.title}
                     </h3>
@@ -103,7 +104,7 @@ export const LatestOnBlog = () => {
               </article>
             );
           })}
-          
+
           {rawPosts?.slice(0, 4).map((post, index) => {
             return (
               <article
@@ -111,11 +112,12 @@ export const LatestOnBlog = () => {
                 onClick={() => router.push("/blog/" + post.id)}
                 className={`hidden md:flex text-black rounded-xl md:flex-col pt-2 flex-row hover:cursor-pointer transition-all duration-300 w-full 
                 ${index === 2 || index === 3
-                  ? "bg-white [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0)_60%)] [mask-repeat:no-repeat] [mask-size:100%_100%] [mask-position:top]"
-                  : "bg-white"}`}
+                    ? "bg-white [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0)_60%)] [mask-repeat:no-repeat] [mask-size:100%_100%] [mask-position:top]"
+                    : "bg-white"}`}
               >
                 <div className="flex flex-col w-full justify-between px-4 py-2 h-full">
                   <div>
+                    <img src={post.image} alt={post.title} className="rounded-xl mb-4" />
                     <h3 className="text-xl tracking-tighter font-bold mb-2">
                       {post.title}
                     </h3>

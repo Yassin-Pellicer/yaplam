@@ -17,7 +17,7 @@ export const Experience = () => {
   }, [i18n.language]);
 
   return (
-    <section id="1" className="sm:py-20 py-8">
+    <section id="1" className="">
       <div className="flex flex-row flex-wrap justify-between AI-align-center items-center mb-6 gap-6">
         <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter ">
           {" "}

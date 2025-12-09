@@ -13,7 +13,7 @@ export const AbsCerts = () => {
     <>
       <section
         id="2"
-        className="flex-col sm:pt-20 pt-8 sm:pb-0! pb-8"
+        className="flex-col sm:pt-10 pt-8 sm:pb-0! pb-8"
       >
         <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
           {t("sections.skills.title")}
@@ -47,7 +47,7 @@ export const AbsCerts = () => {
         </div>
       </section>
 
-      <section id="habilidades" className="flex-col sm:py-20">
+      <section id="habilidades" className="flex-col sm:py-10">
         <h2 className="sm:text-5xl text-4xl font-bold text-white tracking-tighter mb-6">
           {t("sections.certifications.title")}
         </h2>

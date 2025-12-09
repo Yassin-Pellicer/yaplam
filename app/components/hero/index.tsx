@@ -11,7 +11,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="flex items-center align-center sm:pt-24 pt-24 sm:py-20 py-8 border-b border-white w-full mb-12">
+    <section className="flex items-center align-center sm:pt-24 pt-24 sm:py-20 py-8 border-b border-white w-full">
       <div className="flex flex-col items-center max-w-6xl mx-auto text-center">
         <p className="font-bold text-lg md:text-xl text-white mb-8">
           {isClient ? t("hero.greeting") : ""}

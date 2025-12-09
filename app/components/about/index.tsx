@@ -11,7 +11,7 @@ export const About = () => {
   }, []);
 
   if (!mounted) {
-    return <div className="sm:py-20 py-8" style={{ minHeight: "400px" }} />;
+    return <div className="py-10" style={{ minHeight: "400px" }} />;
   }
 
   const items = t("carousel.items", { returnObjects: true }) as Array<{
@@ -21,7 +21,7 @@ export const About = () => {
   }>;
 
   return (
-    <section id="0" className="sm:py-20 py-8">
+    <section id="0" className="py-10">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-5xl font-bold text-white mb-4 tracking-tighter">
           {t("sections.about.title")}
